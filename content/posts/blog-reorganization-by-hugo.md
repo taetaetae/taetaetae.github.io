@@ -1,11 +1,13 @@
 ---
-title: 기술블로그 개편기 (by hugo)
+title: 기술블로그 개편기 (by HUGO)
 date: 2020-11-29T18:12:15+09:00
 categories:
   - tech
 tags: 
   - hugo
   - blog
+  - github-actions
+  - archives-2020
 featuredImage: /images/blog-reorganization-by-hugo/hexo_to_hugo.png
 images :
   - /images/blog-reorganization-by-hugo/hexo_to_hugo.png
