@@ -11,6 +11,8 @@ tags:
   - archives-2018
 url : /2018/07/01/simple-web-server-flask-nginx/
 featuredImage: /images/simple-web-server-flask-nginx/flask-apache-nginx.png
+images :
+  - /images/simple-web-server-flask-nginx/flask-apache-nginx.png
 ---
 [지난포스팅](https://taetaetae.github.io/2018/07/01/simple-web-server-flask-apache/)에 이어 이번엔 Flask와 Nginx를 연동하는 방법을 정리해보고자 한다. Apache로 연동했는데 왜 또 Nginx로 연동하는걸 정리하지(?)하며 의문이 들수 있는데 다른 포스팅을 봐도 <!-- more --> Apache + Flask 조합보다 Nginx + Flask 조합이 더 많고 지난 포스팅에서도 알수있었듯이 ([Apache VS Nginx](https://taetaetae.github.io/2018/06/27/apache-vs-nginx/)) 둘중 어느것이 좋다고 할수도 없고 각 상황에서 연동하는 방법을 알고 있다면 이 또한 나만의 무기가 될것같아 Nginx를 연동하는 방법을 정리해보려 한다.
 

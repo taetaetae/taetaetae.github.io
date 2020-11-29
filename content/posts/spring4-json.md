@@ -9,6 +9,8 @@ categories:
   - tech
 url : /2017/01/07/spring4-json/
 featuredImage: /images/spring4-json/json.png  
+images :
+  - /images/spring4-json/json.png  
 ---
 수많은 블로거분들의 도움을 받고자 구글링을 해서 적용을 해봤지만 너무많은 삽질을 했다.(해봤던 방식은 `jsonViewResolver` 를 따로 설정해보거나, `@RequestMapping` 옵션을 바꿔보는 수준..) 특히나 Spring설정방식이 예전 방식이였던 `xml`이 아닌 `javaconfig`였기 때문에 더욱더 자료가 없었고.. <!-- more --> 한참을 삽질하다 해결을 하여 포스팅하게 된다. 우선 환경은 `spring 4.3.4.RELEASE`, `Maven`, `jdk8`임을 밝힌다.
 

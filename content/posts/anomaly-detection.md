@@ -12,6 +12,8 @@ tags:
   - archives-2018
 url : /2018/05/31/anomaly-detection/
 featuredImage: /images/anomaly-detection/kiyoung_chart.png
+images :
+  - /images/anomaly-detection/kiyoung_chart.png
 ---
 
 급변하는 날씨를 예측하려면 어떠한 정보가 있어야 할까?

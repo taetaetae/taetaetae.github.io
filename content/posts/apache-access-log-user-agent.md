@@ -12,6 +12,8 @@ tags:
   - archives-2018
 url : /2018/04/10/apache-access-log-user-agent/
 featuredImagePreview: /images/apache-access-log-user-agent/user_agent_method_2.png
+images :
+  - /images/apache-access-log-user-agent/user_agent_method_2.png
 ---
 Desktop 및 스마트폰의 대중화로 다양한 OS와 브라우저들을 사용하게 되었다. 이때, 내가 운영하는 웹서버에 들어오는 사람들은 무슨 기기로 접속을 하는 것일까? 혹여 특정 OS의 특정 브라우저에서만 안되는 버그를 잡기 위해 몇일밤을 고생하며 겨우 수정했는데... 과연 그 OS의 브라우저에서는 접속은 하기나 하는걸까? (ㅠㅠ) <!-- more -->
 만약, 접속 사용자의 Device 정보를 알고있다면 고생하며 버그를 잡기 전에 먼저 해당 Device 사용율을 체크해 볼수도 있고(수정이 아닌 간단한 얼럿으로 해결한다거나?) 비지니스 모델까지 생각해야하는 서비스라면 타겟팅을 정하는 등 다양한 활용도가 높은 것이 바로 `User-Agent`라고 한다(이하 UA). 일반 Apache 를 웹서버로 운영하고 있다고 가정을 하고 어떻게 분석을 할수 있었는지, 그리고 분석을 하며 좀더 우아한(?) 방법은 없는지 알아 보고자 한다. 

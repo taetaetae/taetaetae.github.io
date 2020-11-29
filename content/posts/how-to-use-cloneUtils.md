@@ -9,7 +9,8 @@ tags:
   - archives-2018
 url : /2018/08/21/how-to-use-cloneUtils/
 featuredImage: /images/how-to-use-cloneUtils/clone_java.jpg
-
+images :
+  - /images/how-to-use-cloneUtils/clone_java.jpg
 ---
 자바(Java)로 개발을 하다보면 한번쯤 객체를 복사하는 로직을 작성할때가 있다. 그때마다 나오는 이야기인 `Shalldow Copy` 와 `Deep Copy`. 한국어로 표현하면 얕은 복사와 깊은 복사라고 이야기를 하는데 이 두 개념의 차이는 아주 간단하다. 객체의 주소값을 복사하는지, 아니면 객체의 실제 값(value)를 복사하는지. <!-- more --> 이 둘의 차이점을 소개하는 글들은 워낙 많으니 패스하도록 하고 이번 포스팅에서는 `Deep Copy`를 할때 `org.apache.http.client.utils` 하위에 있는 `CloneUtils` 사용법에 대해 정리 하고자 한다.
 

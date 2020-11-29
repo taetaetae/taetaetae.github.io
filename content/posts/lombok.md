@@ -8,7 +8,9 @@ tags:
   - archives-2017
 url : /2017/02/22/lombok/
 featuredImage: /images/lombok/lombok.png
-
+images :
+  - /images/lombok/lombok.png
+  
 ---
 일반적으로 자바개발을 하다보면 `Model` 을 만들고 각 멤버변수를 접근할수 있는 (각 요소들이 private 접근권한을 가지고 있을때) method 를 만들게 된다. IDE에서 제공하는 아래처럼... (윈도우/이클립스 기준)<!-- more -->
 - get/set 메소드 :  `Alt` + `Shift` + `S` + `R`

@@ -11,7 +11,9 @@ tags:
   - archives-2018
 url : /2018/06/29/simple-web-server-flask-apache/
 featuredImage: /images/simple-web-server-flask-apache/flask-apache-python.png
-
+images :
+  - /images/simple-web-server-flask-apache/flask-apache-python.png
+  
 ---
 Static한 HTML이 아닌 로직이 필요한 API서버를 구성한다고 가정해보자. (이제까지 지식으로)처음 머릿속에 떠오르는건 Java를 사용하고 스프링으로 어플리케이션을 만들고 apache에 tomcat을 연동한 다음 ...<!-- more --> 이러한 방법으로 API서버를 구성할수 있겠지만 프로토타이핑 또는 테스트 목적으로 만들기 위해서는 설정하는 시간이 은근 많이 소요된다. (물론 Java Config, Spring Boot 등 간소해졌지만...)
 얼마전부터 Python에 대한 매력을 뼈저리게 느끼고 있다보니 Python으로 API서버를 구성할순 없을까 알아봤고 (모바일 게임 듀랑고 서버가 python이라고 하기도 하고...) `Flask`와 `Django`가 있어서 둘다 써본 결과 필자는 `Flask`가 맞겠다고 생각해서 정리를 해볼까 한다.

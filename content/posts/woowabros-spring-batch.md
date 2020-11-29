@@ -9,6 +9,8 @@ tags:
   - jenkins
 url : /2019/09/29/woowabros-spring-batch/
 featuredImage: /images/woowabros-spring-batch/woo.jpeg
+images :
+  - /images/woowabros-spring-batch/woo.jpeg
 
 ---
 지난주 우아한 형제들에서 진행하였던 "9월 우아한 테크 세미나 - 우아한 스프링 배치" 에 다녀왔다. 필자에게 이번 9월은 정신이 어디에 있는지 모를만큼 바쁘고 힘들었지만 예전부터 궁금하기도 했고 <!--more -->요즘들어 관심을 갖던 "배치 어플리케이션"을 어떻게 하면 "우아한 방법"으로 사용할 수 있을지에 대해 여러 생각들이 있었기에 큰 기대를 가지고 지옥철을 견디며 잠실 근처에 있는 우아한 형제들 작은집으로 가게 되었다.

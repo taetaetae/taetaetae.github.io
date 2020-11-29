@@ -9,6 +9,8 @@ categories:
   - tech
 url : /2017/08/27/hexo-themes-tranquilpeak/
 featuredImage: /images/hexo-themes-tranquilpeak/1.jpg
+images :
+  - /images/hexo-themes-tranquilpeak/1.jpg
 ---
 여러가지 hexo 테마중에 그나마(?) 영어로 된 문서가 있어서 적용해보게 된 tranquilpeak 라는 테마. 오늘은 해당 테마를 적용하면서 겪은 문제, 그리고 적용 방법에 대해서 간략하게나마 정리해보고자 한다. (다른 테마들은 거의다 중국쪽이나 일본...)<!-- more -->
 먼저 hexo 공식사이트에서 알려주는 테마들은 다음 사이트에서 확인해 볼수 있다. 

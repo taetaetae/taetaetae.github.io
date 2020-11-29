@@ -9,6 +9,8 @@ tags:
   - archives-2019
 url : /2019/10/27/a-reason-for-writing/
 featuredImage: /images/a-reason-for-writing/idea.jpg
+images :
+  - /images/a-reason-for-writing/idea.jpg
 ---
 신입시절. 배워야 할 것도 회사 업무도 많아 허우적대던 때가 있었다. 그렇게 하루에 3~4시간 자며 정신없이 하루를 보내던 날 문득 동기 형이 "개발자는 기술 블로그를 해야 돼!"라는 전혀 이해가 안 되는 말을 해온다. 이렇게 바빠 죽겠는데 블로그에 글까지 쓰라고? <!--more -->말이 되는 소릴 하라며 반박하다 못내 이기는 척 하나 둘 글을 쓰기 시작했고, 다른 유명 블로거처럼 엄청나진 않지만 하루에 1,000~2,000명 정도 들어오며 점점 성장해 가는 나만의 기술 블로그가 되었다. 
 

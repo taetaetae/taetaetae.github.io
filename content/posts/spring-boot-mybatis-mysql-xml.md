@@ -9,7 +9,8 @@ tags:
   - mybatis
 url : /2019/04/21/spring-boot-mybatis-mysql-xml/
 featuredImage: /images/spring-boot-mybatis-mysql-xml/logo.jpg
-
+images :
+  - /images/spring-boot-mybatis-mysql-xml/logo.jpg
 ---
 실무에서 개발을 하다보면 과거 누군가 잘 구성해 놓은 밥상(legacy)에 숟가락만 얹는 느낌으로 `로직 구현`만 할때가 있다. 그러다보면 각종 레이어가 어떻게 구성(설정)되어있는지도 모르고 <!-- more --> 간혹 설정에서 문제가 발생하면 "아 내가 이것도 모르고 이제까지 개발을 해왔나" 하는 자괴감이 들며 몇시간을 삽질하는 경우가 있다. 그게 지금의 필자인것 같다. (눙물...)
 

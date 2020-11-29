@@ -9,7 +9,8 @@ tags:
   - write the docs
 url : /2019/03/24/write-the-docs-seoul-2019-review/
 featuredImage: /images/write-the-docs-seoul-2019-review/sticker-wtd-colors.png
-
+images :
+  - /images/write-the-docs-seoul-2019-review/sticker-wtd-colors.png
 ---
 필자는 평소 개발자에게 가장 중요한 덕목 중 하나가 `글쓰기`라고 생각하고 있다. 마침 글쓰기와 기술의 접점을 고민하고 이야기하는 "Write The Docs 서울 밋업"([링크](https://festa.io/events/191)) 이 있다고 하여 쉬고 싶던 주말이지만 만사를 집어치우고 참석하게 되었다. <!-- more -->사실 연예인 개발자분들을 직접 만날 수 있다는 기대감도 있었기 때문이다. (발표하시는 바로 앞자리에 앉았는데 정작 한마디도 못 건넸지만...)
 

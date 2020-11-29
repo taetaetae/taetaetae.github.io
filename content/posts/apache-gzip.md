@@ -9,7 +9,9 @@ tags:
   - archives-2018
 url : /2018/04/01/apache-gzip/
 featuredImage: /images/apache-gzip/apache_gzip.png
-
+images :
+  - /images/apache-gzip/apache_gzip.png
+  
 ---
 내가 운영중인 웹서비스의 응답속도를 보다 더 빠르게 하기 위해서는 어떤 방법이 있을까? 
 웹 서비스를 위해 서버를 구성할 경우 일반적으로 앞단에 `웹서버`를 두고 그뒤에 `WAS`를 두는 설계를 하곤 한다. <!-- more -->여기서 웹서버는 대표적으로 Apache나 Nginx가 있고 WAS는 tomcat이나 기타 다른 모듈을 사용하는데 이렇게 두단계로 나누는 이유는 여러가지가 있겠지만 여기서는 앞단의 웹서버(Apache)의 설정으로 응답속도를 줄일수 있는 방법을 알아 보고자 한다.

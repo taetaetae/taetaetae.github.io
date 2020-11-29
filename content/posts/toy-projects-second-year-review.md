@@ -7,6 +7,8 @@ tags:
   - archives-2020
 url : /2020/07/12/toy-projects-second-year-review/
 featuredImage: /images/toy-projects-second-year-review/ddb.jpg
+images :
+  - /images/toy-projects-second-year-review/ddb.jpg
 ---
 
 　정확히 2018년 07월 12일 필자의 첫 토이 프로젝트인 ‘기술 블로그 구독 서비스’를 오픈하게 된다. 얼마나 많이 구독(가입) 하겠어 하는 생각이 부끄러울 만큼 6개월이 지나 구독자 수는 1,000명을 넘기고 1년이 지나 2,000명.<!--more --> 어느덧 달력을 보니 오늘이 정확하게 토이 프로젝트를 서비스한지 벌써 2년이 되는 날. 구독자 수는 어느덧 3,000명을 넘어선다. 뭔가 뿌듯하면서도 서비스를 좀 더 디벨롭 하지 못한 필자 자신을 돌아보니 괜히 마음이 무거워지고.

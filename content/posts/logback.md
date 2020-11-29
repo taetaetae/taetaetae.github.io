@@ -8,6 +8,8 @@ tags:
   - archives-2017
 url : /2017/02/19/logback/
 featuredImage: /images/logback/logback.jpg
+images :
+  - /images/logback/logback.jpg
 ---
 자바 개발자라면 한번쯤은 들어봤고, 한번쯤은 사용했을법한 logger 로 `log4j`가 있을것이다. 하지만 최근들어 `logback`이라는것을 알게되었고, 왜 `logback`을 사용해야 하는 이유라는 글이 있을정도로 여러 측면에서 개선이 된듯 하다. <!-- more -->([링크](https://beyondj2ee.wordpress.com/2012/11/09/logback-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-reasons-to-prefer-logback-over-log4j))
 이번에 작성할 글의 목적은 `logback`을 설정하고 어떻게 사용하는지에 대해 작성해 보고자 한다.

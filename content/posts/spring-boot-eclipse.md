@@ -8,6 +8,8 @@ tags:
   - archives-2017
 url : /2017/02/27/spring-boot-eclipse/
 featuredImage: /images/spring-boot-eclipse/spring-boot-logo.jpg
+images :
+  - /images/spring-boot-eclipse/spring-boot-logo.jpg
 
 ---
 Spring 환경에서 웹 어플리케이션을 만들어야 한다면 pom.xml 에 이런저런 설정들을 적어줘야 했다. 하지만 이런 수고(?)를 덜어줄수 있는 방법중에 한가지가 바로 Spring Boot로 만드는 방법인데, 이클립스 환경에서 만드는 법을 정리하고자 한다.

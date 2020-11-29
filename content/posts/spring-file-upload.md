@@ -8,6 +8,8 @@ tags:
   - spring
 url : /2019/07/21/spring-file-upload/
 featuredImage: /images/spring-file-upload/upload.png
+images :
+  - /images/spring-file-upload/upload.png
 
 ---
 개발을 하다보면 실제로 직접 구현을 해본적은 없지만 여기저기서 들어본 지식과 그 동안의 짬밥(?)으로 추측해볼수 있는 부분들이 있다. 물론 모든일에 정답은 없겠지만 요즘 느끼는건 책에서 공부만 해본것과 다른 블로그들에서 눈으로만 보고 넘어가는것들 그리고 직접 손가락을 움직여가며 왜 여기서는 이 방법을 사용하지 고민하면서 구현을 해본다는건 정말 엄청나게 큰 차이가 있는것 같다. <!--more -->

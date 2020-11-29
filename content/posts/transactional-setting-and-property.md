@@ -9,6 +9,8 @@ tags:
   - archives-2017
 url : /2017/01/08/transactional-setting-and-property/
 featuredImage: /images/transactional-setting-and-property/transactional.png
+images :
+  - /images/transactional-setting-and-property/transactional.png
 
 ---
 지난번에는 트랜잭션의 설정값에 대해 알아본 바 있다. [ [Spring Transaction 옵션](/2016/10/08/20161008) ]

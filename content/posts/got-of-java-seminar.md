@@ -9,7 +9,8 @@ tags:
   - monitoring
 url : /2019/05/12/got-of-java-seminar/
 featuredImage: /images/got-of-java-seminar/woo.jpeg
-
+images :
+  - /images/got-of-java-seminar/woo.jpeg
 ---
 
 실무에서 자바 기반으로 개발을 하고 서비스를 운영을 하다보면 처음엔 아무런 문제가 없다가 사용자가 몰리는 등 이벤트성으로 트래픽이 많아질 경우 꼭 문제가 생기기 마련이다. 그럴때면 뒤늦게 부랴부랴 원인을 찾고 개선하기 바빠지게 된다.  <!-- more --> (아마 윗분들에게 혼나면서?ㅠㅠ) 

@@ -9,6 +9,8 @@ tags:
   - Load Balance
 url : /2019/08/04/apache-load-balancing/
 featuredImage: /images/apache-load-balancing/lb_logo.jpg
+images :
+  - /images/apache-load-balancing/lb_logo.jpg
 
 ---
 웹서버 하나만 사용하거나 WAS 하나만을 사용하며 웹서비스를 운영하는 경우는 극히 드물다. 웹서버의 장점과 WAS의 장점 그 두마리의 토끼를 다 잡기 위해 보통 앞단에 웹서버를 두고 그 뒤에 WAS를 두며 서비스를 운영하곤 한다. 헌데 운영하는 서비스가 인기가 많아져(?) 사용량이 많아지다면 그만큼 응답이 느려 (TPS 등) 서버를 늘려야 하는 상황이 생긴다고 가정해보자.<!--more --> (물론 서버를 늘리는 것보다 캐시를 적용하거나 로직을 바꿔보는 노력이 선행되야 하겠지만...) 당연히 서버부터 구매하며 "Scale Out"을 하려고 할것이다. 만약 원래 운영하던 서버가 너무 좋아서 CPU나 메모리 사용률이 거의 바닥이여도 서버를 구매해야 할까?

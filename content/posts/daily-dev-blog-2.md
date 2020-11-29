@@ -7,6 +7,8 @@ tags:
   - archives-2018
 url : /2018/08/09/daily-dev-blog-2/
 featuredImage: /images/daily-dev-blog-2/ddb-thumnail.png
+images :
+  - /images/daily-dev-blog-2/ddb-thumnail.png
 ---
 1부에서는 기술블로그 구독서비스(이하 서비스)를 왜 만들게 되었고 어떤구조로 만들가에 대해 이야기를 해보았다면, 이번 포스팅에서는 만들면서 만나게 된 각종 `트러블슈팅 종합세트(?)`를 하나씩 풀어보고자 한다. <!-- more -->물론 개발을 하면서 아무 문제 없이 잘 되면 당연히 좋겠으나 잘되도 이상한게 개발이라는 세계가 아니던가.
 

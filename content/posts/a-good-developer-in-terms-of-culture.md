@@ -8,6 +8,8 @@ tags:
   - archives-2020
 url : /2020/06/21/a-good-developer-in-terms-of-culture/
 featuredImage: /images/a-good-developer-in-terms-of-culture/culture_logo.jpg
+images :
+  - /images/a-good-developer-in-terms-of-culture/culture_logo.jpg
 ---
 
 　한동안 글을 쓰지 않았다. 글을 쓰지 않은 것일까 쓰지 못한 것일까. 이런저런 이유로 번아웃 늪에 빠져버려 아무것도 하기 싫어서라는 핑계가 어울릴 수도 있겠다만. <!--more -->요즘 들어 더욱더 무기력함이 극도로 뿜뿜대는 가운데 문득, 개발자로써 얼마나 잘 지내왔는가 뒤를 돌아보고 싶었다. 앞만 보고 달리는 것보다 내 생각과 내 호흡을 점검하는 것 또한 중요하다고 생각했기에 당분간은 더 나은 개발자가 되기 위한 여러 가지 주제로 글을 써보려 한다.

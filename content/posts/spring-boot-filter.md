@@ -9,6 +9,8 @@ tags:
   - archives-2020
 url : /2020/04/06/spring-boot-filter/
 featuredImagePreview: /images/spring-boot-filter/spring-request-lifecycle.jpg
+images :
+  - /images/spring-boot-filter/spring-request-lifecycle.jpg
 ---
 
 웹 어플리케이션에서 필터를 사용하면 중복으로 처리되는 내용을 한곳에서 처리할 수 있다거나 서비스의 다양한 니즈를 충족시키기에 안성맞춤인 장치인것 같다. 필터란 무엇인가 에 대한 내용은 워낙에 다른 블로그나 공식 도큐먼트에서 자세하게 그리고 다양하게 설명하고 있기에 기본 개념에 대해서는 설명하지 않도록 하려 한다. <!--more -->

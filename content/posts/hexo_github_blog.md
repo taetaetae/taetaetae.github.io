@@ -8,7 +8,8 @@ categories:
   - tech
 url : /2016/09/18/hexo_github_blog/
 featuredImage: /images/hexo_github_blog/hexo.jpg
-
+images :
+  - /images/hexo_github_blog/hexo.jpg
 ---
 
 ## 들어가기에 앞서

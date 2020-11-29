@@ -5,6 +5,8 @@ categories:
   - tech
 url : /2019/02/17/daily-dev-blog-3/
 featuredImage: /images/daily-dev-blog-3/ddb-thumnail.jpg
+images :
+  - /images/daily-dev-blog-3/ddb-thumnail.jpg
 ---
 
 작년 7월 12일부터 시작한 필자의 첫 토이프로젝트인 [기술블로그 구독서비스](http://daily-devblog.com). 오픈할 때까지만 해도 "AWS 프리티어를 사용하고 있는 1년 안에 구독자가 설마 1,000명이 넘겠어?" 라고 생각을 했었는데 <!-- more --> 오픈을 하고 220일째 되는 바로 어제 어느덧 벌써 구독자가 1,000명을 달성하게 되었다. 그 기념으로 그동안 미뤄두었던 `기술블로그 구독서비스 개발 후기` 시리즈의 3부를 쓰고자 한다.

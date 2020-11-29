@@ -7,7 +7,9 @@ tags:
   - archives-2017
 url : /2017/03/08/a-quarter-of-this-year/
 featuredImage: /images/a-quarter-of-this-year/time.png
-
+images :
+  - /images/a-quarter-of-this-year/time.png
+  
 ---
 벌써 3월이다. 뭐하나 제대로 한것도 없는데 시간은 야속하게도 멈추지 않고 지나가고 있다.
 오랜만에 동기형을 만났다. <!-- more -->신입사원이 되기 전 연습생(?)시절 동거동락하며 개발에 대해 고군분투 하던 사이인지라. 오랜만에 만나도 서로 이야기 하고자 하는 주제는 언제나 동일하다. `개발자로서의 삶`

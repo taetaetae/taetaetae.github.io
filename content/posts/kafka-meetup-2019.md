@@ -7,6 +7,8 @@ tags:
   - kafka
 url : /2019/03/31/kafka-meetup-2019/
 featuredImage: /images/kafka-meetup-2019/kafka.jpg
+images :
+  - /images/kafka-meetup-2019/kafka.jpg
 ---
 
 필자는 ElasticStack을 사용하면서 처음 카프카를 접하게 되었다. 메세징 큐 라는 개념도 전혀 모르는 상태에서 설치부터 ElasticStack 연동까지 사용하며 정말 `강제로` 카프카에 대해 공부를 하게 되었다. 카프카를 자주 다루고 메커니즘에 대해 자세히 살펴보다 잠깐 해이해질 무렵 카프카 한국 사용자 모임에서 밋업을 한다고 하길래 빛의 속도로 신청, 아마도 1등으로 신청했지 않았을까 싶다.<!-- more -->

@@ -10,6 +10,8 @@ tags:
   - filebeat
 url : /2019/02/10/access-log-to-elastic-stack/
 featuredImage: /images/access-log-to-elastic-stack/elastic_stack.jpg
+images :
+  - /images/access-log-to-elastic-stack/elastic_stack.jpg
 ---
 
 필자가 Elastic Stack을 알게된건 2017년 어느 여름 동기형이 공부하고 있는것을 보고 호기심에 따라하며 시작하게 되었다. 그때까지만 해도 버전이 2.x 였는데 지금 글을 쓰고있는 2019년 2월초 최신버전이 6.6이니 정말 빠르게 변화하는것 같다. <!-- more -->빠르게 변화하는 버전만큼 사람들의 관심도 (드라마틱하게는 아니지만) 꾸준히 늘어나 개인적으로, 그리고 실무에서도 활용하는 범위가 많아지고 있는것 같다.

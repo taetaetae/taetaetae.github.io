@@ -11,6 +11,8 @@ tags:
   - archives-2017
 url : /2017/03/12/spring-parameter/
 featuredImage: /images/spring-parameter/spring-parameter-1.jpg
+images :
+  - /images/spring-parameter/spring-parameter-1.jpg
 
 ---
 일반적인 웹 프로젝트 구성에서는 `Controller`레벨에서 응답을 받고 비지니스 로직을 처리 후에 다시 `View`레벨로 넘어가는게 통상적인 흐름이다. 이 부분에서 파라미터 관련한 여러가지 부분에 대해 정리해보고자 한다.

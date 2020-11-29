@@ -9,6 +9,8 @@ tags:
   - archives-2018
 url : /2018/04/29/apache-408-response-code/
 featuredImage: /images/apache-408-response-code/network_flow.png
+images :
+  - /images/apache-408-response-code/network_flow.png
 ---
 예전에 아파치 로그를 엘라스틱 스택을 활용하여 [내 서버에 누가 들어오는지를 확인할수 있도록 구성](https://taetaetae.github.io/2018/04/10/apache-access-log-user-agent)을 해두고 몇일간 지켜보니 다음과 같은 엑세스 로그가 발생하고 있었다.<!-- more -->
 ```markdown

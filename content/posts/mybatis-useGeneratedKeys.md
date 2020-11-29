@@ -8,6 +8,8 @@ tags:
   - archives-2017
 url : /2017/04/04/mybatis-useGeneratedKeys/
 featuredImage: /images/mybatis-useGeneratedKeys/mybatis.png
+images :
+  - /images/mybatis-useGeneratedKeys/mybatis.png
 ---
 
 `Select`문이 아닌 다른 `SQL Query`(insert, update 등) 를 실행하고서 결과를 봐야하는 상황이 생긴다. 정확히 잘 수행되었나에 대한 확인. 어떻게 쿼리가 잘 수행되었나를 확인하는 방법은 다음과 같다.

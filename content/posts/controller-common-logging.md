@@ -11,6 +11,8 @@ tags:
   - AOP
 url : /2019/06/30/controller-common-logging/
 featuredImage: /images/controller-common-logging/spring_boot_logging.png
+images :
+  - /images/controller-common-logging/spring_boot_logging.png
 ---
 
 스프링 기반의 웹 어플리케이션을 만들다 보면 요청을 처리하는데 맨 처음에 위치하고 있는 `Controller`(이하 컨트롤러)라는 레이어를 만들게 된다. 그럴때면 사용자가 어떤 요청(Request)을 하였는지에 대해 확인이 필요할 수 있다. <!--more --> 물론 확인을 안해도 무방하지만 가급적 로깅은 시스템 로직에 영향을 주지 않는 범위에서 최대한 다양하게 `미리` 해두는게 나중에 유지보수시 편할 수 있다. (예전 조직장님께서 말씀하신게 아직도 머릿속에 꽉 자리잡고 있다...)

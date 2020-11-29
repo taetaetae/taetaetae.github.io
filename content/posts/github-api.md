@@ -8,7 +8,8 @@ tags:
   - archives-2017
 url : /2017/03/02/github-api/
 featuredImage: /images/github-api/github.png
-
+images :
+  - /images/github-api/github.png
 ---
 github 에서는 레파지토리의 전반적인 상황에 대해 다양한 API를 제공해주고 있다. 이번에는 그 API를 사용하는 방법에 대해 알아보고자 한다.
 

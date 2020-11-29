@@ -11,6 +11,8 @@ tags:
   - archives-2018
 url : /2018/07/01/open-source-software-develpoer-story-review/
 featuredImage: /images/open-source-software-develpoer-story-review/oss.png
+images :
+  - /images/open-source-software-develpoer-story-review/oss.png
 ---
 Facebook그룹들을 눈팅하다(?) OSS개발자 포럼에서 `오픈소스 개발자이야기`라는 주제로 세미나를 주최한다는 공지를 보게되었다. 언제부턴가 트랜드에 뒤쳐지지 않으려는 몸부림중 세미나같은 외부 개발 행사에 참여해보자는 마음으로 공지를 보자마자 홀린듯이 신청을 하게 되었고<!-- more --> 세미나를 듣고 감흥이 가시기 전에 후기를 적고자 한다.(시간이 지나면 잊어버릴것만같은, 보고 들은 생생한 그 무언가를 얻었기에...)
 

@@ -7,7 +7,9 @@ tags:
   - archives-2018
 url : /2018/12/13/elastic-meetup-201812/
 featuredImage: /images/elastic-meetup-201812/elastic_0.jpg
-
+images :
+  - /images/elastic-meetup-201812/elastic_0.jpg
+  
 ---
 엘라스틱을 처음 접하게 된 건 2017년 여름 facebook 피드에 "Elastic Stack을 이용한 서울시 지하철 대시보드" 라는 [링크](https://www.elastic.co/kr/blog/seoul-metro-2014)를 보게 된 것부터인 것 같다. 그 당시 데이터 분석 및 자동화에 관심이 커지고 있던 찰나였는데 <!-- more -->키바나로 간단하면서도 아주 멋진 대시보드를 그릴 수 있다는 게 너무 흥미롭게 다가왔고 거기다 실시간으로 볼수 있다는 점에 공부를 시작하지 않을 수 없었다. 그렇게 이것저것 만들어 보기도 하고 한국 엘라스틱서치 커뮤니티 활동을 해오던 찰나 (최근들어 눈팅만 하고 있지만...) 올해 마지막 밋업을 한다고 하여 참여하게 되었다.
 

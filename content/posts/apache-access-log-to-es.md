@@ -10,6 +10,8 @@ tags:
   - archives-2018
 url : /2018/01/25/apache-access-log-to-es/
 featuredImagePreview: /images/apache-access-log-to-es/model_1.png
+images :
+  - /images/apache-access-log-to-es/model_1.png
 ---
 apache access log 를 분석하고 싶은 상황이 생겼다. 아니 그보다 apache access에 대해서 실시간으로 보고싶었고, log를 검색 & 데이터를 가공하여 유의미한 분석결과를 만들어 보고 싶었다. 그에 생각한것이 (역시) `ElasticStack`.<!-- more -->
 

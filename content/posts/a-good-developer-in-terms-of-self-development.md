@@ -8,6 +8,8 @@ tags:
   - archives-2020
 url : /2020/06/28/a-good-developer-in-terms-of-self-development/
 featuredImage: /images/a-good-developer-in-terms-of-self-development/self-development-logo.jpg
+images :
+  - /images/a-good-developer-in-terms-of-self-development/self-development-logo.jpg
 ---
 
 　학창 시절엔 '선생님'께서 정해놓으신 커리큘럼에 따라가기만 하면 큰 문제 없이 지식을 학습할 수 있었다. 거기에 주기적으로 치르는 시험을 통해 '점수'라는 평가 기준으로 얼마나 잘 성장했나를 검사하기도 한다. <!--more -->졸업 후 어렵게 어렵게 취업에 성공을 하여 '신입 개발자'라는 배지를 달고 회사에 첫 출근. 그렇게 n 년이 지난 지금과 라떼 시절(?)을 비교해 보며 과연 '학습'에 대한 열정 그래프가 아직도 우상향 중인가? 하는 질문엔 일단 단전부터 올라오는 깊은 한숨과 함게 이상하게도 앞이 캄캄해진다.

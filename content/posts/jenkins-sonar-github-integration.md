@@ -10,6 +10,8 @@ tags:
   - archives-2018
 url : /2018/02/08/jenkins-sonar-github-integration/
 featuredImagePreview : /images/jenkins-sonar-github-integration/concept.png
+images :
+  - /images/jenkins-sonar-github-integration/concept.png
 ---
 `코드 정적분석`이라 함은 실제 프로그램을 실행하지 않고 코드만의 형태에 대한 분석을 말한다. 이를테면 냄새나는 코드(?)라던지, 위험성이 있는 코드, 미리 정의된 규칙이나 코딩 표준을 준수하는지에 대한 분석을 말하는데 java 기준으로는 아래 다양한 (잘 알려진) 정적분석 도구들이 있다.<!-- more -->
 - PMD

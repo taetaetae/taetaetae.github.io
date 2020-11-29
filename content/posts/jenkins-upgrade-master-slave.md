@@ -7,6 +7,8 @@ tags:
   - jenkins
 url : /2019/03/17/jenkins-upgrade-master-slave/
 featuredImage: /images/jenkins-upgrade-master-slave/jenkins.jpg
+images :
+  - /images/jenkins-upgrade-master-slave/jenkins.jpg
 ---
 어떠한 작업(Job)이 있다고 가정해보자. 이를 "정해진 시간에 주기적" 이나 "필요할때" 작업을 수행하고 싶다면 어떤 툴(Tool)이 떠오르는가? <!-- more -->그리고 이 작업(Job)들의 실행이력 등 전체적으로 관리하고 필요에 따라 다양한 플러그인을 활용하여 입맛에 맞는 작업(Job)으로 구성하고 싶을때 가장 첫번째로 떠오르는 툴은 바로 "Jenkins" 다. (극히 필자 개인적인 생각일수도 있지만... ) 물론 리눅스 기반의 crontab 이나 다른 스케쥴러를 활용할수도 있다. 다만 필자 개인적인 느낌으로 나만의 Jarvis(?)처럼 내가 원하는데로 설정만 해두면 정해진 시간에 수행하고 그 결과를 로그로 남겨놓고 문제가 발생했을때 알림도 받을수 있으니 너무 좋은 툴이라 생각이 든다.
 

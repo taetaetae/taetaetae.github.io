@@ -9,6 +9,8 @@ tags:
   - archives-2020
 url : /2020/02/09/jupyter-install/
 featuredImagePreview: /images/jupyter-install/jupyter_logo.jpg
+images :
+  - /images/jupyter-install/jupyter_logo.jpg
 ---
 
 파이썬이라는 언어는 다른 프로그래밍 언어들에 비해 쉽고 직관적이라 그런지 프로그래밍을 처음 시작하는 사람들에게 더욱이 주목을 받고 있는것 같다. 정말 다양한 모듈들이 많아 여러분야에서 활용되고 있고 <!--more -->특히 언제부터인가 핫! 해진 분야(?)라 해도 과언이 아닐정도인 "머신러닝" 분야에서도 다양하게 사용되고 있는것 같다. 

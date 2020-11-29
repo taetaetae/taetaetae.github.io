@@ -9,6 +9,8 @@ tags:
   - archives-2020
 url : /2020/03/22/better-rest-template-1-retryable/
 featuredImage: /images/better-rest-template-1-retryable/icons8.png
+images :
+  - /images/better-rest-template-1-retryable/icons8.png
 ---
 
 웹 어플리케이션을 만들면서 꼭 한번 쯤 만나게 되는 "RestTemplate". 접근 가능한 외부 HTTP URL(보통 API)을 호출하는 방법중에 하나로 springframework 에서 제공해주는 모듈이다. 특히 큰 한덩어리로 관리되던 Monolithic Architecture 에서 요청을 하고(client) 응답을 주는(server)  <!--more -->즉, Endpoint가 작은 단위로 분리되는 Microservice Architecture 로 바뀌면서 각 서비스간 호출방식이 HTTP 일 경우 자주 사용되곤 하는 것 같다. (webClient 등 다른 여러 호출 방법들이 있다.)

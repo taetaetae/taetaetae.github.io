@@ -8,7 +8,9 @@ categories:
   - blog
 url : /2017/12/14/elastic-on-tour/
 featuredImage: /images/elastic-on-tour/ElasticStackWorkshop.jpg
-
+images :
+  - /images/elastic-on-tour/ElasticStackWorkshop.jpg
+  
 ---
 작년에 팀을 옮기면서 `로깅`에 대해서 관심을 갖기 시작 하였고 찾아보다 ElasticStack 이 적합하다고 판단, 팀 내에서 나홀로 삽질해가며 지금의 로그 모니터링 시스템을 구축하였다. 그에 ElasticStack 에 관심을 갖던 찰나 지난 화요일(12월 12일)에 있었던 Elastic On Tour에 참석을 하였고 다양한 기술적 인사이트를 얻을수 있었는데 그 감동(?)을 잃기 싫어 정리해보고자 한다.
 <!-- more -->

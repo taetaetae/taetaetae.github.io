@@ -9,6 +9,8 @@ tags:
   - archives-2017
 url : /2017/03/23/oracle-mybatis-date/
 featuredImage: /images/oracle-mybatis-date/oracle_mybatis_date.png
+images :
+  - /images/oracle-mybatis-date/oracle_mybatis_date.png
 
 ---
 ## 상황

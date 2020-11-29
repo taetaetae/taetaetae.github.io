@@ -10,6 +10,8 @@ tags:
   - heap dump
 url : /2019/01/10/spring-redirect-oom/
 featuredImage: /images/spring-redirect-oom/test1-pinpoint.jpg
+images :
+  - /images/spring-redirect-oom/test1-pinpoint.jpg
 
 ---
 초창기 신입시절에 배우거나 사용했던 기술적인 방법들이 있다. 시간이 지날수록 왠만해선 다른방법은 사용하지 않으려 하고 `습관`처럼 기존에 사용했던 방법을 고수하는 버릇이 있다. 그 이유는 과거에 사용했을때 아무 탈 없이 잘 되었기 때문에, 그리고 빠른 구현 때문이라는 핑계일 것 같다. <!-- more -->이러한 버릇은 비단 이 글을 적고있는 필자 뿐만이 아니라 대부분의 개발자들이 가지고 있을꺼라 조심스레 추측해본다. (아니라면...더욱 분발 해야겠다...ㅠ)

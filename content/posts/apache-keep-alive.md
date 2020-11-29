@@ -8,6 +8,8 @@ tags:
   - archives-2017
 url : /2017/08/28/apache-keep-alive/
 featuredImage: /images/apache-keep-alive/keepalive_on_off.png
+images :
+  - /images/apache-keep-alive/keepalive_on_off.png
 ---
 
 서버를 운영하다보면 간혹 문제가 발생하곤 한다. 이를테면 메모리가 다른이유없이 올라간다거나, 사용자 입장에서 응답속도가 간헐적으로 느린다거나. 그럴때마다 선배개발자분들께서 가장먼저 입에 오르내리는 단어. `keepAlive`. <!--more-->대충 검색을 해보면 접속을 유지하거나 그렇지 않거나 하는 설정이구나 만으로 생각했었는데 제대로 짚고 넘어가는 의미에서 정리를 해볼 필요가 있을것 같다.

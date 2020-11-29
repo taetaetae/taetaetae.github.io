@@ -8,6 +8,8 @@ tags:
   - archives-2017
 url : /2017/11/02/what-is-kafka/
 featuredImage: /images/what-is-kafka/kafka.png
+images :
+  - /images/what-is-kafka/kafka.png
 ---
 필자가 맡고있는 서비스에 Elastic Stack 을 도입하면서 중간에 버퍼가 필요하여 Message-Queue 시스템들을 알아보던 중 Kafka 에 대해 알아보고, 정리를 해보게 된다.
 

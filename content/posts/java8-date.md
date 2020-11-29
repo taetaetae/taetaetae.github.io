@@ -8,7 +8,8 @@ tags:
   - archives-2017
 url : /2017/01/10/java8-date/
 featuredImage: /images/java8-date/java_date.png
-
+images :
+  - /images/java8-date/java_date.png
 ---
 이제까지 내 기억으로는 Date 관련 클래스를 아래처럼 점차 바꿔써온걸로 기억이 난다.
 `java.util.Date` > `java.util.Calendar` > `org.joda.time`

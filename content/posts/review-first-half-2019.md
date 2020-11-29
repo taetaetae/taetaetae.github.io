@@ -8,6 +8,8 @@ tags:
   - 글또
 url : /2019/07/07/review-first-half-2019/
 featuredImage: /images/review-first-half-2019/review.jpg
+images :
+  - /images/review-first-half-2019/review.jpg
 ---
 
 누구나 어렸을 땐 빨리 어른이 되고 싶어 하는 것 같다. 시간이 빨리 지나가길 바라고, 빨리 어른이 되고 싶다는 간절함이 있지만 이상하게도 그땐 시간이 천천히 가는 것처럼 느껴졌다. 반면, 시간이 천천히 갔으면 하는 때가 있다. 딱 지금. <!--more -->

@@ -11,6 +11,8 @@ tags:
   - archives-2020
 url : /2020/01/19/spring-boot-maven-multi-module/
 featuredImage: /images/spring-boot-maven-multi-module/multimodule.png
+images :
+  - /images/spring-boot-maven-multi-module/multimodule.png
 ---
 
 서비스를 처음 만들기 시작할때면 각 직군별로 생각하는 포인트가 다양하다. 설계, 기획, 디자인, 개발. 여기서 개발은 프로젝트 셋팅을 어떻게 해야하지? 하는 고민을 하기 마련이다. 아주 간단하게 하나의 모듈로 모든 기능을 담당하도록 만들 수 있지만 기능별로 모듈을 나눠서 셋팅하는게 관리측면에서 장점이라 생각한다.<!--more -->

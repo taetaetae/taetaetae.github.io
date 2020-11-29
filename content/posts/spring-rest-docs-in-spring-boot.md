@@ -9,6 +9,8 @@ tags:
   - archives-2020
 url : /2020/03/08/spring-rest-docs-in-spring-boot/
 featuredImage: /images/spring-rest-docs-in-spring-boot/logo.jpg
+images :
+  - /images/spring-rest-docs-in-spring-boot/logo.jpg
 ---
 
 API를 개발하고 제공하기 위해서는 그에 해당하는 API 명세를 작성해서 사용하는 곳에 전달하게 된다. 어떤 URL에 어떤 파라미터를 사용해서 어떻게 요청을 하면 어떤 결과를 응답으로 내려주는지에 대한 관련 정보들. 이러한 "API 문서" 를 제공하는 방식은 상황에 따라 다양한 방법으로 사용되곤 한다. <!--more -->

@@ -8,6 +8,8 @@ tags:
   - gdg
 url : /2019/05/19/d-light-togetherthon-2019/
 featuredImage: /images/d-light-togetherthon-2019/presentation.jpg
+images :
+  - /images/d-light-togetherthon-2019/presentation.jpg
 ---
 회사일을 하다 보면 시키는 대로 혹은 팀의 목표에 부합하기 위해 어쩔 수 없이 해야 하는 일을 하게 된다. 그러한 일이 재미있고 결과물에 대한 만족도가 100% 라면 다행이지만 간혹 재미도 없고 시켜서 하는 일은 밤을 꼬박 새 가면서 완성을 해도 썩 그렇게 만족스럽지 못한 경우가 대부분인 것 같다.<!-- more --> (물론 회사일에서 자신만의 인사이트를 찾는다면 금상첨화겠지만... + 매번 회사일이 재미없고 하기 싫은건 아님)
 언제부터인지 필자도 이러한 부분에 갈증을 느끼며 회사와는 별도로 무언가를 만들어 보고 싶은 마음이 무럭무럭 생겨날 즈음 facebook 타임라인에서 개발자와 디자이너가 약 7주간 프로젝트를 진행하는 `D.light 투게더톤` 이라는 행사가 있다는 것을 발견하고 나름 정성스레 지원서를 작성 후 합격 메일을 받게 된다. ([GDG Facebook 해당 게시글](https://www.facebook.com/groups/gdgseoul/permalink/1265219273647317/))

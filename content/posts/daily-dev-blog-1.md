@@ -10,6 +10,8 @@ tags:
   - archives-2018
 url : /2018/08/05/daily-dev-blog-1/
 featuredImage: /images/daily-dev-blog-1/ddb-thumnail.png
+images :
+  - /images/daily-dev-blog-1/ddb-thumnail.png
 ---
 이번 포스팅은 약간의 자투리 시간을 활용하여 이것저것 만져보다 만들게 된 `Daily DevBlog`(기술블로그 구독서비스)에 대해 이야기 하려고 한다. <!-- more -->
 하나의 글에 관련 내용을 모두 담기에는 양이 많아서 읽는사람도 지루하고, 글을 쓰는 필자 또한 `어불성설` 할것같아 크게 3개의 시리즈로 나눠서 최대한 자세하고 현장감(?)있게 글을 써보려고 노력했다.

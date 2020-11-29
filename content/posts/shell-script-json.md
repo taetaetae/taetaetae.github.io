@@ -9,6 +9,8 @@ tags:
   - archives-2017
 url : /2017/02/28/shell-script-json/
 featuredImage: /images/shell-script-json/jq.png
+images :
+  - /images/shell-script-json/jq.png
 ---
 
 리눅스 상에서 json형태의 String 을 파싱해야하는 상황이라면 아래 라이브러리를 사용해보는것을 추천해본다.

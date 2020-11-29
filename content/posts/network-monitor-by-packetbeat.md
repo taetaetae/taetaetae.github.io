@@ -8,6 +8,8 @@ tags:
   - network
 url : /2019/09/08/network-monitor-by-packetbeat/
 featuredImage: /images/network-monitor-by-packetbeat/packetbeat_rgb.png
+images :
+  - /images/network-monitor-by-packetbeat/packetbeat_rgb.png
 ---
 
 모니터링은 서비스 로직 개발 만큼 한번씩 고민해보고 경험해 봤을 중요한 영역이라 할 수 있다. 그중 웹서버에서 제공해주는 엑세스 로그는 운영하고 있는 웹서비스에 대해 여러가지 측면에서 분석할 수 있는 가장 강력한 아이템 중에 하나라고 생각한다. <!--more -->이를 통해 사용자들이 어떤 url을 많이 호출하고, 어떤 user-agent형태를 사용하는지 알게 되면 그에 따라 서비스 전략을 변경할수도 있고 악의적으로 공격적인 요청에 대해 웹서버단에서 차단을 할 수 있기 때문이다. 

@@ -13,6 +13,8 @@ tags:
   - archives-2018
 url : /2018/06/27/apache-vs-nginx/
 featuredImage: /images/apache-vs-nginx/want_to_know_that_apache_vs_nginx.png
+images :
+  - /images/apache-vs-nginx/want_to_know_that_apache_vs_nginx.png
 ---
 웹서버는 HTTP 프로토콜을 통해 읽힐수 있는 문서를 처리를 하며 일반적으로 웹 어플리케이션의 앞단에 배치되곤 한다. 동적인 리소스는 WAS에게 처리하도록 하고 정적인 리소스를 보다 효율적으로 처리하기 위한 방법일수도 있다. 크게 Apache와 Nginx가 사용되곤 하는데 이 둘의 차이는 무엇일까?<!-- more --> 사실 필자는 사내에서 주로 Apache만 사용하다보니 Nginx는 그저 `Apache와는 다른 방식의 웹서버다` 또는 `보다 경량화 되었다` 정도로만 알고있었는데 이번기회를 통해 제대로 알고 비교를 해보면서 결국 어떤게 좋은지 알아보고자 한다.
 

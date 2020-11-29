@@ -11,6 +11,8 @@ tags:
   - archives-2020
 url : /2020/09/07/github-pullrequest-build/
 featuredImagePreview: /images/github-pullrequest-build/programmer-github-jenkins.jpg
+images :
+  - /images/github-pullrequest-build/programmer-github-jenkins.jpg
 ---
 
 　git 은 분산 버전 관리 시스템 중 가장 잘 알려져 있다고 해도 과언이 아닐 정도로 대부분의 시스템에서 사용되고 있는 것 같다. 이를 웹서비스에서 보다 편하게 사용할 수 있도록 한 시스템이 Github. <!--more -->Github 을 사용하는 이유 중에 가장 큰 이유를 하나만 이야기해보자면 바로 온라인상에서 코드 리뷰를 할 수 있는 pullRequest라는 기능 때문이 아닐까 조심스럽게 생각을 해본다.

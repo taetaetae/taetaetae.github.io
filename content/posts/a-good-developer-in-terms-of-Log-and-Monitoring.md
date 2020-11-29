@@ -9,6 +9,8 @@ tags:
   - archives-2020
 url : /2020/10/04/a-good-developer-in-terms-of-Log-and-Monitoring/
 featuredImage: /images/a-good-developer-in-terms-of-Log-and-Monitoring/logAndMonitoring-logo.jpg
+images :
+  - /images/a-good-developer-in-terms-of-Log-and-Monitoring/logAndMonitoring-logo.jpg
 ---
 
 　캐릭터를 육성하며 게임하는 경우를 생각해 보자. 더 좋은 아이템을 얻거나 퀘스트를 달성하기 위해 당신은 다양한 방법을 통해 캐릭터를 성장시킨다. 사냥을 하다 체력이 떨어지게 되면 물약을 먹고, <!--more -->캐릭터의 능력 중 부족한 부분이 있으면 훈련을 더 하거나 그에 맞는 아이템을 장착하게 된다. 이렇게 캐릭터의 '상태'를 적절한 UI를 통해 사용자에게 알려주기 때문에 '확인'이 가능하고 '대응'이 가능하게 된다.

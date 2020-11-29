@@ -11,6 +11,8 @@ tags:
   - archives-2020
 url : /2020/03/29/better-rest-template-2-netflix-hystrix/
 featuredImage: /images/better-rest-template-2-netflix-hystrix/netflix_hystrix.jpg
+images :
+  - /images/better-rest-template-2-netflix-hystrix/netflix_hystrix.jpg
 ---
 
 [지난 포스팅](/2020/03/22/better-rest-template-1-retryable/)에서는 Retryable 를 활용해서 간헐적인 네트워크 오류를 "재시도"를 함으로써 아주 간단하면서도 강력하게 해결할 수 있는 방법에 대해 알아보았다. 실제로 필자가 운영하는 서비스 에서도 Retryable 를 이용하기 전과 후를 비교해보면 간헐적인 네트워크 오류의 빈도수가 확실히 줄어든것을 확인할 수 있었다. <!--more -->

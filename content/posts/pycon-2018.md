@@ -9,6 +9,8 @@ tags:
   - archives-2018
 url : /2018/08/28/pycon-2018/
 featuredImage: /images/pycon-2018/presentation.jpg
+images :
+  - /images/pycon-2018/presentation.jpg
 
 ---
 IT관련 행사에 참여하면 여러가지 정보를 얻을수 있다. 개인적으로는 사실 정보를 얻기 위함보다 그곳의  분위기를 현장에서 몸소 느끼고 참여한 사람들의 눈빛을 보며 해이해진 마음가짐을 다시 다잡을수 있음이 가장 큰 목적이다. 그에 올해 Pycon도 하나의 전환점이 되길 바라는 마음으로 신청을 하게 되었다. 

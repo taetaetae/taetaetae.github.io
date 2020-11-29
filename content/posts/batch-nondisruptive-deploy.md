@@ -9,6 +9,8 @@ tags:
   - linux
 url : /2019/10/13/batch-nondisruptive-deploy/
 featuredImage: /images/batch-nondisruptive-deploy/wait_illustration.jpg
+images :
+  - /images/batch-nondisruptive-deploy/wait_illustration.jpg
 ---
 
 [지난 포스팅](https://taetaetae.github.io/2019/09/29/woowabros-spring-batch/), 그러니까 우아한 형제들에서 초대를 받아 Spring batch 에 대한 테크세미나에 다녀 왔다. 그 중 가장 인상깊었던 부분이 바로 `무중단 배포`. 차일피일 미루다 필자가 속한 팀에서도 배포때마다 가장 불편을 느끼고 있었던 부분이었기도 했고<!--more -->, `그런가보다` 하며 개념만 알고 넘어가기엔 무언가 양심에 찔려 직접 무중단 배포를 할 수 있도록 구성을 해보고 테스트까지 해보고자 한다.

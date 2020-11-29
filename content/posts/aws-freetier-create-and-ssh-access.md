@@ -9,6 +9,8 @@ tags:
   - putty
 url : /2019/04/14/aws-freetier-create-and-ssh-access/
 featuredImage: /images/aws-freetier-create-and-ssh-access/aws-ec2.jpg
+images :
+  - /images/aws-freetier-create-and-ssh-access/aws-ec2.jpg
 ---
 IT 쪽에 일을 하고 있거나 관심을 가지고 있는 사람이라면 한번쯤을 들어봤을 AWS(Amazon Web Services). 이름에서도 알수있는 것처럼 아마존에서 제공하는 각종 원격 컴퓨팅 웹서비스이다. <!-- more --> 아마존은 이러한 서비스를 누구나 쉽게 접근해볼수 있도록 [AWS 프리티어](https://aws.amazon.com/ko/free/)를 제공해 주는데 이 프리티어 만으로도 과금없이 (또는 최소화 하여) 웹서비스를 구성할수 있다. 필자가 운영하고 있는 [기술블로그 구독서비스](http://daily-devblog.com)또한 AWS 프리티어로 운영되고 있다. 
 최근 GDG Seoul, P-typer, Sketch Seoul 에서 주최한 [D.light 345 투게더톤](https://www.meetup.com/ko-KR/GDG-Seoul/events/259463050/)에 참가하며 사이드 프로젝트를 하고 있는데 마침 AWS를 사용하게 되었다. 예전에 사용했을때는 장님 코끼리 만지듯이 설정을 했었는데 이번기회를 통해 다시한번 정리를 해본다.
