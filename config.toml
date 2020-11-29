@@ -7,6 +7,7 @@ title = "👨‍💻꿈꾸는 태태태의 공간"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
+summaryLength=500
 
 [params]
   # LoveIt theme version
