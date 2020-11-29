@@ -144,6 +144,8 @@ jobs:
 ## 무엇이 좋아졌나?
 ﻿　우선 글 작성-배포-관리 측면에서 Github Actions으로 한 번에 자동화가 되니 훨씬 편리하였다. 그리고 글 작성할 때도 hugo의 [liveReload](https://github.com/livereload/livereload-js) 기능이 있어 내용이 변경될 때마다 (파일이 수정될 때마다) 서버에 바로 반영이 되니 작성하면서 생성되는 html 을 바로 볼 수 있다는 장점이 있었다. (hexo를 이용할 땐 글을 어느 정도 쓰고 서버 재시작, 다시 반복해야만 했다. 지금은 관련 기능이 있는진 모르겠지만...)
 
+{{< image src="/images/blog-reorganization-by-hugo/automation_build_deploy.jpg" caption="commit/push 만 하면 알아서 빌드/배포를 해준다!" width="80%" >}}
+
 　전체적인 레이아웃이 이뻐진 건 기본이고 (우상단에 동그라미를 누르면 요즘 핫한 다크 모드가 된다. ^오^) 프론트 성능도 기존 대비 수치를 따져보진 않았지만 체감상 좋아진 것 같다. 가장 중요한 이번 기술 블로그 개편의 목적인 **글을 쓰고 싶게 만드는 환경이 구축되었다는 점이다.**
 
 ## 마치며
