@@ -30,7 +30,7 @@ requests.get(rss_url, timeout=10.0)
 - 메일 발송하는 과정에서의 문제
 가끔 메일이 오지 않는다고 친절하게 필자 개인 메일로 연락이 오는 경우가 있었다. 그때마다 서버의 상태를 보면 서버에 직접 접속조차 안 될 정도로 메모리 사용량이 너무 많아서 그때마다 AWS 웹 콘솔에서 강제로 서버를 재부팅을 하곤 했었다. 예전에도 이야기한 것처럼 AWS 프리티어를 사용하고 있다 보니 서버의 메모리가 1기가밖에 되지 않아서 ... 제한된 시스템에서 서비스 운영을 할 수밖에 없는 상황이었다.
 그래서 수집/발송 상태를 로깅으로 쉽게 볼 수 있고 스케줄링을 하기 위해 띄워둔 Jenkins(tomcat)를 중단하고 crontab으로 스케줄링을 하도록 하였고, 로깅은 [별도의 파일로 로깅](https://stackoverflow.com/questions/4811738/how-to-log-cron-jobs)하도록 변경하였다. 
-```
+```markdown
 /usr/bin/python3.6 /home/~~~/email_send.py > /home/~~~/logs/job/email_send_`date +\%Y\%m\%d\%H\%M\%S`.log 2>&1
 ```
 또한 기존에는 빠르게 발송하기 위해 냅다 스레드로 돌렸는데 구독자 수가 많아지다 보니 `RuntimeError: can't start new thread` 라고 스레드를 만들 수 없다는 에러가 발생하기도 했다. 그래서 Pool을 사용하는 방식의 [multiprocessing](https://docs.python.org/3.4/library/multiprocessing.html) 을 도입하여 스레드로 발송할 때보다는 엄청나게 빠른 속도는 아닐지라도 효율적인 메모리 사용으로 2분 안에 1,000명에게 안정된 메일을 보낼 수 있게 되었다. (여담이지만 메일이 안 온다고 알려주셨던 분들께 이 자리를 빌려 감사의 인사를 전하고 싶다.)
