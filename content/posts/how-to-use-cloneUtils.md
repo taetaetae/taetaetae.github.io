@@ -7,7 +7,7 @@ tags:
   - cloneUtils
   - java deep copy
   - archives-2018
-url : /2018/08/21/how-to-use-cloneUtils/
+url : /2018/08/21/how-to-use-cloneutils/
 featuredImage: /images/how-to-use-cloneUtils/clone_java.jpg
 images :
   - /images/how-to-use-cloneUtils/clone_java.jpg

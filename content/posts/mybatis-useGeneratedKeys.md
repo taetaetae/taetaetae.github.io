@@ -6,7 +6,7 @@ tags:
   - mybatis
   - oracle
   - archives-2017
-url : /2017/04/04/mybatis-useGeneratedKeys/
+url : /2017/04/04/mybatis-use-generated-keys/
 featuredImage: /images/mybatis-useGeneratedKeys/mybatis.png
 images :
   - /images/mybatis-useGeneratedKeys/mybatis.png
