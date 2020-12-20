@@ -82,7 +82,7 @@ public class SampleController {
 | paths | ﻿이름에서도 눈치를 챌 수 있듯이 특정 path만 필터링해서 문서를 만들어 준다. |
 | useDefaultResponseMessages | ﻿기본 http 응답 코드를 사용해야 하는지를 나타내는 플래그 |
 
-﻿이외에도 security 나 공통으로 사용되는 파라미터 등 다양한 옵션을 설정할 수 있으니 가능하면 상황에 맞게 설정을 변경해 보는 것도 좋을 것 같다. 다른 설정들을 추가시켜서 좀 더 친절하게 만들어 보면 아래처럼 만들 수 있고 해당 코드는 Github에서 확인 가능하다.
+﻿이외에도 security 나 공통으로 사용되는 파라미터 등 다양한 옵션을 설정할 수 있으니 가능하면 상황에 맞게 설정을 변경해 보는 것도 좋을 것 같다. 다른 설정들을 추가시켜서 좀 더 친절하게 만들어 보면 아래처럼 만들 수 있고 해당 코드는 [Github](https://github.com/taetaetae/Swagger-In-SpringBoot)에서 확인 가능하다.
 
 {{< image src="/images/openapi-and-swagger-ui-in-spring-boot/change-config.png" caption="API 문서화는 최대한 친절하게!!" width="80%" >}}
 
