@@ -2,7 +2,7 @@
 title: 2016 회고
 date: 2016-12-31 16:59:43
 categories:
-  - blog
+  - review
 tags:
   - review
   - archives-2016
