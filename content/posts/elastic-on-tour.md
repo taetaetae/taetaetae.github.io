@@ -5,7 +5,7 @@ tags:
   - elasticsearch
   - archives-2017
 categories:
-  - blog
+  - review
 url : /2017/12/14/elastic-on-tour/
 featuredImage: /images/elastic-on-tour/ElasticStackWorkshop.jpg
 images :
