@@ -2,7 +2,7 @@
 title: 2019 상반기 리뷰 (feat. 글또)
 date: 2019-07-07 17:52:20
 categories:
-  - blog
+  - review
 tags: 
   - review
   - 글또

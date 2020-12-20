@@ -5,7 +5,7 @@ tags:
   - deview
   - archives-2018
 categories: 
-  - blog
+  - review
 url : /2018/10/14/deview-2018/
 featuredImage: /images/deview-2018/deview.png
 images :

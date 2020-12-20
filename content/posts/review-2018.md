@@ -2,7 +2,7 @@
 title: 2018 회고 - Coder가 아닌 Programmer로
 date: 2018-12-31 21:33:29
 categories:
-  - blog
+  - review
 tags: 
   - review
   - archives-2018

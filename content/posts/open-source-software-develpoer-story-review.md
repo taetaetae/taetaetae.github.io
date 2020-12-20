@@ -3,7 +3,7 @@ title: 2018 오픈소스개발자이야기 후기
 date: 2018-07-01 10:00:00
 coverImage : oss.png
 categories:
-  - blog
+  - review
 tags:
   - oss
   - open source software

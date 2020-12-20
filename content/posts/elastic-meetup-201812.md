@@ -1,7 +1,7 @@
 ---
 title: 엘라스틱서치 12월 서울 밋업 후기
 date: 2018-12-13 22:27:02
-categories: [blog]
+categories: [review]
 tags:
   - elasticsearch
   - archives-2018
