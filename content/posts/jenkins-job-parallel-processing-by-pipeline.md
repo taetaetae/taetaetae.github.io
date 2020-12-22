@@ -1,5 +1,5 @@
 ---
-title: Jenkins Job을 병렬로 실행해서 속도를 개선해보자. (feat. Pipeline)
+title: Jenkins Job을 병렬로 실행해서 속도를 개선해보자. (by. Pipeline)
 date: 2020-12-06T20:19:47+09:00
 categories:
   - tech

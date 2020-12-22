@@ -7,6 +7,7 @@ tags:
   - Swagger
   - Swagger-ui
   - OpenAPI
+  - archives-2020
 featuredImage: /images/openapi-and-swagger-ui-in-spring-boot/main.png
 images :
   - /images/openapi-and-swagger-ui-in-spring-boot/main.png
