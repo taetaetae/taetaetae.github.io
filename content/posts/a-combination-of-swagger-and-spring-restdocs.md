@@ -20,7 +20,7 @@ images :
 {{< image src="/images/a-combination-of-swagger-and-spring-restdocs/line-1.png" caption="﻿닉네임이나 프로필 사진은 그들의 개인 정보를 위해 임의로 지정하였다." width="80%" >}}
 
 　﻿필자와 함께 개발자의 인생을 시작한 멋진 친구들에게 정확히 올해 6월 초에 고민을 털어놓으며 좋은 방법이 없을지에 대한 논의를 했던 적이 있다. 그런데 친구 중 한 명이 잊고 있었던 그 이슈에 대해서 다시 꺼내며 URL 하나를 던져준다. 참 고마운 친구들. 
-> thanks to 34. [asuraiv](http://asuraiv.tistory.com/), [black9p](https://black9p.github.io/) 
+> Shout out 34. [asuraiv](http://asuraiv.tistory.com/), [black9p](https://black9p.github.io/) 
 
 {{< image src="/images/a-combination-of-swagger-and-spring-restdocs/line-2.png" caption="언 반년이 지났으나 필자도 잊고 있었던 이슈를 그는 기억하고 있었다." width="40%" >}}
 
