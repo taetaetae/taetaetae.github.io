@@ -17,6 +17,8 @@ images :
 
 ## 고민의 시작
 
+　한창 궁금증이 머릿속에서 지워지지 않았을때 [Spring 한국사용자모임 페이스북 그룹](https://www.facebook.com/groups/springkorea/permalink/2731936460251299/)에 문의도 해가며 방법을 찾아가고 있었다. 
+
 {{< image src="/images/a-combination-of-swagger-and-spring-restdocs/line-1.png" caption="﻿닉네임이나 프로필 사진은 그들의 개인 정보를 위해 임의로 지정하였다." width="80%" >}}
 
 　﻿필자와 함께 개발자의 인생을 시작한 멋진 친구들에게 정확히 올해 6월 초에 고민을 털어놓으며 좋은 방법이 없을지에 대한 논의를 했던 적이 있다. 그런데 친구 중 한 명이 잊고 있었던 그 이슈에 대해서 다시 꺼내며 URL 하나를 던져준다. 참 고마운 친구들. 
