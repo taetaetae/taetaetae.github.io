@@ -7,6 +7,7 @@ tags:
   - Swagger
   - Swagger-ui
   - OpenAPI
+  - spring-rest-docs
   - archives-2020
 featuredImage: /images/a-combination-of-swagger-and-spring-restdocs/main.jpg
 images :
