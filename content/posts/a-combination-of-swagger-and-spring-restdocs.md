@@ -17,7 +17,7 @@ images :
 
 ## 고민의 시작
 
-　한창 궁금증이 머릿속에서 지워지지 않았을때 [Spring 한국사용자모임 페이스북 그룹](https://www.facebook.com/groups/springkorea/permalink/2731936460251299/)에 문의도 해가며 방법을 찾아가고 있었다. 
+　한창 궁금증이 머릿속에서 지워지지 않았을때 [Spring 한국 스프링 사용자 모임 페이스북 그룹](https://www.facebook.com/groups/springkorea/permalink/2731936460251299/)에 문의도 해가며 방법을 찾아가고 있었다. 
 
 {{< image src="/images/a-combination-of-swagger-and-spring-restdocs/line-1.png" caption="﻿닉네임이나 프로필 사진은 그들의 개인 정보를 위해 임의로 지정하였다." width="80%" >}}
 
