@@ -29,7 +29,7 @@ $ sudo yum groupinstall development
 ```
 - yum 저장소에서는 최신 파이썬 릴리즈를 제공하지 않으므로 RPM 패키를 제공하는 IUM 이라는 추가 저장소를 설치
 ```
-$ sudo yum install https://centos6.iuscommunity.org/ius-release.rpm
+$ sudo yum install -y https://repo.ius.io/ius-release-el7.rpm
 ```
 - 파이썬 3.6 버전을 설치
 ```
