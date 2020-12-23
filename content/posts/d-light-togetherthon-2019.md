@@ -6,6 +6,7 @@ categories:
 tags:
   - hackathon
   - gdg
+  - archives-2019
 url : /2019/05/19/d-light-togetherthon-2019/
 featuredImage: /images/d-light-togetherthon-2019/presentation.jpg
 images :

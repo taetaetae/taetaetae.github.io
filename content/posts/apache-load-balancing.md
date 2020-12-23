@@ -7,6 +7,7 @@ tags:
   - apache
   - tomcat
   - Load Balance
+  - archives-2019
 url : /2019/08/04/apache-load-balancing/
 featuredImage: /images/apache-load-balancing/lb_logo.jpg
 images :

@@ -5,6 +5,7 @@ categories:
   - review
 tags: 
   - review
+  - archives-2019
 url : /2019/12/29/review-2019/
 featuredImage: /images/review-2019/think.jpg
 images :

@@ -7,6 +7,7 @@ tags:
   - aws
   - ec2
   - putty
+  - archives-2019
 url : /2019/04/14/aws-freetier-create-and-ssh-access/
 featuredImage: /images/aws-freetier-create-and-ssh-access/aws-ec2.jpg
 images :

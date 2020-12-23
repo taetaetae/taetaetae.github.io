@@ -8,6 +8,7 @@ tags:
   - logstash
   - kibana
   - filebeat
+  - archives-2019
 url : /2019/02/10/access-log-to-elastic-stack/
 featuredImage: /images/access-log-to-elastic-stack/elastic_stack.jpg
 images :

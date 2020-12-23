@@ -6,6 +6,7 @@ categories:
 tags: 
   - packetbeat
   - network
+  - archives-2019
 url : /2019/09/08/network-monitor-by-packetbeat/
 featuredImage: /images/network-monitor-by-packetbeat/packetbeat_rgb.png
 images :

@@ -7,6 +7,7 @@ tags:
   - batch
   - spring
   - jenkins
+  - archives-2019
 url : /2019/09/29/woowabros-spring-batch/
 featuredImage: /images/woowabros-spring-batch/woo.jpeg
 images :

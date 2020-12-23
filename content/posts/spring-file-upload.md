@@ -6,6 +6,7 @@ categories:
 tags: 
   - fileupload
   - spring
+  - archives-2019
 url : /2019/07/21/spring-file-upload/
 featuredImage: /images/spring-file-upload/upload.png
 images :

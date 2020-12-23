@@ -7,6 +7,7 @@ tags:
   - write
   - blog
   - write the docs
+  - archives-2019
 url : /2019/03/24/write-the-docs-seoul-2019-review/
 featuredImage: /images/write-the-docs-seoul-2019-review/sticker-wtd-colors.png
 images :

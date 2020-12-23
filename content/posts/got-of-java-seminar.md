@@ -7,6 +7,7 @@ tags:
   - java
   - performance
   - monitoring
+  - archives-2019
 url : /2019/05/12/got-of-java-seminar/
 featuredImage: /images/got-of-java-seminar/woo.jpeg
 images :

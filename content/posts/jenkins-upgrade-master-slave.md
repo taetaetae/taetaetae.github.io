@@ -5,6 +5,7 @@ categories:
   - tech
 tags: 
   - jenkins
+  - archives-2019
 url : /2019/03/17/jenkins-upgrade-master-slave/
 featuredImage: /images/jenkins-upgrade-master-slave/jenkins.jpg
 images :

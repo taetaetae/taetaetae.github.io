@@ -8,6 +8,7 @@ tags:
   - redirect
   - out of memory
   - heap dump
+  - archives-2019
 url : /2019/01/10/spring-redirect-oom/
 featuredImage: /images/spring-redirect-oom/test1-pinpoint.jpg
 images :

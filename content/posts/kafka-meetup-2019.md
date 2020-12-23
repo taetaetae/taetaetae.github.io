@@ -5,6 +5,7 @@ categories:
   - review
 tags: 
   - kafka
+  - archives-2019
 url : /2019/03/31/kafka-meetup-2019/
 featuredImage: /images/kafka-meetup-2019/kafka.jpg
 images :

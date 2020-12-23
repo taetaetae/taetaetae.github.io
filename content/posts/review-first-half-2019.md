@@ -6,6 +6,7 @@ categories:
 tags: 
   - review
   - 글또
+  - archives-2019
 url : /2019/07/07/review-first-half-2019/
 featuredImage: /images/review-first-half-2019/review.jpg
 images :

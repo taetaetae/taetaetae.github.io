@@ -7,6 +7,7 @@ tags:
   - parallel precess
   - redis
   - rabbitMQ
+  - archives-2019
 url : /2019/01/02/faster-parallel-processes/
 featuredImage: /images/faster-parallel-processes/bg.jpg
 images :

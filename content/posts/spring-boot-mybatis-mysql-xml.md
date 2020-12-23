@@ -7,6 +7,7 @@ tags:
   - spring-boot
   - mysql
   - mybatis
+  - archives-2019
 url : /2019/04/21/spring-boot-mybatis-mysql-xml/
 featuredImage: /images/spring-boot-mybatis-mysql-xml/logo.jpg
 images :

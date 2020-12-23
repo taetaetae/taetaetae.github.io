@@ -7,6 +7,7 @@ tags:
   - batch
   - jenkins
   - linux
+  - archives-2019
 url : /2019/10/13/batch-nondisruptive-deploy/
 featuredImage: /images/batch-nondisruptive-deploy/wait_illustration.jpg
 images :
