@@ -50,7 +50,7 @@ images :
 
 ﻿　이 책을 읽고 필자가 생각하는 진정한 '애자일'이란, 론 제프리즈(Ron Jeffries)의 ‘삶의 순환’ 도표에서 나와있는 익스트림 프로그래밍(XP)의 실천 방법들로 비즈니스, 팀, 기술에 적용하며 구성원 모두가 함께 하는 모든 것이라 생각한다. 그것을 실행할 수 있는 가장 큰 힘은 '데이터'.
 
-﻿{{< image src="/images/review-the-book-clean-agile/circle-of-life.png" caption="﻿이것들 중 몇 개만 해야지 하는 생각은 접어야 한다." width="80%" >}}
+﻿{{< image src="/images/review-the-book-clean-agile/circle-of-life.png" caption="﻿이것들 중 몇 개만 해야지 하는 생각은 접어야 한다.<br>출처 : [도서출판 인사이트](https://blog.insightbook.co.kr/2020/12/03/%e3%80%8a%ed%81%b4%eb%a6%b0-%ec%95%a0%ec%9e%90%ec%9d%bc-%ec%83%88%eb%a1%9c%ec%9a%b4-%ec%84%b8%eb%8c%80%eb%a5%bc-%ec%9c%84%ed%95%9c-%ec%95%a0%ec%9e%90%ec%9d%bc-%ea%b0%80%ec%b9%98%ec%99%80-%ec%8b%a4/)" width="80%" >}}
 
 ## 이 책은 누가 읽어야 할까?
 
