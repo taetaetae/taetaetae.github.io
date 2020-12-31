@@ -22,7 +22,7 @@ images :
 - [2016 회고](https://taetaetae.github.io/2016/12/31/adieu-2016/)
 
 ## 등장, 코로나-19
-{{< image src="/images/review-2020/corona19.jpg" caption="나가지 말라면 나가지 **마!** 밥 먹지 **마!** 모이지 **마!**<br>출처 : [salihgonenli](https://www.instagram.com/p/B55nDnDAHS_/)" width="50%" >}}
+{{< image src="/images/review-2020/corona19.jpg" caption="나가지 말라면 나가지 **마!** 밥 먹지 **마!** 모이지 **마!** <br>출처 : [salihgonenli](https://www.instagram.com/p/B55nDnDAHS_/)" width="50%" >}}
 
 ﻿　세상이 변했다. 작년까지만 해도 미세먼지가 심하면 마스크를 쓰고 나가곤 했지만 코로나-19라는 전염병이 전 세계에 퍼지며 이제는 마스크 없이 살 수 없는 세상이 되었다. 늘 사무실에 나가 팀 동료분들과 이야기를 하며 밥도 먹고 회의도 하며 업무를 진행했지만 재택근무를 한지 어느덧 반년이 훌쩍 지났다.
 
