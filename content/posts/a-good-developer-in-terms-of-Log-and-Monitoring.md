@@ -6,6 +6,7 @@ categories:
 tags: 
   - log
   - monitoring
+  - a-good-developer
   - archives-2020
 url : /2020/10/04/a-good-developer-in-terms-of-log-and-monitoring/
 featuredImage: /images/a-good-developer-in-terms-of-Log-and-Monitoring/logAndMonitoring-logo.jpg

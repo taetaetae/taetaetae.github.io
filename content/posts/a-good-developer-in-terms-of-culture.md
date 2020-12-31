@@ -5,6 +5,7 @@ categories:
   - essay
 tags: 
   - curtule
+  - a-good-developer
   - archives-2020
 url : /2020/06/21/a-good-developer-in-terms-of-culture/
 featuredImage: /images/a-good-developer-in-terms-of-culture/culture_logo.jpg

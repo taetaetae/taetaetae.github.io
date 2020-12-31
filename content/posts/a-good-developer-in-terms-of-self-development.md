@@ -5,6 +5,7 @@ categories:
   - essay
 tags: 
   - self-development
+  - a-good-developer
   - archives-2020
 url : /2020/06/28/a-good-developer-in-terms-of-self-development/
 featuredImage: /images/a-good-developer-in-terms-of-self-development/self-development-logo.jpg
