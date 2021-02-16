@@ -3,6 +3,13 @@ title: "Elastic Stack으로 코로나19 대시보드 만들기 - 1부 : 파이�
 date: 2021-02-15T17:50:12+09:00
 categories:
   - tech
+tags: 
+  - elasticsearch
+  - logstash
+  - kibana
+  - filebeat
+  - dashboard
+  - archives-2021
 featuredImage: /images/make-dashboards-from-elasticstack-1/logo.jpg
 images :
   - /images/make-dashboards-from-elasticstack-1/logo.jpg
@@ -175,7 +182,7 @@ input {
 
 filter {
   mutate {
-  	# 실제 데이터는 "message" 필드로 오기 때문에 csv형태의 내용을 분할하여 새로운 이름으로 필드를 추가해준다. 
+    # 실제 데이터는 "message" 필드로 오기 때문에 csv형태의 내용을 분할하여 새로운 이름으로 필드를 추가해준다. 
     split => [ "message",  "," ] 
     add_field => {
       "date" => "%{[message][0]}"
@@ -269,4 +276,4 @@ sudo ./filebeat -e -c filebeat.yml
 　﻿Kibana에서 보면 아래 화면과 같이 데이터가 잘 들어온 것을 확인할 수 있다.
 {{< image src="/images/make-dashboards-from-elasticstack-1/discover.png" width="100%" caption="Kibana > Discover" >}}
 
-　﻿csv는 하루에 한 번 업데이트가 되니 Filebeat - Lostash - Elasticsearch가 실행 중이라 가정할 때 위에서 작성한 파이썬 스크립트를 실행하게 되면 csv 기준 한 줄이 추가는 상황이니 이를 읽고 추가된 하루의 데이터가 구성한 파이프라인을 통해 Elasticsearch에 인덱싱 될 수 있다. 즉, 위에서 목표로 했던 것처럼 일회성의 대시보드가 아닌 데이터의 수급을 계속 받아 코로나19 바이러스가 종식될 때까지 사용할 수 있는 파이프라인이 구성된 것이다. 다음 편에서는 Kibana의 다양한 기능을 통해 대시보드를 만들어 볼 계획이다. (﻿하루빨리 코로나19 바이러스가 세상에서 사라지기를 바라며...)
+　﻿csv는 하루에 한 번 업데이트가 되니 Filebeat - Lostash - Elasticsearch가 실행 중이라 가정할 때 위에서 작성한 파이썬 스크립트를 실행하게 되면 csv 기준 한 줄이 추가된다. 그러면 추가된 하루의 데이터를 구성한 파이프라인을 통해 Elasticsearch에 자동으로 인덱싱 된다. 즉, 위에서 목표로 했던 것처럼 일회성의 대시보드가 아닌 데이터의 수급을 계속 받아 코로나19 바이러스가 종식될 때까지 사용할 수 있는 파이프라인이 구성된 것이다. 다음 편에서는 이렇게 구성한 데이터를 가지고 Kibana의 다양한 기능을 통해 대시보드를 만들어 볼 계획이다. (﻿하루빨리 코로나19 바이러스가 세상에서 사라지기를 바라며...)
