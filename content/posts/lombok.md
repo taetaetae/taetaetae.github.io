@@ -64,7 +64,7 @@ public class Student {
 이렇게 하는 방법도 있지만 어노테이션 설정으로 적용할수 있는 간단한 라이브러리를 소개하고자 한다.
 바로 `lombok`, 공식 홈페이지 : https://projectlombok.org
 설치 및 사용방법은 아주 간단하다. 공식 홈페이지에서 jar를 다운받고 실행, 아래처럼 이클립스 실행파일 경로를 설정해준다음에 인스톨을 누르면 된다.
-![](lombok.png)
+![](/images/lombok/lombok.png)
 maven 환경에서 dependency를 가져오기 위해서는 당연히 추가설정을 해줘야 한다.
 ```xml
 <dependency>
@@ -86,7 +86,7 @@ public class Student {
 }
 ```
 그럼 이렇게 기본적인 method들이 생성된다.
-![](lombok-annotation.png)
+![](/images/lombok/lombok-annotation.png)
 일반적으로 `@Data`를 사용하고 상황에 따라 필요한 어노테이션만 지정도 가능하다고 한다.
 - @Getter and @Setter
 - @NonNull
