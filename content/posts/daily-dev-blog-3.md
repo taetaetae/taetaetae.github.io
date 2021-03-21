@@ -3,6 +3,7 @@ title: 기술블로그 구독서비스 개발 후기 - 3부
 date: 2019-02-17 01:17:27
 categories:
   - tech
+tag:
   - archives-2019
 url : /2019/02/17/daily-dev-blog-3/
 featuredImage: /images/daily-dev-blog-3/ddb-thumnail.jpg
