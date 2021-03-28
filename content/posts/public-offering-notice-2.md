@@ -7,6 +7,7 @@ tags:
   - public-offering-notice
   - telegram
   - bitly
+  - archives-2021
 featuredImage: /images/public-offering-notice-2/logo.jpg
 images :
   - /images/public-offering-notice-2/logo.jpg
