@@ -54,7 +54,7 @@ images :
 그 다음 만든 프로젝트에서 우클릭 후 새로운 모듈을 선택. Maven 모듈을 선택하고 적당한 이름을 적어준다.
 {{< image src="/images/spring-boot-maven-multi-module/new_module.jpg" caption="다음 > 다음 > 다음 222" width="80%" >}}
 
-"API", "Batch", "Core" 라는 모듈을 추가하고 실제 모듈이 되는 "API", "Batch"에 Build plugin 을 셋팅해주자. 그렇게 하고 각 Pom.xml을 보면 아래와 같다. ("API" 모듈에 대해서만 집중적으로 이야기 하려 한다. "Batch" 모듈도 동일한 형식으로 작성하기 때문.)
+"API", "Batch", "Core" 라는 모듈을 추가하고 실제 모듈이 되는 "API", "Batch"에 `parent` 와 `dependencies` 을 설정해주자. 그렇게 하고 각 Pom.xml을 보면 아래와 같다. ("API" 모듈에 대해서만 집중적으로 이야기 하려 한다. "Batch" 모듈도 동일한 형식으로 작성하기 때문.)
 
 - 최 상위 Pom.xml (library)
 modules 하위에 멀티모듈로 설정한 모듈들의 이름이 들어가 있는것을 확인할 수 있다.
