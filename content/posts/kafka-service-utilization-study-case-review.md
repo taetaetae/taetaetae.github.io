@@ -15,7 +15,7 @@ images :
 
 　한동안 코로나로 모든 개발자 행사가 온라인으로 진행하는 등 오프라인 행사는 눈을 씻고 찾기란 하늘에 별 따기였다. 오프라인 행사에 참여하면 나름의 개발력(?)을 얻을 수 있었는데 오프라인 행사 자체를 하지 않아 괜히 기운이 빠지던 요 몇 년이었지 않았나 싶다. 그러다 [페이스북 KAFKA 한국 사용자 모임](https://www.facebook.com/groups/kafka.kru)에서 공지가 올라왔고 [세션](https://devocean.sk.com/events/view.do?id=155)들을 보아하니 하나도 알아듣지 못할(?) 엄청나게 고차원의 내용이 아닌 그럭저럭 이해할 만한 내용으로 준비되어 있었고, 무엇보다 회사와 가까워서 설레는 마음으로 신청을 하였다. 오래전에도 한번 밋업에 [참석한 적](/2019/03/31/kafka-meetup-2019/)이 있었는데 나름 진행도 매끄러웠고 좋았던 기억들뿐이라 한 치의 망설임 없이 신청하게 되었다.
 
-{{< image src="/images/kafka-service-utilization-study-case-review/ezic_bridge.jpg" caption="신입사원때 자주 오가던 다리..." width="100%" >}}
+{{< image src="/images/kafka-service-utilization-study-case-review/ezic_bridge.png" caption="신입사원때 자주 오가던 다리..." width="100%" >}}
 
 　오전 근무만 하고 판교 테크노벨리에 있는 유명한 다리인 `이직의 다리`를 건너 SKT/SKP 판교 사옥 1층으로 걸어간다. 판교에 올 일이 잘 없는 게 올 때마다 느끼는 건 정말 IT 회사가 많다는 것. 뭔가 이직을 하려고 마음을 먹지 않아도 괜히 마음이 바운스 거리는 건 기분탓 일까 싶다.
 
