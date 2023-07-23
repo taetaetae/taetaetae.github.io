@@ -25,7 +25,7 @@ summaryLength=500
   [params.home.profile]
       enable = true
       avatarURL = "/images/profile.png"
-      subtitle = "Programmer rather than coder."
+      subtitle = "Software Engineer Crazy for Growth"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
