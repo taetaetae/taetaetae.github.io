@@ -81,7 +81,7 @@ summaryLength=500
   filename = "sitemap.xml"
   priority = 1
 
-[author]
+[params.author]
   name = "태태태"
   link = "https://taetaetae.github.io/resume"
 
