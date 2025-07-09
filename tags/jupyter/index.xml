@@ -1,10 +1,74 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>jupyter - Tag - 👨‍💻꿈꾸는 태태태의 공간</title><link>https://taetaetae.github.io/tags/jupyter/</link><description>jupyter - Tag - 👨‍💻꿈꾸는 태태태의 공간</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 09 Feb 2020 20:06:15 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/jupyter/" rel="self" type="application/rss+xml"/><item><title>Jupyter 설치하고 원격접속까지 (for 파.알.못)</title><link>https://taetaetae.github.io/2020/02/09/jupyter-install/</link><pubDate>Sun, 09 Feb 2020 20:06:15 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2020/02/09/jupyter-install/</guid><description><![CDATA[파이썬이라는 언어는 다른 프로그래밍 언어들에 비해 쉽고 직관적이라 그런지 프로그래밍을 처음 시작하는 사람들에게 더욱이 주목을 받고 있는것 같다. 정말 다양한 모듈들이 많아 여러분야에서 활용되고 있고 특히 언제부터인가 핫! 해진 분야(?)라 해도 과언이 아닐정도인 &ldquo;머신러닝&rdquo; 분야에서도 다양하게 사용되고 있는것 같다.
-마침 필자가 속해 있는 팀 내에 머신러닝 스터디가 시작이 되었고, 그에 파이썬을 이용하여 스터디를 해야하는 상황. 하지만 스터디를 하는 팀원 절반 이상이 파이썬을 이용한 개발 경험이 없었고, 서로 배운것을 공유를 하면서 스터디를 하면 더 좋겠다는 생각이 들때 즈음. 언제 어디선가 봤던것이 머릿속을 스쳐 지나간다. 그건 바로 Jupyter(이하 주피터).
-출처 : https://jupyter.org/" 출처 : https://jupyter.org/  주피터는 수십 개의 프로그래밍 언어에서 대화 형 컴퓨팅을위한 오픈 소스 소프트웨어, 오픈 표준 및 서비스를 개발하기 위한 툴이라고 한다. 이 포스트를 작성하기 전까지만 해도 &ldquo;주피터 == 파이썬 웹 개발툴&rdquo; 이라고만 알고있었는데 좀더 찾아보니 다양한 언어를 지원하는것 같다.
-그럼 이러한 주피터를 특정 서버에 설치하고 로컬에 파이썬을 설치하지 않아도 원격으로 파이썬 코딩을 해보면 좀더 스터디에 도움이 되지 않을까 하는 마음이 들었다. 또한 학교에서 운동장에 잔디를 깔아서 맘껏 뛰놀수 있게 하는 느낌으로 팀원들을 위해 설치를 해두고 원격으로 접속할 수 있게 해두면 모두가 편하고 쉽게 파이썬에 대해 경험을 해볼 수 있지 않을까 하는 마음으로 주피터를 설치를 해 보고자 한다.
-본 포스팅의 목표는 다음과 같다.
- 환경 : CentOS 7.4 64Bit, python 2.7 (기본) 목표  anaconda 를 활용하여 시스템 기본 파이썬을 건드리지 않는 가상환경을 구축한다. 주피터를 설치하고 원격으로 접속할 수 있도록 설정한다.    여기까지 보면 필자가 엄청나게 파이썬에 대해 잘 아는것처럼 보일수도 있어 미리 말하지만 필자는 찐 자바 개발자이면서 파이썬 개발 수준은 기본적인 스크립트를 작성하는 정도이다. 그러니 이 포스트를 읽고 있는 필자같은 파알못(?) 분들도 충분히 설치가 가능하다. (최대한 따라할수 있을 정도의 치트키 수준으로 작성 하고자 한다.)
-아나콘다 설치 (덤으로 설치되는 주피터) 우선 아나콘다를 설치하자. 아나콘다는 Anaconda(이전: Continuum Analytics)라는 곳에서 만든 파이썬 배포판으로, 수백 개의 파이썬 패키지를 포함하고 있다고 한다. 즉, 아나콘다를 설치하고 만들어진 가상환경에서 파이썬 개발을 하면 다양한 모듈이 이미 설치되어 있기 때문에 편리하다는 이야기.
-출처 : https://www.anaconda.com/" 출처 : https://www.anaconda.com/  더불어 시스템에 기본으로 설치되어 있는 파이썬을 건드리면 여러 복잡한 문제가 발생할 수 있기에. 아나콘다를 활용하여 파이썬 3을 사용하는 가상환경을 만들어 보자. 설치는 아주 간단하다. 아나콘다 설치파일을 다운받고 이를 실행하면 끝. (user 레벨이 root 면 sudo 명령어를 생략해도 된다.)
-$ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh $ sudo bash Anaconda3-2019.10-Linux-x86_64.sh Welcome to Anaconda3 2019.10 In order to continue the installation process, please review the license agreement. Please, press ENTER to continue &gt;&gt;&gt; =================================== Anaconda End User License Agreement =================================== Copyright 2015, Anaconda, Inc. ~~~ 중략 ~~~ Do you accept the license terms? [yes|no] [no] &gt;&gt;&gt; yes # yes!! Anaconda3 will now be installed into this location: /root/anaconda3 - Press ENTER to confirm the location - Press CTRL-C to abort the installation - Or specify a different location below [/root/anaconda3] &gt;&gt;&gt; /home/anaconda3 # 설치될 경로를 설정해주고 기본 설정값에 설치하려면 그냥 엔터 ~~~뭐가 엄청 설치된다. 물 한잔 먹고 오자.~~~ installation finished. Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no] [no] &gt;&gt;&gt; yes # yes!! 이렇게 되면 설치는 끝. 환경변수를 설정해서 기본 파이썬 환경을 아나콘다에 의해 설정되도록 맞춰주자.
-sudo vi .bashrc __conda_setup=&#34;$(&#39;/home/anaconda3/bin/conda&#39; &#39;shell.bash&#39; &#39;hook&#39; 2&gt; /dev/null)&#34; if [ $? -eq 0 ]; then eval &#34;$__conda_setup&#34; else if [ -f &#34;/home/anaconda3/etc/profile.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jupyter on</title><link>https://taetaetae.github.io/tags/jupyter/</link><description>Recent content in Jupyter on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 09 Feb 2020 20:06:15 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml"/><item><title>Jupyter 설치하고 원격접속까지 (for 파.알.못)</title><link>https://taetaetae.github.io/2020/02/09/jupyter-install/</link><pubDate>Sun, 09 Feb 2020 20:06:15 +0000</pubDate><guid>https://taetaetae.github.io/2020/02/09/jupyter-install/</guid><description>&lt;p>파이썬이라는 언어는 다른 프로그래밍 언어들에 비해 쉽고 직관적이라 그런지 프로그래밍을 처음 시작하는 사람들에게 더욱이 주목을 받고 있는것 같다. 정말 다양한 모듈들이 많아 여러분야에서 활용되고 있고 &lt;!--more -->특히 언제부터인가 핫! 해진 분야(?)라 해도 과언이 아닐정도인 &amp;ldquo;머신러닝&amp;rdquo; 분야에서도 다양하게 사용되고 있는것 같다.&lt;/p>
+&lt;p>마침 필자가 속해 있는 팀 내에 머신러닝 스터디가 시작이 되었고, 그에 파이썬을 이용하여 스터디를 해야하는 상황. 하지만 스터디를 하는 팀원 절반 이상이 파이썬을 이용한 개발 경험이 없었고, 서로 배운것을 공유를 하면서 스터디를 하면 더 좋겠다는 생각이 들때 즈음. 언제 어디선가 봤던것이 머릿속을 스쳐 지나간다. 그건 바로 Jupyter(이하 주피터).&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/jupyter-install/jupyter_logo.jpg" title="/images/jupyter-install/jupyter_logo.jpg" data-thumbnail="/images/jupyter-install/jupyter_logo.jpg" data-sub-html="&lt;h2>출처 : https://jupyter.org/&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/jupyter-install/jupyter_logo.jpg"
+ data-srcset="https://taetaetae.github.io/images/jupyter-install/jupyter_logo.jpg, https://taetaetae.github.io/images/jupyter-install/jupyter_logo.jpg 1.5x, https://taetaetae.github.io/images/jupyter-install/jupyter_logo.jpg 2x"
+ data-sizes="auto"
+ alt="/images/jupyter-install/jupyter_logo.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">출처 : &lt;a href="https://jupyter.org/" target="_blank" rel="noopener noreffer ">https://jupyter.org/&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>&lt;a href="https://jupyter.org/" target="_blank" rel="noopener noreffer ">주피터&lt;/a>는 수십 개의 프로그래밍 언어에서 대화 형 컴퓨팅을위한 오픈 소스 소프트웨어, 오픈 표준 및 서비스를 개발하기 위한 툴이라고 한다. 이 포스트를 작성하기 전까지만 해도 &amp;ldquo;주피터 == 파이썬 웹 개발툴&amp;rdquo; 이라고만 알고있었는데 좀더 찾아보니 &lt;a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank" rel="noopener noreffer ">다양한 언어를 지원&lt;/a>하는것 같다.&lt;/p>
+&lt;p>그럼 이러한 주피터를 특정 서버에 설치하고 로컬에 파이썬을 설치하지 않아도 원격으로 파이썬 코딩을 해보면 좀더 스터디에 도움이 되지 않을까 하는 마음이 들었다. 또한 학교에서 운동장에 잔디를 깔아서 맘껏 뛰놀수 있게 하는 느낌으로 팀원들을 위해 설치를 해두고 원격으로 접속할 수 있게 해두면 모두가 편하고 쉽게 파이썬에 대해 경험을 해볼 수 있지 않을까 하는 마음으로 주피터를 설치를 해 보고자 한다.&lt;/p>
+&lt;p>본 포스팅의 목표는 다음과 같다.&lt;/p>
+&lt;ul>
+&lt;li>환경 : CentOS 7.4 64Bit, python 2.7 (기본)&lt;/li>
+&lt;li>목표
+&lt;ul>
+&lt;li>anaconda 를 활용하여 시스템 기본 파이썬을 건드리지 않는 가상환경을 구축한다.&lt;/li>
+&lt;li>주피터를 설치하고 원격으로 접속할 수 있도록 설정한다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>여기까지 보면 필자가 엄청나게 파이썬에 대해 잘 아는것처럼 보일수도 있어 미리 말하지만 필자는 찐 자바 개발자이면서 파이썬 개발 수준은 기본적인 스크립트를 작성하는 정도이다. 그러니 이 포스트를 읽고 있는 필자같은 파알못(?) 분들도 충분히 설치가 가능하다. (최대한 따라할수 있을 정도의 치트키 수준으로 작성 하고자 한다.)&lt;/p>
+&lt;h2 id="아나콘다-설치-덤으로-설치되는-주피터">아나콘다 설치 (덤으로 설치되는 주피터)&lt;/h2>
+&lt;p>우선 아나콘다를 설치하자. 아나콘다는 Anaconda(이전: Continuum Analytics)라는 곳에서 만든 파이썬 배포판으로, 수백 개의 파이썬 패키지를 포함하고 있다고 한다. 즉, 아나콘다를 설치하고 만들어진 가상환경에서 파이썬 개발을 하면 다양한 모듈이 이미 설치되어 있기 때문에 편리하다는 이야기.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/jupyter-install/ananconda.jpg" title="/images/jupyter-install/ananconda.jpg" data-thumbnail="/images/jupyter-install/ananconda.jpg" data-sub-html="&lt;h2>출처 : https://www.anaconda.com/&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/jupyter-install/ananconda.jpg"
+ data-srcset="https://taetaetae.github.io/images/jupyter-install/ananconda.jpg, https://taetaetae.github.io/images/jupyter-install/ananconda.jpg 1.5x, https://taetaetae.github.io/images/jupyter-install/ananconda.jpg 2x"
+ data-sizes="auto"
+ alt="/images/jupyter-install/ananconda.jpg" width="40%" />
+ &lt;/a>&lt;figcaption class="image-caption">출처 : &lt;a href="https://www.anaconda.com/" target="_blank" rel="noopener noreffer ">https://www.anaconda.com/&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>더불어 시스템에 기본으로 설치되어 있는 파이썬을 건드리면 여러 복잡한 문제가 발생할 수 있기에. 아나콘다를 활용하여 파이썬 3을 사용하는 가상환경을 만들어 보자.
+설치는 아주 간단하다. 아나콘다 설치파일을 다운받고 이를 실행하면 끝.
+(user 레벨이 root 면 sudo 명령어를 생략해도 된다.)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo bash Anaconda3-2019.10-Linux-x86_64.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Welcome to Anaconda3 2019.10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">In order to &lt;span class="k">continue&lt;/span> the installation process, please review the license
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">agreement.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Please, press ENTER to &lt;span class="k">continue&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt;&amp;gt;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">===================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Anaconda End User License &lt;span class="nv">Agreement&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">===================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Copyright 2015, Anaconda, Inc.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~~~ 중략 ~~~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Do you accept the license terms? &lt;span class="o">[&lt;/span>yes&lt;span class="p">|&lt;/span>no&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>no&lt;span class="o">]&lt;/span> &amp;gt;&amp;gt;&amp;gt; yes &lt;span class="c1"># yes!!&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Anaconda3 will now be installed into this location:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/root/anaconda3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - Press ENTER to confirm the location
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - Press CTRL-C to abort the installation
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - Or specify a different location below
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>/root/anaconda3&lt;span class="o">]&lt;/span> &amp;gt;&amp;gt;&amp;gt; /home/anaconda3 &lt;span class="c1"># 설치될 경로를 설정해주고 기본 설정값에 설치하려면 그냥 엔터&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~~~뭐가 엄청 설치된다. 물 한잔 먹고 오자.~~~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">installation finished.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Do you wish the installer to initialize Anaconda3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">by running conda init? &lt;span class="o">[&lt;/span>yes&lt;span class="p">|&lt;/span>no&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>no&lt;span class="o">]&lt;/span> &amp;gt;&amp;gt;&amp;gt; yes &lt;span class="c1"># yes!!&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>이렇게 되면 설치는 끝. 환경변수를 설정해서 기본 파이썬 환경을 아나콘다에 의해 설정되도록 맞춰주자.&lt;/p></description></item></channel></rss>

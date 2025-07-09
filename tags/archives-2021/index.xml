@@ -1,94 +1,370 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>archives-2021 - Tag - 👨‍💻꿈꾸는 태태태의 공간</title><link>https://taetaetae.github.io/tags/archives-2021/</link><description>archives-2021 - Tag - 👨‍💻꿈꾸는 태태태의 공간</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 02 Jan 2022 21:45:40 +0900</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/archives-2021/" rel="self" type="application/rss+xml"/><item><title>고장나기 직전 개발자의 2021 리뷰</title><link>https://taetaetae.github.io/posts/review-2021/</link><pubDate>Sun, 02 Jan 2022 21:45:40 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/review-2021/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/review-2021/main.jpg" referrerpolicy="no-referrer">
-            </div>미래의 시간을 계획하는 것도 중요하지만 과거의 시간을 돌아보고 더하거나 빼는 시간이 더 중요하다고 느끼는 시간인 &lsquo;회고&rsquo;. 올해도 어김없이 필자의 2021년을 돌아보며 회고 글을 쓰려 했지만 이런저런 일들로 한 해를 넘기고야 만다. 연말이 지나고 새해가 시작되었지만 무슨 일이 있어도 매년 회고는 꼭 하자는 나와의 약속을 지키려 2021년을 되돌아보고 크나큰 이벤트들의 연속이 될 것만 같은 2022년을 위해 더할 건 더하고 뺄 건 빼는 리뷰를 해보고자 한다.
-여러 가지 작은 도전들 　재택근무가 장기화되면서 시간을 좀 더 알차게 사용할 수 있었고, 그에 생각하지도 못한 다양한 경험들을 할 수 있게 되었다. 먼저 찾아보기도 하거나 필자의 블로그나 다른 경로를 통해 오히려 연락이 왔던 &lsquo;멘토링&rsquo;은 많은 것을 생각하게 해주는 경험이 되었다. BE, FE, 머신러닝, DevOps 등 분야를 막론하고 이제 막 개발자로써 취업전선에 뛰어드려 하는 예비 개발자부터 한참 개발을 시작하고 있는 이른바 주니어 개발자까지 다양한 분들을 zoom이나 gather-town 같은 온라인 플랫폼에서 만나게 되었고, 그들의 고민을 함께 이해하려 노력하며 선배 개발자로써 조금이나마 도움이 되는 부분들에 대해 이야기해주는 활동들을 해왔다.
-10년후에 만나요 :D" 10년후에 만나요 :D  　물론 필자를 완벽하게 잘 성장한 (또는 본보기의 대상이 될만한) 개발자라고 말하기는 매우 어렵지만 그들보다는 다양한 경험들을 먼저 해본 선배 입장에서 노하우나 방향성에 대해 이해하기 쉽게 최대한 풀어 설명하려 했다. 이러한 점을 누구는 대수롭지 않게 여긴 적도 있지만 누군가는 XX 기업에 취업을 했다거나 며칠간 복잡하고 힘들었던 고민이 해결이 되었다는 소리를 들었을 땐 아, 멘토링 하길 잘했다는 생각이 들게 되었고 더불어 이제는 점점 누군가와 함께 공동의 목표를 이루기 위한 위치에서 있다 보니 이런 점을 연습할 수 있는 기회가 된 것 같아 너무 좋았다. 무엇보다 멘토링을 하면서 필자도 대충 알고 있던 개발 지식에 대해 (제대로 알려주기 위해) 공부하게 되는 기회가 되었고 이런저런 상담을 하며 느낀 그들의 열정을 조금이나마 간접경험하며 얼마 전부터 잃어버린 내 열정도 찾으려는 동기부여도 되기도 하였다.
-　코로나가 장기화되고 개발자로써 할 수 있는 건 없을까 하며 Elastic Stack 을 활용하여 코로나19 대시보드 만들기라는 포스팅을 올리게 되었고 그에 힘입어 나만의 데이터 분석 플랫폼 엘라스틱서치라는 책에 베타 리딩을 하기도 하였다. 작년부터 책을 써보는 건 어떻겠냐는 요청이 아주 가끔 들어오지만 베타 리딩을 하면서 책을 출간하는 게 얼마나 어려운 건지 다시 한번 깨닫게 되었고 기회가 된다면 내 이름으로 된 책을 써보고 싶은 생각도 들었다.
-　공모주 청약을 가끔 하면서 누군가 알려주면 좋을 텐데 하는 생각으로 공모주 알리미 라는 토이 프로젝트를 만들었다. 기술 블로그 구독 서비스를 운영하고 있는 AWS ec2 서버에 메모리가 조금 남아 배치 형식으로 만들어서 텔레그램으로 정보를 알려주는 서비스인데 생각보다 수요가 많아서 깜짝 놀랐다. 보다 대중적인(?) 메신저인 카카오톡으로 운영하고 싶었지만 메시지를 보낼 때마다 비용이 발생해서 (아무리 토이 프로젝트라 해도&hellip;) 차마 엄두가 나질 않아 카카오톡 채널만 만들고 텔레그램 링크를 연결해두었다. 지금은 아예 손도 안대는 서비스이지만 잘 돌아가고 있는 걸 보면 자동화의 힘은 정말 대단하다는 걸 다시금 느껴본다. 카카오채널 가입자에게 메세지를 보낼 수 있음 좋을텐데&hellip;" 카카오채널 가입자에게 메세지를 보낼 수 있음 좋을텐데&hellip; 
-라이프 사이클의 변화 　문득 이렇게 재미있는 개발을 언제까지 할 수 있을까 하는 생각을 하게 된 적이 있다. 개발을 오랫동안 할 수 있는 방법이 무엇이 있을까 하는 생각의 끝에는 결국 &ldquo;든든한 자산&quot;과 &ldquo;생각의 패러다임 전환&rdquo;, 그리고 &ldquo;건강&quot;이라는 결론에 도달하게 되었다. 개발 업무 기기를 산다거나 신기술 학습을 위해 투자하기 위해서는 결국 돈이 필요하다고 느껴졌고, 공대생의 고립된(?) 가치관에서 다양한 인문학적인 관점들이 가미된다면 개발에도 훨씬 도움이 될 거라 생각이 들었다.]]></description></item><item><title>그런 개발자로 괜찮은가 - '취업' 편</title><link>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-employment/</link><pubDate>Sun, 24 Oct 2021 16:07:11 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-employment/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/a-good-developer-in-terms-of-employment/logo.jpg" referrerpolicy="no-referrer">
-            </div>몇 달 전부터 좋은 기회가 생겨 이제 막 개발자의 길로 들어서는 분들과 다양한 색깔들로 이야기를 나누고 있다. 과거 필자가 막 취업을 했을 때의 온도와는 확연하게 다르지만 확실하게 이야기할 수 있는 건, 이미 개발자라는 직업으로 10년 가까이 지내보니 무엇이 중요하고 어떤 것들은 자신을 갉아먹는 존재라는 게 뻔히 보인다는 점이다. 하지만 그 어느 누구도 처음 시작점에서는 당연히 힘들어할 수밖에 없는데 그 과정을 무작정 싫어만 한다거나 그 힘듦을 못 견디고 포기 또는 잘못된 선택(일단 어디라도 붙으면 무조건 가자는 식의)을 하게 되는 점이 너무 안타깝다. 만약 어떠한 &lsquo;공식&rsquo;처럼 중요한 것만 바라보고 필요 없는 것들은 하지 않는 식으로 하면 개발자라는 직업을 갖는 직장인의 삶은 과연 행복할까? 아니 그게 가능하긴 할까?
-　이런저런 과정을 거쳐서 취업에 성공했다고 가정해 보자. 과연 우리가 꿈꾸던 아름답고 멋진 개발자 라이프가 보장이 될까? (물론 사람마다 회사마다 다르지만) 야근은 밥 먹기 일쑤고 모르는 거 투성에 매번 실수하거나 혼나고 좌절의 연속. 드디어 취업했다!라는 외침이 온 데 간 데 사라지고 스트레스가 반복되어 결국 퇴사를 생각하거나 정신 차려보니 나도 모르게 CRUD (create, read, update, delete) 찍어내는 기계가 되어버리곤 한다. 무엇이 문제일까? 이런 생활을 기대하고 취업한 건 아닐 텐데 말이다.
-개발자 전성시대, 이대로 좋은가출처 : https://news.nate.com/view/20210226n37680" 개발자 전성시대, 이대로 좋은가
-출처 : https://news.nate.com/view/20210226n37680  　이번 포스팅에서는 이제 막 &lsquo;개발자&rsquo;라는 직업을 가지려는 분들이나 직장인으로서 시작은 했는데 어떠한 이유로 지친다거나 매너리즘에 빠진 분들께 조금이나마 도움이 될까 하여 필자의 생각을 정리해 보고자 한다. 왜 본인이 수많은 직업 중에 하필 &lsquo;개발자&rsquo;를 선택했는지, 그리고 취업을 하고자 할 때 생각해 봐야 할 몇 가지들에 대해 이야기해보자.
-왜 하필 &lsquo;개발자&rsquo;인가 　한국 고용정보원이 2020년 발간한 「한국 직업사전 통합본 제5판」에 따르면 2019년 12월 기준으로 우리나라 직업의 종류는 16,891개라고 한다. 산업이 발달됨에 따라 다양한 직업들이 생겨나기에 지금은 훨씬 더 많을 것으로 예상된다. 그런데, 이 수많은 직업들 중에 왜 하필 우리는 &lsquo;개발자&rsquo;라는 직업을 선택하려는 걸까? 관련 전공을 나와서? 요즘 인기 있는 직업이라서? 한 번쯤은 아니, 꼭 이런 생각을 며칠에서 몇 달 동안 깊게 고민해 봤으면 좋겠다. 왜 나는 개발자로써 살아가려 하는 것인지에 대해서 말이다.
-　이력서 혹은 자기소개서에 &lsquo;입사 포부&rsquo;라는 문항이 자주 나타난다. 그곳에는 본인이 개발자가 되어야만 하는 이유에 대해 다양한 미사여구를 붙여가며 작성하기 마련인데 그렇게 &lsquo;보여주기식&rsquo;내용 말고 정말 내가 개발이 &lsquo;재밌는지에&rsquo; 대해 반문을 해보는 과정이 필요하다. 개발을 하는 과정 속에서 나는 어느 상황에서 재미를 느끼는지. 새로운 기술을 배울 때, 몇 날 며칠 동안 삽질을 하다 해결을 했을 때, 내가 개발한 애플리케이션을 누군가 사용할 때 등등. 찾아보면 다양한 시점에서 우리는 개발을 하며 재미를 느낄 때가 있다.
-　눈치를 챘을 수도 있지만 필자가 말하고 싶은 건, 개발자라는 직업을 선택하려면 개발이 재미있어야 된다는 말이다. 반문을 해보자. 그럼 만약에 개발이 재미없다면 어떨까? 개발자로써 살아갈 수 없는 것일까? 일반화하긴 싫지만 개발이 재미가 없으면 개발자로써 살아가기에 너무 힘들 것 같다. 검정 화면에 영어로 된 글자들을 만져가며 홀로 고독하게 자신과의 싸움을 하는 시간들의 연속일 텐데 재미라도 있지 않다면, 더군다나 그게 하루의 절반 이상을 할애하는 &lsquo;직업&rsquo;이라면 오래 유지하는데 힘들지 않을까?
-그래도 오늘이 몇일인지는 알고 하자.출처 : https://bbs.ruliweb.com/community/board/300143/read/49006211" 그래도 오늘이 몇일인지는 알고 하자.
-출처 : https://bbs.ruliweb.com/community/board/300143/read/49006211  　당장 개발이 재미없어도 좋다. 태어날 때부터 개발이 재밌어서 돌잡이 때 기계식 키보드를 잡는 사람은 없듯 누구나 약간의 호기심에서 개발을 시작하기 마련인데 여기서 중요한 점은 개발의 재미를 본인만의 호흡으로 찾는 습관을 들여야 한다는 것이다. 예컨대, 필자는 회사에서 이런저런 이유로 개발이 재미 없어지거나 쳐다도 보기 싫을 상황이 생기면 무언가를 만들어 보거나(=토이 프로젝트) 모르는 부분이 생겼다면 깊게 파고 들어 어떻게든 해결하려고 노력하는 과정을 어딘가에 정리하며(=기술 블로그) 무너지지 않으려 개발의 재미를 유지하려 애써온 것 같다.]]></description></item><item><title>공모주 알리미 개발 후기 - 3부</title><link>https://taetaetae.github.io/posts/public-offering-notice-3/</link><pubDate>Sun, 04 Apr 2021 18:54:00 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/public-offering-notice-3/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/public-offering-notice-3/logo.jpg" referrerpolicy="no-referrer">
-            </div>﻿공모주 알리미라는 토이 프로젝트 개발기의 마지막 포스팅이다. 토이 프로젝트를 왜 시작하게 되었고 어떻게 설계하게 되었으며 데이터는 어떤 식으로 수집하고 그 데이터를 어떤 방법으로 사용자들에게 알림을 보내기까지 알아보았다. 이제는 이러한 일련의 &lsquo;파이프라인&rsquo;을 자동화해야 할 시간이다. 사람이 직접 수동으로 로컬 컴퓨터에서 위 파이프라인을 실행하는 것이 아니라 별도의 서버에 해당 애플리케이션이 등록되어 있고 이를 어떤 무언가에 의해 트리거링을 해주는 방식으로 말이다.﻿
- 1부 : 프로젝트 설계, 데이터 수집 2부 : 수집한 데이터 알림 발송 3부 : 서버 선정 및 릴리즈  서버 선정 　﻿1부에서 이야기했던 것처럼 heroku라는 PaaS(Platform as a service)를 사용하면 될 것 같았다. 무료 플랜으로도 설계했던 서비스 내용을 모두 소화 가능했기 때문이다. 앞서 만든 Spring Boot Application 을 heroku에 배포를 해보자.
-　heroku에서 새로운 &lsquo;App&rsquo;을 생성한다. 아래에서 보여주고 있는 화면대로 App name을 지정하고 만들기만 하면 끝. 그러면 배포 방법이 여러 가지가 나오는데 heroku에서 제공하는 CLI를 사용하는 방법, 그리고 Github 과 연동하거나, 컨테이너 레지스트리를 활용하는 방법 총 3가지가 있다. 여기서 필자는 Github을 활용해서 연동하는 방법을 소개해 보고자 한다.
-heroku 에서 app을 생성하자." heroku 에서 app을 생성하자.  　﻿로컬에서 만든 애플리케이션을 Github에 push 하면 Github Repository 가 생기고 작업 파일들이 정상적으로 업로드된 것을 확인할 수 있다. 그다음 heroku에서 만들었던 App 페이지에서 Deploy 탭을 클릭하면 아래와 같이 3가지 방법으로 Deploy를 할 수 있다고 나오고, 이 중에 &ldquo;Connect to Github&quot;을 선택하면 Github 과 연동할 수 있는 버튼이 생기고 이를 누르면 자동으로 본인의 Github 내 Repository를 등록할 수 있도록 화면이 바뀐다.
-heroku 와 github 연동" heroku 와 github 연동  　﻿그다음 위에서 Github에 push 했던 Repository 이름을 적고 검색하면 조회가 되고 &lsquo;Connect&rsquo;를 누르면 자동으로 연결이 된 것을 확인할 수 있다. 연동된 Repository 브랜치에 코드가 푸시 되면 자동으로 heroku에 배포가 되도록 자동화 설정도 가능하고 그 아래에 보면 브랜치를 선택해서 배포를 수동으로 할 수 있기도 하다. 수동으로 푸시를 눌러보면 이런저런 빌드 로그가 나오고 최종적으로 배포가 되어 {Appname}.herokuapp.com 을 접속해보면 서버에 배포가 되어있는 것을 확인할 수 있다.
- sample Github Code : taetaetae@heroku#HelloWorldController.java#L11 sample heroku app : https://taetaetae-test.herokuapp.com/  수동으로 배포를 해보자." 수동으로 배포를 해보자.  　﻿heroku에서는 이렇게 몇 번의 클릭만으로 간단하게 애플리케이션을 배포할 수 있는 기능을 제공하고 있고 서버 내 로그도 아래 화면처럼 보여주고 있기 때문에 쉽고 간단하게 서버를 구성하고 싶은 사용자들에게 매력적으로 보이는 것 같다. 단, 무료 플랜의 제한사항들을 자세히 살펴보고 사용할 것을 추천한다.
-서버 로그도 볼 수 있다!" 서버 로그도 볼 수 있다!  호출 테스트, 문제의 시작 　﻿앞서 만들었던 텔레그램 채널에는 아무도 가입을 하지 않았기에 배포한 heroku web endpoint를 호출하면 텔레그램 봇을 통해 알림이 오는 걸 테스트하고 싶었다. 그런데 아무리 호출을 해도 서버는 타임아웃이라는 에러 응답을 뱉기 일쑤였고, 로직이 문제인지 한참을 리팩토링하며 원인을 파악하는데 꽤 오랜 시간을 삽질하였다. 왜 타임아웃이 발생할까? heroku는 web에서 바로 실행할 수 있는 console 페이지를 제공하고 있었다. 그래서 &lsquo;크롤링을 하기 위한 페이지&rsquo;와 &lsquo;구글&rsquo;을 비교하기 위해 단순하게 curl 해서 가져오는 테스트를 해보니 아래처럼 확연히 결과가 달랐다. 결국은 heroku 와 크롤링 하는 서버 간의 네트워크 타임아웃이 문제였던 것.
-오류가 나고 원인을 찾는 과정이 가장 어려운 것 같다. 어플리케이션의 문제가 아닌 네트워크 자체의 문제" 오류가 나고 원인을 찾는 과정이 가장 어려운 것 같다. 어플리케이션의 문제가 아닌 네트워크 자체의 문제  그래서 어떻게 해결 했나? 　﻿heroku에서 타임아웃이 발생하는 문제를 해결하려 여러 구글링을 통해 찾아봤지만 방법을 찾을 수 없어서 결국 heroku를 사용하는 것을 포기하고 다른 방법을 찾아봐야만 했다.]]></description></item><item><title>공모주 알리미 개발 후기 - 2부</title><link>https://taetaetae.github.io/posts/public-offering-notice-2/</link><pubDate>Sun, 28 Mar 2021 11:41:33 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/public-offering-notice-2/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/public-offering-notice-2/logo.jpg" referrerpolicy="no-referrer">
-            </div>﻿혹시 이 포스트를 처음 읽는 독자라면 지난 포스팅을 읽고 오는 것을 추천한다. 정리하자면, 지난 포스트에서는 토이 프로젝트를 시작하게 된 계기와, 어떤 식으로 만들지에 대한 설계. 그리고 데이터를 수집하는 과정에 대해 이야기했었다. 지난 포스팅에서 수집한 데이터를 이제 사용자들에게 알려주는 부분에 대해 정리하고자 한다.
- 1부 : 프로젝트 설계, 데이터 수집 2부 : 수집한 데이터 알림 발송 3부 : 서버 선정 및 릴리즈  데이터 정의 　﻿java 라이브러리 중에 jsoup라는 것을 사용하여 웹사이트를 크롤링 하였고, 필요한 데이터를 파싱을 하였다. 아래는 &lsquo;공모주&rsquo;라는 자바 모델을 정의해 보았다. 이렇게 자바 &lsquo;모델&rsquo;로 정의를 하는 이유는 필요한 데이터가 무엇인지 다시 한번 정리를 하기 위함이기도 하고 map 같은 형태의 임시 변수(?)보다 더 직관적이기에 이후 코드를 작성하는데 가이드 역할의 효과도 얻을 수 있을 것 같았기 때문이다.
-public class PublicOffering { private String name; // 종목명  private LocalDate startDate; // 일정 시작일  private LocalDate endDate; // 일정 마감일  private LocalDate listingDate; // 상장일  private String publicOfferingPrice; // 확정 공모가  private String expectedOfferingPrice; // 희망 공모가  private List&lt;String&gt; Underwriter; // 주간사  private String detailUrl; // 상세URL  private String competitionRate; // 청약경쟁률 } 　﻿초기에는 위에서 정의한 모델처럼 공모주의 기본 정보만을 서비스해야겠다 생각했고, 관련 뉴스라든지 기타 추가적인 정보나 다른 분들의 요구 사항(?)들이 추가될 경우 점진적으로 설계를 하고서 확장시켜 나가는 방향으로 계획했다. 우선은 기능들이 부족하더라고 돌아가는 서비스를 만들고 싶었기에.
-애자일 방법론! 출처 : https://m.blog.naver.com/keycosmos3/221267522930" 애자일 방법론!
-출처 : https://m.blog.naver.com/keycosmos3/221267522930  텔레그램 봇/채널 생성 　﻿텔레그램 봇을 만드는 과정은 가볍게 검색을 해보면 너무나 쉽게 찾을 수 있지만, 보다 하나의 글 안에 모든 내용을 담고 싶어 텔레그램 봇을 만들고 → 텔레그램 채널을 만든 다음 → 텔레그램 봇을 이용해서 텔레그램 채널에 메시지를 보내는 걸 이야기해 보고자 한다.
- ﻿아, 여기서 왜 꼭 &lsquo;텔레그램&rsquo;을 선택했는가에 대한 이유는 개인적으로 다른 메신저 (카카오톡, 라인 등)보다도 api를 활용하여 메시지를 보내는 과정이 단순하면서도 빠르고 쉽게 느껴졌기 때문이다. 혹시 텔레그램 이 아닌 다른 메신저로 보내달라는 요청이 있을 경우 그때 가서 고민해 보려 한다.
-  텔레그램 봇 생성  　﻿먼저 텔레그램 메신저에서 &lsquo;BotFather&rsquo;라는 사용자를 찾고 &lsquo;/start&rsquo;를 누르면 아래와 같이 사용할 수 있는 명령어가 나온다.
-　﻿그다음 우리는 봇을 만들 것이기 때문에 &lsquo;/newbot&rsquo;을 누르고 봇의 이름을 작성하고 그 봇의 사용자 이름을 지정한다. &lsquo;_bot&rsquo;으로 끝나야 한다고 하기에 이름 뒤에 붙여서 만들면 그걸로 끝. 다음으로 친절하게 HTTP API를 사용할 수 있는 토큰이 발급되는데 이 토큰으로 봇을 컨트롤 가능하기 때문에 잘 간직하고(?) 있어야 한다.
-친절한 봇 아버지" 친절한 봇 아버지  　﻿이후 해당 토큰을 이용해서 봇의 상태를 확인해보자. 아래의 url에 토큰 경로만 변경하여 입력하면 json 응답을 받을 수 있다.
-https://api.telegram.org/bot{token}/getUpdates e.g. https://api.telegram.org/bot17...42:AAH...cQU/getUpdates  텔레그램 채널 생성  　﻿1:N으로 채널에 가입한 사람들에게 메시지를 일방적으로 보내야 하기 때문에 사용할 채널을 만들어 보자. 텔레그램 UI만 봐도 간단하게 생성하기 쉽게 되어있다. 더불어 이 채널에 메시지를 보내야 하기 때문에 위에서 만들었던 봇을 추가하고 관리자로 승격 시키자.
-채널 생성 &gt; 봇을 관리자로" 채널 생성 &gt; 봇을 관리자로   ﻿텔레그램 봇으로 텔레그램 채널에 메시지 보내기  　이 부분에서 약간 헤맸는데 결국 위에서 얻은 토큰과 채널의 특정 id를 알아야 메시지를 보낼 수 있다. 앞서 만들었던 채널에 아무 메시지나 작성을 하고 위에서 호출했던 &lsquo;getUpdates&rsquo; api를 다시 호출해보면 아래처럼 채널의 id를 구할 수 있게 된다.]]></description></item><item><title>공모주 알리미 개발 후기 - 1부</title><link>https://taetaetae.github.io/posts/public-offering-notice-1/</link><pubDate>Sun, 21 Mar 2021 19:13:49 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/public-offering-notice-1/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/public-offering-notice-1/logo.jpg" referrerpolicy="no-referrer">
-            </div>﻿작년부터 시작된 &lsquo;동학 개미 운동&rsquo;에 언제부터인가 필자도 주린이로써 동참을 하게 되었다. 최근에는 &lsquo;공모주 청약&rsquo;이라는 걸 알게 되었는데 따라 해보고 정신 차려보니 치킨 한 마리 정도의 수익을 얻는 기적이 일어났다. 공모주란 정해진 일자에 청약을 하고 배정을 받으면 해당 주식이 상장을 하기 전에 미리 살 수 있다는 &lsquo;기회&rsquo;로 이해했다. (주린이라 이해의 범위가 여기까지다&hellip;) 공모주 배정이 로또처럼 엄청난 큰 수익률을 가져다주는 건 아니지만 앞서 이야기 한 것처럼 언제 있을지 모르는 공모주 청약을 꼬박꼬박 챙겨서 하게 된다면 맛있는 치킨을 먹을 수 있겠다는 기대감이 부풀었다. (치킨은 역시 교촌 허니콤보&hellip;)
-주린이는 계속 자야 할까 싶다. 출처 : https://b-s-d.tistory.com/8" 주린이는 계속 자야 할까 싶다.
-출처 : https://b-s-d.tistory.com/8  　﻿치킨이 머릿속에 맴도는 시간도 잠시. 필자의 머리를 스치는 하나의 생각. 그러면 공모주 청약은 언제 하는 거지? 청약하니까 준비하라고 누가 알려주면 좋을 텐데&hellip; 그러면서 이런저런 검색을 해보니 안드로이드 앱은 이미 있었고, IOS 앱은 없었다. 음? 그럼 이걸 내가 만들어보면 어떨까?
-　﻿결론부터 말하자면, 텔레그램을 활용하여 자동화 공모주 알림봇을 만들게 되었다. 혹시 공모주에 관심이 있다면 필자가 만든 텔레그램 채널을 가입하는 것도 좋을 것 같다.﻿
-　﻿이번 글에서는 필자의 새로운 토이 프로젝트인 &lsquo;공모주 알리미&rsquo;를 만들게 된 배경과 설계, 그리고 개발부터 릴리즈까지에 대해 이야기를 해보고자 한다. 크게 아래의 목차로 이야기하게 될 것 같다.
- 1부 : 프로젝트 설계, 데이터 수집 2부 : 수집한 데이터 알림 발송 3부 : 서버 선정 및 릴리즈  　﻿자칫 너무 간단한데~, 이런 걸 굳이 왜 만들어?라는 시각이 있을 수 있겠지만 토이 프로젝트를 해야지 하고 마음을 먹었지만 막상 시작을 못하고 있는 어느 누군가에게는 도움이 될 내용인 것 같아서 꽤 자세히 정리를 하려 한다. 물론 이러한 정리는 필자 자신을 위해서가 더 크긴 하다.
-프로젝트 설계 　﻿과거에 토이 프로젝트로 진행했던 기술블로그 구독 서비스의 경험을 되새기면서 처음부터 황소처럼 달려드는 것보단 충분에 충족을 더해 충만해질 때까지 고민을 오랫동안 해보기로 했다. (그래봤자 하루 정도&hellip;?^^) ﻿ 우선 데이터를 어딘가에서 가져오고 가져온 데이터를 DB에 저장할 것인지 아니면 저장하지 않고 휘발성으로 조회후 버리는(?) 형태로 할 것인지를 고민해야 했다. 공모주라는 데이터의 특성상 한번 정해진 메타 데이터가 상황에 따라 변경이 될 수도 있다고 했기에(일정이 변경되거나 공모가가 변경되거나 등) DB에 저장을 하게 되면 이를 동기화(Sync) 하는 비용이 추가로 생길 것 같아서 알림을 보내기 직전에만 조회하고 버리는 형태를 생각했다.
-　그렇게 데이터를 조회했다면 이를 입맛에 맞게 가공하고서 사용자에게 알림을 줘야 한다. 알림을 발생시키는 방법은 매우 다양한데 뭔가 적은 비용으로 구성하고 싶었다. 즉, 알림을 받는 사용자가 10명, 100명, 1000명 이 되어도 (그렇게 될지는 모르겠지만;;) 내가 만든 서비스에서 알림 수신인이 늘어나는 경우를 고려하지 않아도 되었으면 했다. 그에 생각한 게 메신저 API. 그중에서도 텔레그램 API가 뭔가 이런 형식으로 딱일 것 같았기 때문이다. 결국 데이터를 메시지 형태에 맞춰 한 번만 발송하게 되면 1:N 형식(Broadcast)으로 텔레그램 채널을 구독하고 있는 사용자들에게 전송이 될 테니 안성맞춤이었다.
-　그럼 언제 어떤 정보를 알려주는 게 좋을까? 청약이 보통 오전에 시작하기 때문에 대략 매일 오전 9시에 관련 정보들을 보내주면 될 것 같았다. 3일 전에 청약을 시작하게 되니 미리 준비하라는 알림. 그리고 청약 날짜가 도래해서 잊지 말고 청약을 신청하라는 알림. 마지막으로 공모주가 상장을 하게 되는 알림. 이 세 가지 알림만 잘 챙긴다면 필자 같은 주린이들도 충분히 공모주 청약으로 치킨을 먹을 수 있을 거라 생각했다.
-　마지막으로 이 모든 내용을 개발한 어플리케이션을 어느 곳에 배포해야 하는지를 결정해야 했다. 항상 머릿속에는 있었지만 한 번도 안 해본 클라우드 Paas 인 heroku가 딱일 거라 생각했다.]]></description></item><item><title>그런 개발자로 괜찮은가 - '멘토링' 편</title><link>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-mentoring/</link><pubDate>Mon, 01 Mar 2021 15:12:26 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-mentoring/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/a-good-developer-in-terms-of-mentoring/logo.jpg" referrerpolicy="no-referrer">
-            </div>﻿이런저런 고생 끝에 원하는 회사에 취업을 해서 &lsquo;주니어&rsquo;라는 꼬리표를 달고 이제 막 회사 생활을 하다 보면 경험이 부족해서 실수를 하거나 기대했던 업무 퍼포먼스가 나오지 않는 경우가 종종 생긴다. 그럴 때면 &ldquo;주니어잖아~ 주니어니까 괜찮아~&rdquo; 라는 말로 어느 정도 &lsquo;이해&rsquo;를 하게 되지만. 쳇바퀴처럼 정신없이 시간이 지나 어느새 경력이 생기게 되고 이제는 약간의 실수조차 &lsquo;이해&rsquo;하기 어려운 시점이 되어버린다. 그러다 이런저런 이유로 &lsquo;개발자&rsquo;를 그만두게까지 되는 슬픈 현실은 주변을 둘러보면 어렵지 않게 찾아볼 수 있다. 그런데, 처음부터 잘 할 수는 없을까? 혹은 어렵거나 힘든 시점이 올 때면 학창 시절에 나를 이끌어 주셨던 &lsquo;선생님&rsquo;같은 존재에게 기대며 다시 일어날 수는 없는 것일까?
-　나름 괜찮은 조직의 경우 연차가 낮은 직원이 힘들어할 때면 그 직원이 적응을 하는 데 도움을 줄 수 있도록 보다 연차가 높은 &lsquo;지도선배&rsquo; 혹은 &lsquo;멘토&rsquo;를 할당해 주곤 한다. 그렇게 맺어진 관계가 잘 지속이 되면 위에서 말했던 &lsquo;힘든 시점&rsquo;에서 큰 도움이 되어 이겨낼 수 있는 힘이 생길 순 있지만 자칫 잘못되는 경우 &lsquo;멘토&rsquo;, &lsquo;멘티&rsquo; 모두에게 부담이 되거나 오히려 안 하느니만 못한 시간들이 되어버리는 멘토링.
-함께 성장하는 멘토링.출처 : https://medium.com/@ashokbalasubramanian/career-development-mentorship-844797327703" 함께 성장하는 멘토링.
-출처 : https://medium.com/@ashokbalasubramanian/career-development-mentorship-844797327703  　이번 포스팅에서는 개발자로써 &lsquo;멘토링&rsquo;에 대해 어떤 마음가짐을 가져야 할지에 대해 작성해보고자 한다. 물론 틀린 부분도 있을 수 있지만 적어도 필자가 실무 개발자로써 다양한 경험들을 해보며 &lsquo;멘토링&rsquo;에 대해 꽤 중요하다 여겨왔던 순간들이 많았고, 직접 멘티 / 멘토의 경험도 해봤기에 누군가에게는 도움이 될 것이라 조심스레 생각해 본다.
-멘토링? 어떻게 시작 하는거야? ﻿ 멘토링에 대해 이야기하기 전에 멘토링의 정의부터 이야기할 필요가 있을 것 같다. 위키백과에 따르면 풍부한 경험과 지혜를 겸비한 신뢰할 수 있는 사람이 1:1로 지도와 조언을 하는 행위라 나와있다. 더불어, 조력자의 역할을 하는 사람을 멘토(mentor)라고 하며 조력을 받는 사람을 멘티(mentee)라고 나와있다. 학창 시절로 돌아가 보면 선생님은 멘토, 학생들은 멘티의 역할이 될 수도 있을 것 같다. 하지만 회사에서 멘토, 멘티의 관계는 어떻게 맺을 수 있을까? 앞서 이야기했듯이 누군가(아마도 조직의 리더가) 멘토와 멘티 관계를 정해주는 경우가 있지만 그렇지 않은 경우엔 어떻게 해야 할까?
-　아래에서 이야기하겠지만 멘토링은 비단 도움을 &lsquo;얻게 되는&rsquo; 멘티만 좋은 것이 아니라 도움을 &lsquo;주는&rsquo; 멘토에게도 상당히 좋은 활동이라 생각한다. 하지만 단편적으로 보면 멘토보단 멘티가 힘들고 어려운 상황을 이겨내는데 더욱 &lsquo;필요&rsquo;로 하기 때문에 궁극적으로는 멘티가 멘토를 찾아 나서서 멘토링 관계를 맺어야 한다고 생각한다. 물론 천사 같은 선배가 멘토를 자처하고 멘토링을 해주겠다고 하는 상황이라면 땡큐지만 대부분의 선배들은 자기 코가 석자다 하며 바쁘기에&hellip;
-　그렇다면 멘티는 멘토를 어떻게 찾아야 할까? 함께 일하는 선배 동료가 있다면 정중하게 도움을 요청하는 것도 나쁘지 않다 본다. 단, 무작정 &ldquo;저의 멘토가 되어주세요.&ldquo;라는 것보다 자신이 가지고 있는 고민거리를 털어놓으며 조금씩 친분을 쌓아간다면 아무래도 경험이 많은 선배이기에 고민의 범위를 조금이라도 줄여줄 수 있지 않을까. 혹여 주변에 선배 동료가 없다면 온/오프라인 커뮤니티 활동을 하면서 찾는 것도 방법이다. 메신저를 통해 다가가거나 메일로 정중하게 고민을 요약해서 보내놓으면 당장은 아니더라도 가까운 시일 내에 응답이 오기 마련이다. (적어도 괜찮은 선배라면.)
-﻿　여기서 말하는 &lsquo;선배&rsquo;의 정의는 단순 나이가 많아서가 아닌 자신보다 경험이 많은 사람을 의미한다. 그렇기에 자신보다 나이가 적은 사람이 멘토가 될 수도 있다고 생각한다.
-﻿
-왜 멘토링을 해야할까? ﻿ &lsquo;경험&rsquo;이 정말 중요하고 홍수같이 쏟아지는 신기술을 온몸으로 받아내야 하는 우리 개발자들은 특히나 멘토링이 필요하다고 생각한다. 어떠한 기능을 만들어 내야 하는 상황이라 생각해 보자. 아주 일반적으로는 기능 개발에만 집중하다 보니 서비스 릴리즈시 검토해야 할 부분들을 생각하지 못하는 경우가 있다.]]></description></item><item><title>Elastic Stack으로 코로나19 대시보드 만들기 - 2부 : 대시보드</title><link>https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-2/</link><pubDate>Wed, 17 Feb 2021 16:53:49 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-2/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/make-dashboards-from-elasticstack-2/logo.jpg" referrerpolicy="no-referrer">
-            </div>지난 포스팅에서는 ﻿데이터를 수급하며 전처리 과정을 거쳤고, Filebeat와 Logstash를 거쳐 Elasticsearch에 인덱싱 하는 것까지 알아보았다. 앞선 포스팅에서 이야기했지만 단순하게 데이터를 시각화 도구를 이용해서 대시보드를 만드는 게 아니라 데이터가 추가되면 만들어둔 대시보드에 자동으로 반영되는 흐름을 만들고 싶었다. 마침 파이프라인을 이틀 전에 만들었기 때문에 그동안의 빠진 데이터를 추가해야 하는 상황이다. 이 경우 Filebeat-Logstash-Elasticsearch 가 실행 중이라면 앞서 작성했던 파이썬 스크립트만 한번 실행해 주면 이틀 치 데이터가 파이프라인을 거쳐 Elasticsearch로 인덱싱이 된다. 즉, 별도로 데이터를 가져와서 재 가공하고 추가하는 다소 까다로운 작업이 미리 만들어둔 파이프라인 덕분에 한 번의 스크립트 실행으로 손쉽게 처리가 됨을 알 수 있다.
-　이제는 쌓여있는 데이터를 가지고 시각화를 해볼 차례이다. ElasticStack에서는 Kibana라는 강력한 시각화 도구를 제공하는데 이번 포스팅에서는 Kibana를 이용해서 대시보드를 만드는 방법에 대해 알아보려 한다.
-Visualize 　﻿Elasticsearch에 인덱싱 되어있는 데이터들은 기본으로 제공되는 REST API를 통해서 조회할 수 있고 JSON 형태로 결과가 나오기 때문에 이를 가지고 다양하게 시각화를 할 수도 있다. 하지만 Kibana에서는 데이터를 조회하고 UI로 표현하는 일련의 모든 행위를 클릭 몇 번으로 할 수 있게 해주기 때문에 전문가가 아니더라도 조금만 만져보면 누구나 만들 수 있다.
-New Visualizaion!!" New Visualizaion!!  　버전업이 되면서 비쥬얼라이즈를 만드는 첫 화면 또한 변화가 생겼다. 기존에는 어떤 유형의 비쥬얼라이즈를 선택할 것인지에 대해 선택하는 화면부터 나왔는데 만드는 걸 보다 편리하게 도와주는 Lens, TSVB 같은 기능들이 먼저 반겨준다. 이 기능을 통해서 만드는 방법도 괜찮지만 보다 명시적으로 만들고 싶으니 하단에 Aggregation based을 선택해서 원하는 비쥬얼라이즈의 타입을 선택해 보자. 이후 생성되어 있는 인덱스를 선택하면 본격적으로 비쥬얼라이즈를 그릴 수 있는 화면이 나오는데 대시보드 화면 기준으로 만들어야 할 항목별로 살펴보자.
-전체 수 ." .  　﻿확진자, 사망자, 격리 해제의 총합을 표현하려 한다. 이렇게 &lsquo;숫자&rsquo;를 표현하려 하는 경우 Metric을 활용하곤 한다. 우측에서 Aggregation 방법을 &lsquo;sum&rsquo;으로 설정하고 필드는 유형별로 각각 선택해 주자. 아래 &lsquo;Add&rsquo;버튼을 눌러 확진, 사망, 격리 해제 수를 모두 표시한 다음 저장을 눌러준다. Label을 지정하지 않으면 어떤 형태로 Aggregation을 했는지를 Label 영역에 보여주는데 그게 보기 싫다면 원하는 텍스트로 지정해 주는 것도 방법이다.
-최근 수 ." .  　﻿확진자, 사망자, 격리 해제의 &lsquo;최근 데이터&rsquo;를 보여주는 게 목적이다. 이 경우 Aggregation을 Top Hit으로 선택하면 필드를 선택할 수 있게 되는데 하루의 데이터가 총 18 row이기 때문에 (서울, 부산, &hellip;, 제주, 검역) 18 row 을 전부 더한 값이 하루 기준의 합계가 된다. 여기서 정렬을 날짜 기준 내림차순으로 해줘야 가장 최근 데이터의 합계가 되는 점도 신경 써야 한다.
-각 타입별 합계 ." .  　﻿지역별로 타입별 수를 보기 위해 Pie 타입으로 선택하여 진행한다. 타입별(예로 들어 확진이면 confirmed)로 합계를 구하기 위해 Aggregation을 &lsquo;sum&rsquo;으로 설정하면 빈 원이 나오지만 각 지역별로 차트를 잘라서 봐야 하기에 하단의 Buckets의 Add를 누르고 regieon의 필드를 Terms Aggregation 한다. 18 row의 데이터가 전부 보여야 하기에 정렬 개수를 늘리고 option 탭에서 보는 취향에 알맞게 설정값들을 바꿔준다.
-타입별 추이 ." .  　﻿확진, 사망, 격리 해제 중에 사망을 제외하고 나머지 둘은 데이터의 크기가 크고 변화량이 비슷하기 때문에 x축은 시간으로 설정해두고 사망은 막대로, 나머지 둘은 라인으로 한 화면에서 표현하면 이 3가지 데이터를 한눈에 보기 좋을 것 같았다. Vertical bar 을 선택하고 x축(Buckets &gt; X-axis)은 데이터 타입인 convert_date로 설정한다. 다음으로 사망은 매일 몇 명 사망했는지 뚜렷하게 보기 위해 그냥 sum으로, 나머지 둘은 누적 합계가 더 의미 있어 보일 것 같아 Cumulative Sum으로 Aggregation을 한다.]]></description></item><item><title>Elastic Stack으로 코로나19 대시보드 만들기 - 1부 : 파이프라인 구성</title><link>https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-1/</link><pubDate>Mon, 15 Feb 2021 17:50:12 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-1/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/make-dashboards-from-elasticstack-1/logo.jpg" referrerpolicy="no-referrer">
-            </div>﻿　얼마 전에 필자의 블로그를 보고 어느 교육 기관에서 ElasticStack에 대한 강의 요청이 들어왔다. 사실 관련 기술에 대해 지식이 아주 깊고 해박한 게 아니라서 약간의 반감부터 들었지만 ElasticStack을 전혀 모르는 사람들 기준으로 어떻게 돌아가는지에 대해서만 간단하게 소개하는 정도로 하면 된다고 하여 조심스럽지만 떨리는 마음으로 열심히 준비를 하기 시작했다. 그런데, 이런저런 이유로 갑자기 강의를 할 수 없게 되었고 그간 준비했던 내용들이 너무 아쉽지만 아무 소용이 없게 되어버렸다. 그냥 중단하기엔 아쉬운 마음이 너무 커서 준비했던 내용 중에 &lsquo;데이터를 가지고 대시보드를 만드는 부분&rsquo;은 누군가에겐 도움이 될까 싶어 블로그에 정리를 해보려 한다.
- ﻿강의를 준비한 올해 1월 중순엔 Elasticsearch 버전이 7.10.2이었는데 블로그를 쓰고 있는 지금은 벌써 7.11으로 버전 업 되었다. 내가 아는 오픈소스 중에 버전업이 가장 빠른데 그렇다고 기능이 확 바뀌거나 습득하기 어렵게 바뀌진 않았다. 그만큼 사용자가 무엇을 원하는지 명확히 알고 작은 단위로 조금씩 바뀌어 가는 모습이 꽤 인상적이다.
- 　﻿작년 초부터 코로나19 바이러스가 전 세계적으로 퍼지기 시작했고 아직까지도 진행 중이다. 나도 전염되는 건 아닐까 하는 두려움에 어디에서 얼마나 발생했는지를 확인하기 어렵던 시절 우리나라의 뛰어난 개발자들은 누가 시키지도 않았는데 정말 감사하게도 그 현황을 한눈에 볼 수 있도록 여러 유형으로 코로나19 바이러스 대시보드를 만들기 시작한다. 그 덕분에 좀 더 현황을 보기에 편해졌고 더욱 조심하게 되는 계기가 되었다고 생각한다. 이제는 포털사이트나 각종 매체를 통해 손쉽게 코로나19 바이러스의 현황을 볼 수 있지만 이러한 데이터를 가지고 검색엔진이지만 대시보드를 구축하는데 훌륭한 기능을 가지고 있는 ElasticStack을 활용해서 &lsquo;나만의 대시보드&rsquo;를 만드는 걸 정리해보고자 한다. 본 포스팅의 일회성으로 데이터를 가지고 대시보드를 만드는 것에서 끝나는 게 아니라 지속적으로 데이터가 업데이트된다는 가정하에 전반적인 &ldquo;파이프라인&quot;을 구축한 뒤 대시보드를 만들어 두고 데이터만 갱신하면 자동으로 대시보드 또한 업데이트되는 것을 목적으로 한다. 전체 흐름" 전체 흐름 
- ﻿글을 모두 작성하고 보니 양이 생각보다 길어져서 데이터를 조회하고 필터링하여 Elasticsearch에 인덱싱 하는 대시보드를 만들기 위한 일종의 &ldquo;데이터 파이프라인&quot;을 구성하는 부분과 만들어진 데이터 기반으로 Kibana의 다양한 기능을 활용하여 대시보드를 만드는 2개의 포스팅으로 나누어 정리해보겠다.
- ﻿　최종적으로 만들게 될 대시보드의 모습은 다음과 같다. 최종 목표!" 최종 목표! 
-대시보드 구성 준비 　﻿예전에는 Elasticsearch, Logstash, Kibana 3가지를 가지고 ELK라 불리다 Beat라는 경량 수집기 제품이 등장하며 이 모든 걸 ElasticStack라 부르기 시작했다. (공식 홈페이지 참고) 먼저 어떤 목표와 어떤 순서로 대시보드를 구성할 것인지에 대해 정리해봐야겠다.﻿
-데이터 　﻿데이터는 공공데이터 포털에서 가져오려다 조회를 해보니 누락되는 날짜도 있었고 원하는 데이터의 품질이 생각보다 좋지 않아서 다른 곳을 찾아봐야 했다. 그러다 간결하게 정리한 데이터가 깃헙에 공개가 되어 있어서 그것을 사용하려 한다. 해당 데이터는 https://coronaboard.kr/ 에서도 사용되는 데이터라고 한다. ﻿
-데이터 전처리(preprocessing) 　﻿원하는 데이터는 위 깃헙에서 제공하는 데이터 중에 지역별 발생 현황. 해당 데이터를 살펴보면 요일별로 데이터가 &lsquo;누적&rsquo;되어 저장되어 있다. 즉, 서울지역 기준으로 2020년 2월 17일에 14명이 발생했고 2020년 2월 18일에 한 명도 발생하지 않았는데 14명으로 &lsquo;누적&rsquo;되어 저장되어 있다. 사실 이대로 해도 큰 문제는 없지만 어디까지나 별도의 가공 없이 최대한 원본 데이터(raw) 가 있어야 데이터 분석 시 다양하게 활용이 가능하기에 데이터를 분석하기 전에 전처리 과정이 필요했다. 정리하면, 집계 수가 누적되지 않고 날짜 기준으로 집계된 수만 있는 데이터를 원했다.﻿
-　﻿필자는 주로 java를 가지고 개발을 하지만 가끔 간단한 스크립트성 개발은 python을 활용하는 편이기에 다소 이쁜 코드는 아니지만 데이터를 조작하려 아래와 같은 코드를 작성하였다.
-import csv, requests import pandas as pd CSV_URL = &#39;https://raw.githubusercontent.com/jooeungen/coronaboard_kr/master/kr_regional_daily.csv&#39; # 확진, 사망, 격리해제 yesterday_data = {} yesterday_data[&#39;서울&#39;] = [0, 0, 0] yesterday_data[&#39;부산&#39;] = [0, 0, 0] yesterday_data[&#39;대구&#39;] = [0, 0, 0] yesterday_data[&#39;인천&#39;] = [0, 0, 0] yesterday_data[&#39;광주&#39;] = [0, 0, 0] yesterday_data[&#39;대전&#39;] = [0, 0, 0] yesterday_data[&#39;울산&#39;] = [0, 0, 0] yesterday_data[&#39;세종&#39;] = [0, 0, 0] yesterday_data[&#39;경기&#39;] = [0, 0, 0] yesterday_data[&#39;강원&#39;] = [0, 0, 0] yesterday_data[&#39;충북&#39;] = [0, 0, 0] yesterday_data[&#39;충남&#39;] = [0, 0, 0] yesterday_data[&#39;전북&#39;] = [0, 0, 0] yesterday_data[&#39;전남&#39;] = [0, 0, 0] yesterday_data[&#39;경북&#39;] = [0, 0, 0] yesterday_data[&#39;경남&#39;] = [0, 0, 0] yesterday_data[&#39;제주&#39;] = [0, 0, 0] yesterday_data[&#39;검역&#39;] = [0, 0, 0] flag = False csv_data = [] with requests.]]></description></item><item><title>그런 개발자로 괜찮은가 - '이력서' 편</title><link>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-resume/</link><pubDate>Sun, 31 Jan 2021 18:14:37 +0900</pubDate><author>Author</author><guid>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-resume/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/a-good-developer-in-terms-of-resume/logo.jpg" referrerpolicy="no-referrer">
-            </div>﻿ 이력서는 언제 쓰게 되는 걸까? 아주 일반적으로. 신입(학생)의 경우 대학을 졸업할 즈음 취업하고 싶은 회사로 지원하기 위해 작성하고, 경력(회사원)의 경우 이직을 마음먹고 가고자 하는 회사가 뚜렷하게 결정이 되면 그때 작성하게 되는 것 같다. 회사마다 정해진 형식이 있는 곳이라면 그 형식에 맞추어 작성하고 그렇지 않다면 나만의 기준에 맞추어 작성하게 되는 &lsquo;이력서&rsquo;.
-　회사에 입사하고 정신없이 지내다 보면 이직을 생각하기 전까지는 &lsquo;이력서&rsquo;라는 존재를 자칫 잊어버리기 쉽다. 또한 구태여 시간을 할애하면서까지 써야 한다는 마음조차 잘 들지 않는다. 실제로 텅 빈 책상 앞에 앉아 하얀 A4지와 펜 한 자루만 가지고 써봐야지 하고 시작하면 내가 이제까지 뭘 해왔나 하며 잘 써지지 않기도 하고.
-이력서에 뭘 써야 할까.출처 : https://epsem.tistory.com/243" 이력서에 뭘 써야 할까.
-출처 : https://epsem.tistory.com/243  　그런 개발자로 괜찮은가 시리즈인 ﻿이번 포스팅에서는 개발자에게 있어 &lsquo;이력서&rsquo;란 무엇이고 언제, 왜 그리고 어떻게 써야 하는지에 대해 이야기해보고자 한다. 정보의 바다, 홍수처럼 쏟아지는 기술의 변화를 IT 최전방에서 온몸으로 맞서 싸우는 우리 개발자들에게 &lsquo;회사&rsquo;보다는 &lsquo;나 자신&rsquo;을 위해 하루를 살아갈 수 있는 &lsquo;힘&rsquo;이 되었으면 하는 마음으로.
- ﻿들어가기 앞서, 본 포스팅은 이직을 권유하는 내용은 절대 아님을 밝힌다. 오히려 이력서 작성을 통해 현재의 직장에서 본인에게 더욱 집중하고 회사와 함께 성장했으면 하는 바람이다.
- 개발자에게 이력서란? 　우선 이력서란 무엇일까? 사전적 의미를 먼저 살펴보자. 위키백과에 따르면 &ldquo;취직을 위한 면접의 기회를 얻기 위해 회사 등 조직에 제출하는 개인의 신상정보, 학력, 경력 등을 시간 순으로 요약 혹은 나열한 문서&quot;라 나와있다. 여기에 추가로 우리 개발자들은 본인이 사용할 수 있는 &lsquo;기술&rsquo;이나 특정한 &lsquo;경험&rsquo;을 적으며 자신이 가지고 있는 기술적 가치에 대해 어필하는 경우가 대부분이다.
-　사전적 의미로 보면 &lsquo;내 정보&rsquo;를 잘 요약해서 취업하고자 하는 &lsquo;회사&rsquo;에 전달하는 수단으로도 이해할 수도 있을 것 같다. 즉, 누군가에게 본인을 정보(혹은 실력)를 정리해서 알리는 수단 중에 하나로 볼 수 있는데, 과연 이 이력서에는 &lsquo;알린다&rsquo;라는 의미만 담겨있을까?
-　필자가 생각하는 이력서의 정의는 &lsquo;나를 알리는 수단&rsquo; 보다 &lsquo;나를 가장 잘 아는 거울&rsquo;이라 생각한다. 특히 개발자에게는 더욱더. 무엇을 개발해왔고 어떤 기술을 써 왔으며 어떤 경험이 있는지 어느 곳에 작성을 하지 않으면 더듬더듬 기억으로 나 자신을 알기엔 요즘은 봐야 할 정보가 많은 세상이 되어버렸기 때문이다.
-왜 써야 할까? 　앞서 이력서를 &lsquo;나를 가장 잘 아는 거울&rsquo;이라고 말했다. 거울을 보고 얼굴에 뭐가 묻었으면 닦거나 옷차림이 별로라면 고쳐보는 등 &lsquo;거울&rsquo;은 나를 가장 잘 볼 수 있는 도구 중에 가장 좋은 물건이라 생각한다. 그런 의미에서 이력서는 단순하게 &lsquo;Java 개발 N 연차&rsquo; 가 아닌 그동안 무엇을 해왔고 어떤 경험과 기술을 사용해 왔는지 정리를 하며 나 자신을 돌아볼 수 있는 훌륭한 도구라 생각한다.
-　개발자 생활(정확히 말하면 회사 생활)을 하다 보면 개인 사업을 제외하고 회사가 추구하는 비즈니스의 목표를 위해 자의적이 아닌 타의적으로 임무를 할당받아 진행하는 경우가 대부분이다. 그러다 보면 소위 말하는 &lsquo;찍어내기식 개발&rsquo;을 하는 경우도 많고, 문제를 만날 경우 다양한 삽질로 해결은 하지만 제대로 이해하지 못한 채 일정에 치여 넘어가는 경우들도 있다. 그렇게 시간이 지나고 연말이 되어 한 해를 돌아보면 업무를 일정에 맞추어 진행하는 데는 성공하였지만 정작 본인에게 남은 건 장시간 컴퓨터 앞에 앉아 생긴 거북목과 점점 짙어져가는 다크서클뿐이다.
-왜 되지?출처 : https://www.clien.net/service/board/park/4533074" 왜 되지?
-출처 : https://www.clien.net/service/board/park/4533074  ﻿　이력서를 써야 하는 이유를 크게 두 가지로 꼽자면, 첫 번째로는 나를 알리는 수단(Personal branding)으로 활용할 수 있다는 점에서다. 잘 정리한 자신의 이력서를 공개해놓으면 취업의 기회가 생길 수도 있고 인적 네트워킹이 되어 생각하지 못한 &lsquo;기회&rsquo;를 얻을 수도 있기 때문이다.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Archives-2021 on</title><link>https://taetaetae.github.io/tags/archives-2021/</link><description>Recent content in Archives-2021 on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 02 Jan 2022 21:45:40 +0900</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/archives-2021/index.xml" rel="self" type="application/rss+xml"/><item><title>고장나기 직전 개발자의 2021 리뷰</title><link>https://taetaetae.github.io/posts/review-2021/</link><pubDate>Sun, 02 Jan 2022 21:45:40 +0900</pubDate><guid>https://taetaetae.github.io/posts/review-2021/</guid><description>&lt;p>　미래의 시간을 계획하는 것도 중요하지만 과거의 시간을 돌아보고 더하거나 빼는 시간이 더 중요하다고 느끼는 시간인 &amp;lsquo;회고&amp;rsquo;. 올해도 어김없이 필자의 2021년을 돌아보며 회고 글을 쓰려 했지만 이런저런 일들로 한 해를 넘기고야 만다. 연말이 지나고 새해가 시작되었지만 무슨 일이 있어도 매년 회고는 꼭 하자는 나와의 약속을 지키려 2021년을 되돌아보고 크나큰 이벤트들의 연속이 될 것만 같은 2022년을 위해 더할 건 더하고 뺄 건 빼는 리뷰를 해보고자 한다.&lt;/p>
+&lt;h2 id="여러-가지-작은-도전들">여러 가지 작은 도전들&lt;/h2>
+&lt;p>　재택근무가 장기화되면서 시간을 좀 더 알차게 사용할 수 있었고, 그에 생각하지도 못한 다양한 경험들을 할 수 있게 되었다. 먼저 찾아보기도 하거나 필자의 블로그나 다른 경로를 통해 오히려 연락이 왔던 &amp;lsquo;멘토링&amp;rsquo;은 많은 것을 생각하게 해주는 경험이 되었다. BE, FE, 머신러닝, DevOps 등 분야를 막론하고 이제 막 개발자로써 취업전선에 뛰어드려 하는 예비 개발자부터 한참 개발을 시작하고 있는 이른바 주니어 개발자까지 다양한 분들을 zoom이나 gather-town 같은 온라인 플랫폼에서 만나게 되었고, 그들의 고민을 함께 이해하려 노력하며 선배 개발자로써 조금이나마 도움이 되는 부분들에 대해 이야기해주는 활동들을 해왔다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/review-2021/tyler.jpg" title="/images/review-2021/tyler.jpg" data-thumbnail="/images/review-2021/tyler.jpg" data-sub-html="&lt;h2>10년후에 만나요 :D&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/review-2021/tyler.jpg"
+ data-srcset="https://taetaetae.github.io/images/review-2021/tyler.jpg, https://taetaetae.github.io/images/review-2021/tyler.jpg 1.5x, https://taetaetae.github.io/images/review-2021/tyler.jpg 2x"
+ data-sizes="auto"
+ alt="/images/review-2021/tyler.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">10년후에 만나요 :D&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　물론 필자를 완벽하게 잘 성장한 (또는 본보기의 대상이 될만한) 개발자라고 말하기는 매우 어렵지만 그들보다는 다양한 경험들을 먼저 해본 선배 입장에서 노하우나 방향성에 대해 이해하기 쉽게 최대한 풀어 설명하려 했다. 이러한 점을 누구는 대수롭지 않게 여긴 적도 있지만 누군가는 XX 기업에 취업을 했다거나 며칠간 복잡하고 힘들었던 고민이 해결이 되었다는 소리를 들었을 땐 아, 멘토링 하길 잘했다는 생각이 들게 되었고 더불어 이제는 점점 누군가와 함께 공동의 목표를 이루기 위한 위치에서 있다 보니 이런 점을 연습할 수 있는 기회가 된 것 같아 너무 좋았다. 무엇보다 멘토링을 하면서 필자도 대충 알고 있던 개발 지식에 대해 (제대로 알려주기 위해) 공부하게 되는 기회가 되었고 이런저런 상담을 하며 느낀 그들의 열정을 조금이나마 간접경험하며 얼마 전부터 잃어버린 내 열정도 찾으려는 동기부여도 되기도 하였다.&lt;/p>
+&lt;p>　코로나가 장기화되고 개발자로써 할 수 있는 건 없을까 하며 Elastic Stack 을 활용하여 코로나19 대시보드 만들기라는 포스팅을 올리게 되었고 그에 힘입어 &lt;a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9791165920500" target="_blank" rel="noopener noreffer ">나만의 데이터 분석 플랫폼 엘라스틱서치&lt;/a>라는 책에 베타 리딩을 하기도 하였다. 작년부터 책을 써보는 건 어떻겠냐는 요청이 아주 가끔 들어오지만 베타 리딩을 하면서 책을 출간하는 게 얼마나 어려운 건지 다시 한번 깨닫게 되었고 기회가 된다면 내 이름으로 된 책을 써보고 싶은 생각도 들었다.&lt;/p>
+&lt;p>　공모주 청약을 가끔 하면서 누군가 알려주면 좋을 텐데 하는 생각으로 &lt;a href="https://hilarious-pearl-833.notion.site/89148aa1197646fa8465d844400e9f5f" target="_blank" rel="noopener noreffer ">공모주 알리미&lt;/a> 라는 토이 프로젝트를 만들었다. 기술 블로그 구독 서비스를 운영하고 있는 AWS ec2 서버에 메모리가 조금 남아 배치 형식으로 만들어서 텔레그램으로 정보를 알려주는 서비스인데 생각보다 수요가 많아서 깜짝 놀랐다. 보다 대중적인(?) 메신저인 카카오톡으로 운영하고 싶었지만 메시지를 보낼 때마다 비용이 발생해서 (아무리 토이 프로젝트라 해도&amp;hellip;) 차마 엄두가 나질 않아 카카오톡 채널만 만들고 텔레그램 링크를 연결해두었다. 지금은 아예 손도 안대는 서비스이지만 잘 돌아가고 있는 걸 보면 자동화의 힘은 정말 대단하다는 걸 다시금 느껴본다.
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/review-2021/kakao.jpg" title="/images/review-2021/kakao.jpg" data-thumbnail="/images/review-2021/kakao.jpg" data-sub-html="&lt;h2>카카오채널 가입자에게 메세지를 보낼 수 있음 좋을텐데&amp;hellip;&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/review-2021/kakao.jpg"
+ data-srcset="https://taetaetae.github.io/images/review-2021/kakao.jpg, https://taetaetae.github.io/images/review-2021/kakao.jpg 1.5x, https://taetaetae.github.io/images/review-2021/kakao.jpg 2x"
+ data-sizes="auto"
+ alt="/images/review-2021/kakao.jpg" width="100%" />
+ &lt;/a>&lt;figcaption class="image-caption">카카오채널 가입자에게 메세지를 보낼 수 있음 좋을텐데&amp;hellip;&lt;/figcaption>
+ &lt;/figure>&lt;/p>
+&lt;h2 id="라이프-사이클의-변화">라이프 사이클의 변화&lt;/h2>
+&lt;p>　문득 이렇게 재미있는 개발을 언제까지 할 수 있을까 하는 생각을 하게 된 적이 있다. 개발을 오랫동안 할 수 있는 방법이 무엇이 있을까 하는 생각의 끝에는 결국 &amp;ldquo;든든한 자산&amp;quot;과 &amp;ldquo;생각의 패러다임 전환&amp;rdquo;, 그리고 &amp;ldquo;건강&amp;quot;이라는 결론에 도달하게 되었다. 개발 업무 기기를 산다거나 신기술 학습을 위해 투자하기 위해서는 결국 돈이 필요하다고 느껴졌고, 공대생의 고립된(?) 가치관에서 다양한 인문학적인 관점들이 가미된다면 개발에도 훨씬 도움이 될 거라 생각이 들었다. 마지막으로 하루의 절반 이상을 의자에 앉아 컴퓨터만 바라보는 불쌍한 개발자의 삶이기에 건강관리는 빠져서는 안 될 중요한 부분이라 하루 시간 계획을 다시 정비했어야 했다. 마치 시간표대로 움직였던 학창 시절처럼.&lt;/p></description></item><item><title>그런 개발자로 괜찮은가 - '취업' 편</title><link>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-employment/</link><pubDate>Sun, 24 Oct 2021 16:07:11 +0900</pubDate><guid>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-employment/</guid><description>&lt;p>　몇 달 전부터 좋은 기회가 생겨 이제 막 개발자의 길로 들어서는 분들과 다양한 색깔들로 이야기를 나누고 있다. 과거 필자가 막 취업을 했을 때의 온도와는 확연하게 다르지만 확실하게 이야기할 수 있는 건, 이미 개발자라는 직업으로 10년 가까이 지내보니 무엇이 중요하고 어떤 것들은 자신을 갉아먹는 존재라는 게 뻔히 보인다는 점이다. 하지만 그 어느 누구도 처음 시작점에서는 당연히 힘들어할 수밖에 없는데 그 과정을 무작정 싫어만 한다거나 그 힘듦을 못 견디고 포기 또는 잘못된 선택(일단 어디라도 붙으면 무조건 가자는 식의)을 하게 되는 점이 너무 안타깝다. 만약 어떠한 &amp;lsquo;공식&amp;rsquo;처럼 중요한 것만 바라보고 필요 없는 것들은 하지 않는 식으로 하면 개발자라는 직업을 갖는 직장인의 삶은 과연 행복할까? 아니 그게 가능하긴 할까?&lt;/p>
+&lt;p>　이런저런 과정을 거쳐서 취업에 성공했다고 가정해 보자. 과연 우리가 꿈꾸던 아름답고 멋진 개발자 라이프가 보장이 될까? (물론 사람마다 회사마다 다르지만) 야근은 밥 먹기 일쑤고 모르는 거 투성에 매번 실수하거나 혼나고 좌절의 연속. 드디어 취업했다!라는 외침이 온 데 간 데 사라지고 스트레스가 반복되어 결국 퇴사를 생각하거나 정신 차려보니 나도 모르게 CRUD (create, read, update, delete) 찍어내는 기계가 되어버리곤 한다. 무엇이 문제일까? 이런 생활을 기대하고 취업한 건 아닐 텐데 말이다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/news.jpg" title="/images/a-good-developer-in-terms-of-employment/news.jpg" data-thumbnail="/images/a-good-developer-in-terms-of-employment/news.jpg" data-sub-html="&lt;h2>개발자 전성시대, 이대로 좋은가출처 : https://news.nate.com/view/20210226n37680&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/news.jpg"
+ data-srcset="https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/news.jpg, https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/news.jpg 1.5x, https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/news.jpg 2x"
+ data-sizes="auto"
+ alt="/images/a-good-developer-in-terms-of-employment/news.jpg" width="100%" />
+ &lt;/a>&lt;figcaption class="image-caption">개발자 전성시대, 이대로 좋은가&lt;br>출처 : &lt;a href="https://news.nate.com/view/20210226n37680" target="_blank" rel="noopener noreffer ">https://news.nate.com/view/20210226n37680&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　이번 포스팅에서는 이제 막 &amp;lsquo;개발자&amp;rsquo;라는 직업을 가지려는 분들이나 직장인으로서 시작은 했는데 어떠한 이유로 지친다거나 매너리즘에 빠진 분들께 조금이나마 도움이 될까 하여 필자의 생각을 정리해 보고자 한다. 왜 본인이 수많은 직업 중에 하필 &amp;lsquo;개발자&amp;rsquo;를 선택했는지, 그리고 취업을 하고자 할 때 생각해 봐야 할 몇 가지들에 대해 이야기해보자.&lt;/p>
+&lt;h2 id="왜-하필-개발자인가">왜 하필 &amp;lsquo;개발자&amp;rsquo;인가&lt;/h2>
+&lt;p>　한국 고용정보원이 2020년 발간한 「한국 직업사전 통합본 제5판」에 따르면 2019년 12월 기준으로 우리나라 직업의 종류는 16,891개라고 한다. 산업이 발달됨에 따라 다양한 직업들이 생겨나기에 지금은 훨씬 더 많을 것으로 예상된다. 그런데, 이 수많은 직업들 중에 왜 하필 우리는 &amp;lsquo;개발자&amp;rsquo;라는 직업을 선택하려는 걸까? 관련 전공을 나와서? 요즘 인기 있는 직업이라서? 한 번쯤은 아니, 꼭 이런 생각을 며칠에서 몇 달 동안 깊게 고민해 봤으면 좋겠다. 왜 나는 개발자로써 살아가려 하는 것인지에 대해서 말이다.&lt;/p>
+&lt;p>　이력서 혹은 자기소개서에 &amp;lsquo;입사 포부&amp;rsquo;라는 문항이 자주 나타난다. 그곳에는 본인이 개발자가 되어야만 하는 이유에 대해 다양한 미사여구를 붙여가며 작성하기 마련인데 그렇게 &amp;lsquo;보여주기식&amp;rsquo;내용 말고 정말 내가 개발이 &amp;lsquo;재밌는지에&amp;rsquo; 대해 반문을 해보는 과정이 필요하다. 개발을 하는 과정 속에서 나는 어느 상황에서 재미를 느끼는지. 새로운 기술을 배울 때, 몇 날 며칠 동안 삽질을 하다 해결을 했을 때, 내가 개발한 애플리케이션을 누군가 사용할 때 등등. 찾아보면 다양한 시점에서 우리는 개발을 하며 재미를 느낄 때가 있다.&lt;/p>
+&lt;p>　눈치를 챘을 수도 있지만 필자가 말하고 싶은 건, 개발자라는 직업을 선택하려면 개발이 재미있어야 된다는 말이다. 반문을 해보자. 그럼 만약에 개발이 재미없다면 어떨까? 개발자로써 살아갈 수 없는 것일까? 일반화하긴 싫지만 개발이 재미가 없으면 개발자로써 살아가기에 너무 힘들 것 같다. 검정 화면에 영어로 된 글자들을 만져가며 홀로 고독하게 자신과의 싸움을 하는 시간들의 연속일 텐데 재미라도 있지 않다면, 더군다나 그게 하루의 절반 이상을 할애하는 &amp;lsquo;직업&amp;rsquo;이라면 오래 유지하는데 힘들지 않을까?&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/ebs.jpeg" title="/images/a-good-developer-in-terms-of-employment/ebs.jpeg" data-thumbnail="/images/a-good-developer-in-terms-of-employment/ebs.jpeg" data-sub-html="&lt;h2>그래도 오늘이 몇일인지는 알고 하자.출처 : https://bbs.ruliweb.com/community/board/300143/read/49006211&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/ebs.jpeg"
+ data-srcset="https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/ebs.jpeg, https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/ebs.jpeg 1.5x, https://taetaetae.github.io/images/a-good-developer-in-terms-of-employment/ebs.jpeg 2x"
+ data-sizes="auto"
+ alt="/images/a-good-developer-in-terms-of-employment/ebs.jpeg" width="100%" />
+ &lt;/a>&lt;figcaption class="image-caption">그래도 오늘이 몇일인지는 알고 하자.&lt;br>출처 : &lt;a href="https://bbs.ruliweb.com/community/board/300143/read/49006211" target="_blank" rel="noopener noreffer ">https://bbs.ruliweb.com/community/board/300143/read/49006211&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　당장 개발이 재미없어도 좋다. 태어날 때부터 개발이 재밌어서 돌잡이 때 기계식 키보드를 잡는 사람은 없듯 누구나 약간의 호기심에서 개발을 시작하기 마련인데 여기서 중요한 점은 개발의 재미를 본인만의 호흡으로 찾는 습관을 들여야 한다는 것이다. 예컨대, 필자는 회사에서 이런저런 이유로 개발이 재미 없어지거나 쳐다도 보기 싫을 상황이 생기면 무언가를 만들어 보거나&lt;code>(=토이 프로젝트)&lt;/code> 모르는 부분이 생겼다면 깊게 파고 들어 어떻게든 해결하려고 노력하는 과정을 어딘가에 정리하며&lt;code>(=기술 블로그)&lt;/code> 무너지지 않으려 개발의 재미를 유지하려 애써온 것 같다. 이 글을 읽고 있는 당신은 어떤 상황에서 개발의 재미를 느끼는가. 본인만의 호흡을 찾아서 개발이 재미있도록 습관을 길러보는 건 어떨까.&lt;/p></description></item><item><title>공모주 알리미 개발 후기 - 3부</title><link>https://taetaetae.github.io/posts/public-offering-notice-3/</link><pubDate>Sun, 04 Apr 2021 18:54:00 +0900</pubDate><guid>https://taetaetae.github.io/posts/public-offering-notice-3/</guid><description>&lt;p>　﻿&lt;a href="https://t.me/PublicOfferingNotice" target="_blank" rel="noopener noreffer ">공모주 알리미&lt;/a>라는 토이 프로젝트 개발기의 마지막 포스팅이다. 토이 프로젝트를 왜 시작하게 되었고 어떻게 설계하게 되었으며 데이터는 어떤 식으로 수집하고 그 데이터를 어떤 방법으로 사용자들에게 알림을 보내기까지 알아보았다. 이제는 이러한 일련의 &amp;lsquo;파이프라인&amp;rsquo;을 자동화해야 할 시간이다. 사람이 직접 수동으로 로컬 컴퓨터에서 위 파이프라인을 실행하는 것이 아니라 별도의 서버에 해당 애플리케이션이 등록되어 있고 이를 어떤 무언가에 의해 트리거링을 해주는 방식으로 말이다.﻿&lt;/p>
+&lt;ul>
+&lt;li>1부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-1" rel="">프로젝트 설계, 데이터 수집&lt;/a>&lt;/li>
+&lt;li>2부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-2" rel="">수집한 데이터 알림 발송&lt;/a>&lt;/li>
+&lt;li>3부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-3" rel="">서버 선정 및 릴리즈&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="서버-선정">서버 선정&lt;/h2>
+&lt;p>　﻿1부에서 이야기했던 것처럼 &lt;a href="https://www.heroku.com" target="_blank" rel="noopener noreffer ">heroku&lt;/a>라는 PaaS(Platform as a service)를 사용하면 될 것 같았다. 무료 플랜으로도 설계했던 서비스 내용을 모두 소화 가능했기 때문이다. 앞서 만든 Spring Boot Application 을 heroku에 배포를 해보자.&lt;/p>
+&lt;p>　heroku에서 새로운 &amp;lsquo;App&amp;rsquo;을 생성한다. 아래에서 보여주고 있는 화면대로 App name을 지정하고 만들기만 하면 끝. 그러면 배포 방법이 여러 가지가 나오는데 heroku에서 제공하는 CLI를 사용하는 방법, 그리고 Github 과 연동하거나, 컨테이너 레지스트리를 활용하는 방법 총 3가지가 있다. 여기서 필자는 Github을 활용해서 연동하는 방법을 소개해 보고자 한다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-3/1.jpg" title="/images/public-offering-notice-3/1.jpg" data-thumbnail="/images/public-offering-notice-3/1.jpg" data-sub-html="&lt;h2>heroku 에서 app을 생성하자.&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-3/1.jpg"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-3/1.jpg, https://taetaetae.github.io/images/public-offering-notice-3/1.jpg 1.5x, https://taetaetae.github.io/images/public-offering-notice-3/1.jpg 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-3/1.jpg" />
+ &lt;/a>&lt;figcaption class="image-caption">heroku 에서 app을 생성하자.&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿로컬에서 만든 애플리케이션을 Github에 push 하면 Github Repository 가 생기고 작업 파일들이 정상적으로 업로드된 것을 확인할 수 있다. 그다음 heroku에서 만들었던 App 페이지에서 Deploy 탭을 클릭하면 아래와 같이 3가지 방법으로 Deploy를 할 수 있다고 나오고, 이 중에 &amp;ldquo;Connect to Github&amp;quot;을 선택하면 Github 과 연동할 수 있는 버튼이 생기고 이를 누르면 자동으로 본인의 Github 내 Repository를 등록할 수 있도록 화면이 바뀐다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-3/2.jpg" title="/images/public-offering-notice-3/2.jpg" data-thumbnail="/images/public-offering-notice-3/2.jpg" data-sub-html="&lt;h2>heroku 와 github 연동&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-3/2.jpg"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-3/2.jpg, https://taetaetae.github.io/images/public-offering-notice-3/2.jpg 1.5x, https://taetaetae.github.io/images/public-offering-notice-3/2.jpg 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-3/2.jpg" />
+ &lt;/a>&lt;figcaption class="image-caption">heroku 와 github 연동&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿그다음 위에서 Github에 push 했던 Repository 이름을 적고 검색하면 조회가 되고 &amp;lsquo;Connect&amp;rsquo;를 누르면 자동으로 연결이 된 것을 확인할 수 있다. 연동된 Repository 브랜치에 코드가 푸시 되면 자동으로 heroku에 배포가 되도록 자동화 설정도 가능하고 그 아래에 보면 브랜치를 선택해서 배포를 수동으로 할 수 있기도 하다. 수동으로 푸시를 눌러보면 이런저런 빌드 로그가 나오고 최종적으로 배포가 되어 &lt;code>{Appname}.herokuapp.com&lt;/code> 을 접속해보면 서버에 배포가 되어있는 것을 확인할 수 있다.&lt;/p>
+&lt;ul>
+&lt;li>sample Github Code : &lt;a href="https://github.com/taetaetae/heroku/blob/master/src/main/java/com/taetaetae/helloworld/heroku/HelloWorldController.java#L11" target="_blank" rel="noopener noreffer ">taetaetae@heroku#HelloWorldController.java#L11&lt;/a>&lt;/li>
+&lt;li>sample heroku app : &lt;a href="https://taetaetae-test.herokuapp.com/" target="_blank" rel="noopener noreffer ">https://taetaetae-test.herokuapp.com/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-3/3.jpg" title="/images/public-offering-notice-3/3.jpg" data-thumbnail="/images/public-offering-notice-3/3.jpg" data-sub-html="&lt;h2>수동으로 배포를 해보자.&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-3/3.jpg"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-3/3.jpg, https://taetaetae.github.io/images/public-offering-notice-3/3.jpg 1.5x, https://taetaetae.github.io/images/public-offering-notice-3/3.jpg 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-3/3.jpg" />
+ &lt;/a>&lt;figcaption class="image-caption">수동으로 배포를 해보자.&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿heroku에서는 이렇게 몇 번의 클릭만으로 간단하게 애플리케이션을 배포할 수 있는 기능을 제공하고 있고 서버 내 로그도 아래 화면처럼 보여주고 있기 때문에 쉽고 간단하게 서버를 구성하고 싶은 사용자들에게 매력적으로 보이는 것 같다. 단, 무료 플랜의 제한사항들을 자세히 살펴보고 사용할 것을 추천한다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-3/4.jpg" title="/images/public-offering-notice-3/4.jpg" data-thumbnail="/images/public-offering-notice-3/4.jpg" data-sub-html="&lt;h2>서버 로그도 볼 수 있다!&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-3/4.jpg"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-3/4.jpg, https://taetaetae.github.io/images/public-offering-notice-3/4.jpg 1.5x, https://taetaetae.github.io/images/public-offering-notice-3/4.jpg 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-3/4.jpg" />
+ &lt;/a>&lt;figcaption class="image-caption">서버 로그도 볼 수 있다!&lt;/figcaption>
+ &lt;/figure>
+&lt;h2 id="호출-테스트-문제의-시작">호출 테스트, 문제의 시작&lt;/h2>
+&lt;p>　﻿앞서 만들었던 텔레그램 채널에는 아무도 가입을 하지 않았기에 배포한 heroku web endpoint를 호출하면 텔레그램 봇을 통해 알림이 오는 걸 테스트하고 싶었다. 그런데 아무리 호출을 해도 서버는 타임아웃이라는 에러 응답을 뱉기 일쑤였고, 로직이 문제인지 한참을 리팩토링하며 원인을 파악하는데 꽤 오랜 시간을 삽질하였다. 왜 타임아웃이 발생할까? heroku는 web에서 바로 실행할 수 있는 console 페이지를 제공하고 있었다. 그래서 &amp;lsquo;크롤링을 하기 위한 페이지&amp;rsquo;와 &amp;lsquo;구글&amp;rsquo;을 비교하기 위해 단순하게 curl 해서 가져오는 테스트를 해보니 아래처럼 확연히 결과가 달랐다. 결국은 heroku 와 크롤링 하는 서버 간의 네트워크 타임아웃이 문제였던 것.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-3/5.jpg" title="/images/public-offering-notice-3/5.jpg" data-thumbnail="/images/public-offering-notice-3/5.jpg" data-sub-html="&lt;h2>오류가 나고 원인을 찾는 과정이 가장 어려운 것 같다. 어플리케이션의 문제가 아닌 네트워크 자체의 문제&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-3/5.jpg"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-3/5.jpg, https://taetaetae.github.io/images/public-offering-notice-3/5.jpg 1.5x, https://taetaetae.github.io/images/public-offering-notice-3/5.jpg 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-3/5.jpg" />
+ &lt;/a>&lt;figcaption class="image-caption">오류가 나고 원인을 찾는 과정이 가장 어려운 것 같다. 어플리케이션의 문제가 아닌 네트워크 자체의 문제&lt;/figcaption>
+ &lt;/figure>
+&lt;h2 id="그래서-어떻게-해결-했나">그래서 어떻게 해결 했나?&lt;/h2>
+&lt;p>　﻿heroku에서 타임아웃이 발생하는 문제를 해결하려 여러 구글링을 통해 찾아봤지만 방법을 찾을 수 없어서 결국 heroku를 사용하는 것을 포기하고 다른 방법을 찾아봐야만 했다. 앞서 이야기했지만 토이 프로젝트를 무료로 운영하고 싶었기 때문에 이런저런 방법을 찾다 보니 AWS 와 비슷하게 Google에서도 GCP라는 서비스를 알게 되었다. 이곳에서도 1년 동안은 무료이지만 이후 AWS처럼 과금이 드는 문제가 아쉬워서 좀 더 찾아보니 아주 작은 서버에 특정 조건을 맞춘다면 평생 무료로 사용이 가능하다는 걸 알게 되었고 이를 사용하기로 마음먹는다. (참고 사이트 : &lt;a href="https://nhj12311.tistory.com/317" target="_blank" rel="noopener noreffer ">https://nhj12311.tistory.com/317&lt;/a>)﻿&lt;/p></description></item><item><title>공모주 알리미 개발 후기 - 2부</title><link>https://taetaetae.github.io/posts/public-offering-notice-2/</link><pubDate>Sun, 28 Mar 2021 11:41:33 +0900</pubDate><guid>https://taetaetae.github.io/posts/public-offering-notice-2/</guid><description>&lt;p>　﻿혹시 이 포스트를 처음 읽는 독자라면 &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-1" rel="">지난 포스팅&lt;/a>을 읽고 오는 것을 추천한다. 정리하자면, 지난 포스트에서는 &lt;a href="https://t.me/PublicOfferingNotice" target="_blank" rel="noopener noreffer ">토이 프로젝트&lt;/a>를 시작하게 된 계기와, 어떤 식으로 만들지에 대한 설계. 그리고 데이터를 수집하는 과정에 대해 이야기했었다. 지난 포스팅에서 수집한 데이터를 이제 사용자들에게 알려주는 부분에 대해 정리하고자 한다.&lt;/p>
+&lt;ul>
+&lt;li>1부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-1" rel="">프로젝트 설계, 데이터 수집&lt;/a>&lt;/li>
+&lt;li>2부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-2" rel="">수집한 데이터 알림 발송&lt;/a>&lt;/li>
+&lt;li>3부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-3" rel="">서버 선정 및 릴리즈&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="데이터-정의">데이터 정의&lt;/h2>
+&lt;p>　﻿java 라이브러리 중에 jsoup라는 것을 사용하여 웹사이트를 크롤링 하였고, 필요한 데이터를 파싱을 하였다. 아래는 &amp;lsquo;공모주&amp;rsquo;라는 자바 모델을 정의해 보았다. 이렇게 자바 &amp;lsquo;모델&amp;rsquo;로 정의를 하는 이유는 필요한 데이터가 무엇인지 다시 한번 정리를 하기 위함이기도 하고 map 같은 형태의 임시 변수(?)보다 더 직관적이기에 이후 코드를 작성하는데 가이드 역할의 효과도 얻을 수 있을 것 같았기 때문이다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">PublicOffering&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 종목명&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">LocalDate&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">startDate&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 일정 시작일&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">LocalDate&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">endDate&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 일정 마감일&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">LocalDate&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">listingDate&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 상장일&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">publicOfferingPrice&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 확정 공모가&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">expectedOfferingPrice&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 희망 공모가&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Underwriter&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 주간사&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">detailUrl&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 상세URL&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">competitionRate&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 청약경쟁률&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>　﻿초기에는 위에서 정의한 모델처럼 공모주의 기본 정보만을 서비스해야겠다 생각했고, 관련 뉴스라든지 기타 추가적인 정보나 다른 분들의 요구 사항(?)들이 추가될 경우 점진적으로 설계를 하고서 확장시켜 나가는 방향으로 계획했다. 우선은 기능들이 부족하더라고 돌아가는 서비스를 만들고 싶었기에.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-2/agile.png" title="/images/public-offering-notice-2/agile.png" data-thumbnail="/images/public-offering-notice-2/agile.png" data-sub-html="&lt;h2>애자일 방법론! 출처 : https://m.blog.naver.com/keycosmos3/221267522930&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-2/agile.png"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-2/agile.png, https://taetaetae.github.io/images/public-offering-notice-2/agile.png 1.5x, https://taetaetae.github.io/images/public-offering-notice-2/agile.png 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-2/agile.png" />
+ &lt;/a>&lt;figcaption class="image-caption">애자일 방법론!&lt;br> 출처 : &lt;a href="https://m.blog.naver.com/keycosmos3/221267522930" target="_blank" rel="noopener noreffer ">https://m.blog.naver.com/keycosmos3/221267522930&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;h2 id="텔레그램-봇채널-생성">텔레그램 봇/채널 생성&lt;/h2>
+&lt;p>　﻿텔레그램 봇을 만드는 과정은 가볍게 검색을 해보면 너무나 쉽게 찾을 수 있지만, 보다 하나의 글 안에 모든 내용을 담고 싶어 텔레그램 봇을 만들고 → 텔레그램 채널을 만든 다음 → 텔레그램 봇을 이용해서 텔레그램 채널에 메시지를 보내는 걸 이야기해 보고자 한다.&lt;/p>
+&lt;blockquote>
+&lt;p>﻿아, 여기서 왜 꼭 &amp;lsquo;텔레그램&amp;rsquo;을 선택했는가에 대한 이유는 개인적으로 다른 메신저 (카카오톡, 라인 등)보다도 api를 활용하여 메시지를 보내는 과정이 단순하면서도 빠르고 쉽게 느껴졌기 때문이다. 혹시 텔레그램 이 아닌 다른 메신저로 보내달라는 요청이 있을 경우 그때 가서 고민해 보려 한다.&lt;/p>&lt;/blockquote>
+&lt;ul>
+&lt;li>텔레그램 봇 생성&lt;/li>
+&lt;/ul>
+&lt;p>　﻿먼저 텔레그램 메신저에서 &amp;lsquo;BotFather&amp;rsquo;라는 사용자를 찾고 &amp;lsquo;/start&amp;rsquo;를 누르면 아래와 같이 사용할 수 있는 명령어가 나온다.&lt;/p>
+&lt;p>　﻿그다음 우리는 봇을 만들 것이기 때문에 &amp;lsquo;/newbot&amp;rsquo;을 누르고 봇의 이름을 작성하고 그 봇의 사용자 이름을 지정한다. &amp;lsquo;_bot&amp;rsquo;으로 끝나야 한다고 하기에 이름 뒤에 붙여서 만들면 그걸로 끝. 다음으로 친절하게 HTTP API를 사용할 수 있는 토큰이 발급되는데 이 토큰으로 봇을 컨트롤 가능하기 때문에 잘 간직하고(?) 있어야 한다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-2/newbot.jpg" title="/images/public-offering-notice-2/newbot.jpg" data-thumbnail="/images/public-offering-notice-2/newbot.jpg" data-sub-html="&lt;h2>친절한 봇 아버지&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-2/newbot.jpg"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-2/newbot.jpg, https://taetaetae.github.io/images/public-offering-notice-2/newbot.jpg 1.5x, https://taetaetae.github.io/images/public-offering-notice-2/newbot.jpg 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-2/newbot.jpg" width="70%" />
+ &lt;/a>&lt;figcaption class="image-caption">친절한 봇 아버지&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿이후 해당 토큰을 이용해서 봇의 상태를 확인해보자. 아래의 url에 토큰 경로만 변경하여 입력하면 json 응답을 받을 수 있다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">https://api.telegram.org/bot{token}/getUpdates
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e.g. https://api.telegram.org/bot17...42:AAH...cQU/getUpdates
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>텔레그램 채널 생성&lt;/li>
+&lt;/ul>
+&lt;p>　﻿1:N으로 채널에 가입한 사람들에게 메시지를 일방적으로 보내야 하기 때문에 사용할 채널을 만들어 보자. 텔레그램 UI만 봐도 간단하게 생성하기 쉽게 되어있다. 더불어 이 채널에 메시지를 보내야 하기 때문에 위에서 만들었던 봇을 추가하고 관리자로 승격 시키자.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-2/newchannel.jpg" title="/images/public-offering-notice-2/newchannel.jpg" data-thumbnail="/images/public-offering-notice-2/newchannel.jpg" data-sub-html="&lt;h2>채널 생성 &amp;gt; 봇을 관리자로&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-2/newchannel.jpg"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-2/newchannel.jpg, https://taetaetae.github.io/images/public-offering-notice-2/newchannel.jpg 1.5x, https://taetaetae.github.io/images/public-offering-notice-2/newchannel.jpg 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-2/newchannel.jpg" width="70%" />
+ &lt;/a>&lt;figcaption class="image-caption">채널 생성 &amp;gt; 봇을 관리자로&lt;/figcaption>
+ &lt;/figure>
+&lt;ul>
+&lt;li>﻿텔레그램 봇으로 텔레그램 채널에 메시지 보내기&lt;/li>
+&lt;/ul>
+&lt;p>　이 부분에서 약간 헤맸는데 결국 위에서 얻은 토큰과 채널의 특정 id를 알아야 메시지를 보낼 수 있다. 앞서 만들었던 채널에 아무 메시지나 작성을 하고 위에서 호출했던 &amp;lsquo;getUpdates&amp;rsquo; api를 다시 호출해보면 아래처럼 채널의 id를 구할 수 있게 된다.&lt;/p></description></item><item><title>공모주 알리미 개발 후기 - 1부</title><link>https://taetaetae.github.io/posts/public-offering-notice-1/</link><pubDate>Sun, 21 Mar 2021 19:13:49 +0900</pubDate><guid>https://taetaetae.github.io/posts/public-offering-notice-1/</guid><description>&lt;p>　﻿작년부터 시작된 &amp;lsquo;동학 개미 운동&amp;rsquo;에 언제부터인가 필자도 주린이로써 동참을 하게 되었다. 최근에는 &amp;lsquo;공모주 청약&amp;rsquo;이라는 걸 알게 되었는데 따라 해보고 정신 차려보니 치킨 한 마리 정도의 수익을 얻는 기적이 일어났다. 공모주란 정해진 일자에 청약을 하고 배정을 받으면 해당 주식이 상장을 하기 전에 미리 살 수 있다는 &amp;lsquo;기회&amp;rsquo;로 이해했다. (주린이라 이해의 범위가 여기까지다&amp;hellip;) 공모주 배정이 로또처럼 엄청난 큰 수익률을 가져다주는 건 아니지만 앞서 이야기 한 것처럼 언제 있을지 모르는 공모주 청약을 꼬박꼬박 챙겨서 하게 된다면 맛있는 치킨을 먹을 수 있겠다는 기대감이 부풀었다. (치킨은 역시 교촌 허니콤보&amp;hellip;)&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/public-offering-notice-1/stock.jpg" title="/images/public-offering-notice-1/stock.jpg" data-thumbnail="/images/public-offering-notice-1/stock.jpg" data-sub-html="&lt;h2>주린이는 계속 자야 할까 싶다. 출처 : https://b-s-d.tistory.com/8&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/public-offering-notice-1/stock.jpg"
+ data-srcset="https://taetaetae.github.io/images/public-offering-notice-1/stock.jpg, https://taetaetae.github.io/images/public-offering-notice-1/stock.jpg 1.5x, https://taetaetae.github.io/images/public-offering-notice-1/stock.jpg 2x"
+ data-sizes="auto"
+ alt="/images/public-offering-notice-1/stock.jpg" width="50%" />
+ &lt;/a>&lt;figcaption class="image-caption">주린이는 계속 자야 할까 싶다.&lt;br> 출처 : &lt;a href="https://b-s-d.tistory.com/8" target="_blank" rel="noopener noreffer ">https://b-s-d.tistory.com/8&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿치킨이 머릿속에 맴도는 시간도 잠시. 필자의 머리를 스치는 하나의 생각. 그러면 공모주 청약은 언제 하는 거지? 청약하니까 준비하라고 누가 알려주면 좋을 텐데&amp;hellip; 그러면서 이런저런 검색을 해보니 안드로이드 앱은 이미 있었고, IOS 앱은 없었다. 음? 그럼 이걸 내가 만들어보면 어떨까?&lt;/p>
+&lt;p>　﻿결론부터 말하자면, 텔레그램을 활용하여 자동화 공모주 알림봇을 만들게 되었다. 혹시 공모주에 관심이 있다면 필자가 만든 &lt;a href="https://t.me/PublicOfferingNotice" target="_blank" rel="noopener noreffer ">텔레그램 채널&lt;/a>을 가입하는 것도 좋을 것 같다.﻿&lt;/p>
+&lt;p>　﻿이번 글에서는 필자의 새로운 토이 프로젝트인 &amp;lsquo;공모주 알리미&amp;rsquo;를 만들게 된 배경과 설계, 그리고 개발부터 릴리즈까지에 대해 이야기를 해보고자 한다. 크게 아래의 목차로 이야기하게 될 것 같다.&lt;/p>
+&lt;ul>
+&lt;li>1부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-1" rel="">프로젝트 설계, 데이터 수집&lt;/a>&lt;/li>
+&lt;li>2부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-2" rel="">수집한 데이터 알림 발송&lt;/a>&lt;/li>
+&lt;li>3부 : &lt;a href="https://taetaetae.github.io/posts/public-offering-notice-3" rel="">서버 선정 및 릴리즈&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>　﻿자칫 너무 간단한데~, 이런 걸 굳이 왜 만들어?라는 시각이 있을 수 있겠지만 토이 프로젝트를 해야지 하고 마음을 먹었지만 막상 시작을 못하고 있는 어느 누군가에게는 도움이 될 내용인 것 같아서 꽤 자세히 정리를 하려 한다. 물론 이러한 정리는 필자 자신을 위해서가 더 크긴 하다.&lt;/p>
+&lt;h2 id="프로젝트-설계">프로젝트 설계&lt;/h2>
+&lt;p>　﻿과거에 토이 프로젝트로 진행했던 &lt;a href="http://daily-devblog.com/" target="_blank" rel="noopener noreffer ">기술블로그 구독 서비스&lt;/a>의 경험을 되새기면서 처음부터 황소처럼 달려드는 것보단 충분에 충족을 더해 충만해질 때까지 고민을 오랫동안 해보기로 했다. (그래봤자 하루 정도&amp;hellip;?^^)
+　﻿
+우선 데이터를 어딘가에서 가져오고 가져온 데이터를 DB에 저장할 것인지 아니면 저장하지 않고 휘발성으로 조회후 버리는(?) 형태로 할 것인지를 고민해야 했다. 공모주라는 데이터의 특성상 한번 정해진 메타 데이터가 상황에 따라 변경이 될 수도 있다고 했기에(일정이 변경되거나 공모가가 변경되거나 등) DB에 저장을 하게 되면 이를 동기화(Sync) 하는 비용이 추가로 생길 것 같아서 알림을 보내기 직전에만 조회하고 버리는 형태를 생각했다.&lt;/p>
+&lt;p>　그렇게 데이터를 조회했다면 이를 입맛에 맞게 가공하고서 사용자에게 알림을 줘야 한다. 알림을 발생시키는 방법은 매우 다양한데 뭔가 적은 비용으로 구성하고 싶었다. 즉, 알림을 받는 사용자가 10명, 100명, 1000명 이 되어도 (그렇게 될지는 모르겠지만;;) 내가 만든 서비스에서 알림 수신인이 늘어나는 경우를 고려하지 않아도 되었으면 했다. 그에 생각한 게 메신저 API. 그중에서도 텔레그램 API가 뭔가 이런 형식으로 딱일 것 같았기 때문이다. 결국 데이터를 메시지 형태에 맞춰 한 번만 발송하게 되면 1:N 형식(Broadcast)으로 텔레그램 채널을 구독하고 있는 사용자들에게 전송이 될 테니 안성맞춤이었다.&lt;/p>
+&lt;p>　그럼 언제 어떤 정보를 알려주는 게 좋을까? 청약이 보통 오전에 시작하기 때문에 대략 매일 오전 9시에 관련 정보들을 보내주면 될 것 같았다. 3일 전에 청약을 시작하게 되니 미리 준비하라는 알림. 그리고 청약 날짜가 도래해서 잊지 말고 청약을 신청하라는 알림. 마지막으로 공모주가 상장을 하게 되는 알림. 이 세 가지 알림만 잘 챙긴다면 필자 같은 주린이들도 충분히 공모주 청약으로 치킨을 먹을 수 있을 거라 생각했다.&lt;/p>
+&lt;p>　마지막으로 이 모든 내용을 개발한 어플리케이션을 어느 곳에 배포해야 하는지를 결정해야 했다. 항상 머릿속에는 있었지만 한 번도 안 해본 클라우드 Paas 인 &lt;a href="https://dashboard.heroku.com/" target="_blank" rel="noopener noreffer ">heroku&lt;/a>가 딱일 거라 생각했다. (실제로 해보지 않았던 지금까지는 그랬다&amp;hellip;) 다들 토이 프로젝트 서버로 잘 활용한다는 소리를 들었고 가장 큰 장점은 &amp;lsquo;무료&amp;rsquo;라는 점에서 heroku를 선택하지 않을 수 없었다.&lt;/p></description></item><item><title>그런 개발자로 괜찮은가 - '멘토링' 편</title><link>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-mentoring/</link><pubDate>Mon, 01 Mar 2021 15:12:26 +0900</pubDate><guid>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-mentoring/</guid><description>&lt;p>　﻿이런저런 고생 끝에 원하는 회사에 취업을 해서 &amp;lsquo;주니어&amp;rsquo;라는 꼬리표를 달고 이제 막 회사 생활을 하다 보면 경험이 부족해서 실수를 하거나 기대했던 업무 퍼포먼스가 나오지 않는 경우가 종종 생긴다. 그럴 때면 &amp;ldquo;주니어잖아~ 주니어니까 괜찮아~&amp;rdquo; 라는 말로 어느 정도 &amp;lsquo;이해&amp;rsquo;를 하게 되지만. 쳇바퀴처럼 정신없이 시간이 지나 어느새 경력이 생기게 되고 이제는 약간의 실수조차 &amp;lsquo;이해&amp;rsquo;하기 어려운 시점이 되어버린다. 그러다 이런저런 이유로 &amp;lsquo;개발자&amp;rsquo;를 그만두게까지 되는 슬픈 현실은 주변을 둘러보면 어렵지 않게 찾아볼 수 있다. 그런데, 처음부터 잘 할 수는 없을까? 혹은 어렵거나 힘든 시점이 올 때면 학창 시절에 나를 이끌어 주셨던 &amp;lsquo;선생님&amp;rsquo;같은 존재에게 기대며 다시 일어날 수는 없는 것일까?&lt;/p>
+&lt;p>　나름 괜찮은 조직의 경우 연차가 낮은 직원이 힘들어할 때면 그 직원이 적응을 하는 데 도움을 줄 수 있도록 보다 연차가 높은 &amp;lsquo;지도선배&amp;rsquo; 혹은 &amp;lsquo;멘토&amp;rsquo;를 할당해 주곤 한다. 그렇게 맺어진 관계가 잘 지속이 되면 위에서 말했던 &amp;lsquo;힘든 시점&amp;rsquo;에서 큰 도움이 되어 이겨낼 수 있는 힘이 생길 순 있지만 자칫 잘못되는 경우 &amp;lsquo;멘토&amp;rsquo;, &amp;lsquo;멘티&amp;rsquo; 모두에게 부담이 되거나 오히려 안 하느니만 못한 시간들이 되어버리는 멘토링.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/a-good-developer-in-terms-of-mentoring/mentorship.jpeg" title="/images/a-good-developer-in-terms-of-mentoring/mentorship.jpeg" data-thumbnail="/images/a-good-developer-in-terms-of-mentoring/mentorship.jpeg" data-sub-html="&lt;h2>함께 성장하는 멘토링.출처 : https://medium.com/@ashokbalasubramanian/career-development-mentorship-844797327703&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/a-good-developer-in-terms-of-mentoring/mentorship.jpeg"
+ data-srcset="https://taetaetae.github.io/images/a-good-developer-in-terms-of-mentoring/mentorship.jpeg, https://taetaetae.github.io/images/a-good-developer-in-terms-of-mentoring/mentorship.jpeg 1.5x, https://taetaetae.github.io/images/a-good-developer-in-terms-of-mentoring/mentorship.jpeg 2x"
+ data-sizes="auto"
+ alt="/images/a-good-developer-in-terms-of-mentoring/mentorship.jpeg" />
+ &lt;/a>&lt;figcaption class="image-caption">함께 성장하는 멘토링.&lt;br>출처 : &lt;a href="https://medium.com/@ashokbalasubramanian/career-development-mentorship-844797327703" target="_blank" rel="noopener noreffer ">https://medium.com/@ashokbalasubramanian/career-development-mentorship-844797327703&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　이번 포스팅에서는 개발자로써 &amp;lsquo;멘토링&amp;rsquo;에 대해 어떤 마음가짐을 가져야 할지에 대해 작성해보고자 한다. 물론 틀린 부분도 있을 수 있지만 적어도 필자가 실무 개발자로써 다양한 경험들을 해보며 &amp;lsquo;멘토링&amp;rsquo;에 대해 꽤 중요하다 여겨왔던 순간들이 많았고, 직접 멘티 / 멘토의 경험도 해봤기에 누군가에게는 도움이 될 것이라 조심스레 생각해 본다.&lt;/p>
+&lt;h2 id="멘토링-어떻게-시작-하는거야">멘토링? 어떻게 시작 하는거야?&lt;/h2>
+&lt;p>﻿
+　멘토링에 대해 이야기하기 전에 멘토링의 정의부터 이야기할 필요가 있을 것 같다. &lt;a href="https://ko.wikipedia.org/wiki/%EB%A9%98%ED%86%A0%EB%A7%81" target="_blank" rel="noopener noreffer ">위키백과&lt;/a>에 따르면 풍부한 경험과 지혜를 겸비한 신뢰할 수 있는 사람이 1:1로 지도와 조언을 하는 행위라 나와있다. 더불어, 조력자의 역할을 하는 사람을 멘토(mentor)라고 하며 조력을 받는 사람을 멘티(mentee)라고 나와있다. 학창 시절로 돌아가 보면 선생님은 멘토, 학생들은 멘티의 역할이 될 수도 있을 것 같다. 하지만 회사에서 멘토, 멘티의 관계는 어떻게 맺을 수 있을까? 앞서 이야기했듯이 누군가(아마도 조직의 리더가) 멘토와 멘티 관계를 정해주는 경우가 있지만 그렇지 않은 경우엔 어떻게 해야 할까?&lt;/p>
+&lt;p>　아래에서 이야기하겠지만 멘토링은 비단 도움을 &amp;lsquo;얻게 되는&amp;rsquo; 멘티만 좋은 것이 아니라 도움을 &amp;lsquo;주는&amp;rsquo; 멘토에게도 상당히 좋은 활동이라 생각한다. 하지만 단편적으로 보면 멘토보단 멘티가 힘들고 어려운 상황을 이겨내는데 더욱 &amp;lsquo;필요&amp;rsquo;로 하기 때문에 궁극적으로는 멘티가 멘토를 찾아 나서서 멘토링 관계를 맺어야 한다고 생각한다. 물론 천사 같은 선배가 멘토를 자처하고 멘토링을 해주겠다고 하는 상황이라면 땡큐지만 대부분의 선배들은 자기 코가 석자다 하며 바쁘기에&amp;hellip;&lt;/p>
+&lt;p>　그렇다면 멘티는 멘토를 어떻게 찾아야 할까? 함께 일하는 선배 동료가 있다면 정중하게 도움을 요청하는 것도 나쁘지 않다 본다. 단, 무작정 &amp;ldquo;저의 멘토가 되어주세요.&amp;ldquo;라는 것보다 자신이 가지고 있는 고민거리를 털어놓으며 조금씩 친분을 쌓아간다면 아무래도 경험이 많은 선배이기에 고민의 범위를 조금이라도 줄여줄 수 있지 않을까. 혹여 주변에 선배 동료가 없다면 온/오프라인 커뮤니티 활동을 하면서 찾는 것도 방법이다. 메신저를 통해 다가가거나 메일로 정중하게 고민을 요약해서 보내놓으면 당장은 아니더라도 가까운 시일 내에 응답이 오기 마련이다. (적어도 괜찮은 선배라면.)&lt;/p>
+&lt;p>﻿　여기서 말하는 &amp;lsquo;선배&amp;rsquo;의 정의는 단순 나이가 많아서가 아닌 자신보다 경험이 많은 사람을 의미한다. 그렇기에 자신보다 나이가 적은 사람이 멘토가 될 수도 있다고 생각한다.&lt;/p>
+&lt;p>﻿&lt;/p>
+&lt;h2 id="왜-멘토링을-해야할까">왜 멘토링을 해야할까?&lt;/h2>
+&lt;p>﻿
+　&amp;lsquo;경험&amp;rsquo;이 정말 중요하고 홍수같이 쏟아지는 신기술을 온몸으로 받아내야 하는 우리 개발자들은 특히나 멘토링이 필요하다고 생각한다. 어떠한 기능을 만들어 내야 하는 상황이라 생각해 보자. 아주 일반적으로는 기능 개발에만 집중하다 보니 서비스 릴리즈시 검토해야 할 부분들을 생각하지 못하는 경우가 있다. 성능/부하 테스트, 로깅, 모니터링 등등 시간이 지나 상황들을 만나면서 자연스럽게 경험하게 되지만 생각의 시점을 앞당길 수 있다면 조금이라도 성장할 수 있는 시간을 확보하게 되고 결국 시간적인 여유가 생겨 더 깊게 고민을 해볼 수 있는 기회가 생길 수 있을 것 같다. 그에 멘토링은 정말 좋은 도구가 아닐까 싶다.&lt;/p></description></item><item><title>Elastic Stack으로 코로나19 대시보드 만들기 - 2부 : 대시보드</title><link>https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-2/</link><pubDate>Wed, 17 Feb 2021 16:53:49 +0900</pubDate><guid>https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-2/</guid><description>&lt;p>　&lt;a href="https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-1/" rel="">지난 포스팅&lt;/a>에서는 ﻿데이터를 수급하며 전처리 과정을 거쳤고, Filebeat와 Logstash를 거쳐 Elasticsearch에 인덱싱 하는 것까지 알아보았다. 앞선 포스팅에서 이야기했지만 단순하게 데이터를 시각화 도구를 이용해서 대시보드를 만드는 게 아니라 데이터가 추가되면 만들어둔 대시보드에 자동으로 반영되는 흐름을 만들고 싶었다. 마침 파이프라인을 이틀 전에 만들었기 때문에 그동안의 빠진 데이터를 추가해야 하는 상황이다. 이 경우 Filebeat-Logstash-Elasticsearch 가 실행 중이라면 앞서 작성했던 파이썬 스크립트만 한번 실행해 주면 이틀 치 데이터가 파이프라인을 거쳐 Elasticsearch로 인덱싱이 된다. 즉, 별도로 데이터를 가져와서 재 가공하고 추가하는 다소 까다로운 작업이 미리 만들어둔 파이프라인 덕분에 한 번의 스크립트 실행으로 손쉽게 처리가 됨을 알 수 있다.&lt;/p>
+&lt;p>　이제는 쌓여있는 데이터를 가지고 시각화를 해볼 차례이다. ElasticStack에서는 Kibana라는 강력한 시각화 도구를 제공하는데 이번 포스팅에서는 Kibana를 이용해서 대시보드를 만드는 방법에 대해 알아보려 한다.&lt;/p>
+&lt;h2 id="visualize">Visualize&lt;/h2>
+&lt;p>　﻿Elasticsearch에 인덱싱 되어있는 데이터들은 기본으로 제공되는 REST API를 통해서 조회할 수 있고 JSON 형태로 결과가 나오기 때문에 이를 가지고 다양하게 시각화를 할 수도 있다. 하지만 Kibana에서는 데이터를 조회하고 UI로 표현하는 일련의 모든 행위를 클릭 몇 번으로 할 수 있게 해주기 때문에 전문가가 아니더라도 조금만 만져보면 누구나 만들 수 있다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/visualize-main.jpg" title="/images/make-dashboards-from-elasticstack-2/visualize-main.jpg" data-thumbnail="/images/make-dashboards-from-elasticstack-2/visualize-main.jpg" data-sub-html="&lt;h2>New Visualizaion!!&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/visualize-main.jpg"
+ data-srcset="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/visualize-main.jpg, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/visualize-main.jpg 1.5x, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/visualize-main.jpg 2x"
+ data-sizes="auto"
+ alt="/images/make-dashboards-from-elasticstack-2/visualize-main.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">New Visualizaion!!&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　버전업이 되면서 비쥬얼라이즈를 만드는 첫 화면 또한 변화가 생겼다. 기존에는 어떤 유형의 비쥬얼라이즈를 선택할 것인지에 대해 선택하는 화면부터 나왔는데 만드는 걸 보다 편리하게 도와주는 &lt;code>Lens&lt;/code>, &lt;code>TSVB&lt;/code> 같은 기능들이 먼저 반겨준다. 이 기능을 통해서 만드는 방법도 괜찮지만 보다 명시적으로 만들고 싶으니 하단에 &lt;code>Aggregation based&lt;/code>을 선택해서 원하는 비쥬얼라이즈의 타입을 선택해 보자. 이후 생성되어 있는 인덱스를 선택하면 본격적으로 비쥬얼라이즈를 그릴 수 있는 화면이 나오는데 대시보드 화면 기준으로 만들어야 할 항목별로 살펴보자.&lt;/p>
+&lt;h3 id="전체-수">전체 수&lt;/h3>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/1.jpg" title="/images/make-dashboards-from-elasticstack-2/1.jpg" data-thumbnail="/images/make-dashboards-from-elasticstack-2/1.jpg" data-sub-html="&lt;h2>.&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/1.jpg"
+ data-srcset="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/1.jpg, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/1.jpg 1.5x, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/1.jpg 2x"
+ data-sizes="auto"
+ alt="/images/make-dashboards-from-elasticstack-2/1.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">.&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿확진자, 사망자, 격리 해제의 총합을 표현하려 한다. 이렇게 &amp;lsquo;숫자&amp;rsquo;를 표현하려 하는 경우 &lt;code>Metric&lt;/code>을 활용하곤 한다. 우측에서 Aggregation 방법을 &amp;lsquo;sum&amp;rsquo;으로 설정하고 필드는 유형별로 각각 선택해 주자. 아래 &amp;lsquo;Add&amp;rsquo;버튼을 눌러 확진, 사망, 격리 해제 수를 모두 표시한 다음 저장을 눌러준다. Label을 지정하지 않으면 어떤 형태로 Aggregation을 했는지를 Label 영역에 보여주는데 그게 보기 싫다면 원하는 텍스트로 지정해 주는 것도 방법이다.&lt;/p>
+&lt;h3 id="최근-수">최근 수&lt;/h3>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/2.jpg" title="/images/make-dashboards-from-elasticstack-2/2.jpg" data-thumbnail="/images/make-dashboards-from-elasticstack-2/2.jpg" data-sub-html="&lt;h2>.&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/2.jpg"
+ data-srcset="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/2.jpg, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/2.jpg 1.5x, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/2.jpg 2x"
+ data-sizes="auto"
+ alt="/images/make-dashboards-from-elasticstack-2/2.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">.&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿확진자, 사망자, 격리 해제의 &amp;lsquo;최근 데이터&amp;rsquo;를 보여주는 게 목적이다. 이 경우 Aggregation을 Top Hit으로 선택하면 필드를 선택할 수 있게 되는데 하루의 데이터가 총 18 row이기 때문에 (서울, 부산, &amp;hellip;, 제주, 검역) 18 row 을 전부 더한 값이 하루 기준의 합계가 된다. 여기서 정렬을 날짜 기준 내림차순으로 해줘야 가장 최근 데이터의 합계가 되는 점도 신경 써야 한다.&lt;/p>
+&lt;h3 id="각-타입별-합계">각 타입별 합계&lt;/h3>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/3.jpg" title="/images/make-dashboards-from-elasticstack-2/3.jpg" data-thumbnail="/images/make-dashboards-from-elasticstack-2/3.jpg" data-sub-html="&lt;h2>.&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/3.jpg"
+ data-srcset="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/3.jpg, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/3.jpg 1.5x, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/3.jpg 2x"
+ data-sizes="auto"
+ alt="/images/make-dashboards-from-elasticstack-2/3.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">.&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿지역별로 타입별 수를 보기 위해 &lt;code>Pie&lt;/code> 타입으로 선택하여 진행한다. 타입별(예로 들어 확진이면 confirmed)로 합계를 구하기 위해 Aggregation을 &amp;lsquo;sum&amp;rsquo;으로 설정하면 빈 원이 나오지만 각 지역별로 차트를 잘라서 봐야 하기에 하단의 Buckets의 Add를 누르고 regieon의 필드를 Terms Aggregation 한다. 18 row의 데이터가 전부 보여야 하기에 정렬 개수를 늘리고 option 탭에서 보는 취향에 알맞게 설정값들을 바꿔준다.&lt;/p>
+&lt;h3 id="타입별-추이">타입별 추이&lt;/h3>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/4.jpg" title="/images/make-dashboards-from-elasticstack-2/4.jpg" data-thumbnail="/images/make-dashboards-from-elasticstack-2/4.jpg" data-sub-html="&lt;h2>.&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/4.jpg"
+ data-srcset="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/4.jpg, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/4.jpg 1.5x, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-2/4.jpg 2x"
+ data-sizes="auto"
+ alt="/images/make-dashboards-from-elasticstack-2/4.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">.&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　﻿확진, 사망, 격리 해제 중에 사망을 제외하고 나머지 둘은 데이터의 크기가 크고 변화량이 비슷하기 때문에 x축은 시간으로 설정해두고 사망은 막대로, 나머지 둘은 라인으로 한 화면에서 표현하면 이 3가지 데이터를 한눈에 보기 좋을 것 같았다. &lt;code>Vertical bar&lt;/code> 을 선택하고 x축(Buckets &amp;gt; X-axis)은 데이터 타입인 convert_date로 설정한다. 다음으로 사망은 매일 몇 명 사망했는지 뚜렷하게 보기 위해 그냥 sum으로, 나머지 둘은 누적 합계가 더 의미 있어 보일 것 같아 Cumulative Sum으로 Aggregation을 한다. 한 화면에서 3가지의 데이터를 보여주기엔 다소 y 축의 크기가 맞지 않으므로 확진, 격리 해제를 별도의 y 축(Y-axes)으로 &amp;lsquo;Metrics &amp;amp; axes&amp;rsquo;탭에서 설정해 준다. 다음으로 각 항목의 범례를 위로 표시하여 보다 보기 편하게 배치한다.&lt;/p></description></item><item><title>Elastic Stack으로 코로나19 대시보드 만들기 - 1부 : 파이프라인 구성</title><link>https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-1/</link><pubDate>Mon, 15 Feb 2021 17:50:12 +0900</pubDate><guid>https://taetaetae.github.io/posts/make-dashboards-from-elasticstack-1/</guid><description>&lt;p>﻿　얼마 전에 필자의 블로그를 보고 어느 교육 기관에서 ElasticStack에 대한 강의 요청이 들어왔다. 사실 관련 기술에 대해 지식이 아주 깊고 해박한 게 아니라서 약간의 반감부터 들었지만 ElasticStack을 전혀 모르는 사람들 기준으로 어떻게 돌아가는지에 대해서만 간단하게 소개하는 정도로 하면 된다고 하여 조심스럽지만 떨리는 마음으로 열심히 준비를 하기 시작했다. 그런데, 이런저런 이유로 갑자기 강의를 할 수 없게 되었고 그간 준비했던 내용들이 너무 아쉽지만 아무 소용이 없게 되어버렸다. 그냥 중단하기엔 아쉬운 마음이 너무 커서 준비했던 내용 중에 &amp;lsquo;데이터를 가지고 대시보드를 만드는 부분&amp;rsquo;은 누군가에겐 도움이 될까 싶어 블로그에 정리를 해보려 한다.&lt;/p>
+&lt;blockquote>
+&lt;p>﻿강의를 준비한 올해 1월 중순엔 Elasticsearch 버전이 7.10.2이었는데 블로그를 쓰고 있는 지금은 벌써 7.11으로 버전 업 되었다. 내가 아는 오픈소스 중에 버전업이 가장 빠른데 그렇다고 기능이 확 바뀌거나 습득하기 어렵게 바뀌진 않았다. 그만큼 사용자가 무엇을 원하는지 명확히 알고 작은 단위로 조금씩 바뀌어 가는 모습이 꽤 인상적이다.&lt;/p>&lt;/blockquote>
+&lt;p>　﻿작년 초부터 코로나19 바이러스가 전 세계적으로 퍼지기 시작했고 아직까지도 진행 중이다. 나도 전염되는 건 아닐까 하는 두려움에 어디에서 얼마나 발생했는지를 확인하기 어렵던 시절 우리나라의 뛰어난 개발자들은 누가 시키지도 않았는데 정말 감사하게도 그 현황을 한눈에 볼 수 있도록 여러 유형으로 코로나19 바이러스 대시보드를 만들기 시작한다. 그 덕분에 좀 더 현황을 보기에 편해졌고 더욱 조심하게 되는 계기가 되었다고 생각한다. 이제는 포털사이트나 각종 매체를 통해 손쉽게 코로나19 바이러스의 현황을 볼 수 있지만 이러한 데이터를 가지고 검색엔진이지만 대시보드를 구축하는데 훌륭한 기능을 가지고 있는 ElasticStack을 활용해서 &amp;lsquo;나만의 대시보드&amp;rsquo;를 만드는 걸 정리해보고자 한다. 본 포스팅의 일회성으로 데이터를 가지고 대시보드를 만드는 것에서 끝나는 게 아니라 지속적으로 데이터가 업데이트된다는 가정하에 전반적인 &amp;ldquo;파이프라인&amp;quot;을 구축한 뒤 대시보드를 만들어 두고 데이터만 갱신하면 자동으로 대시보드 또한 업데이트되는 것을 목적으로 한다.
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/pipeline.png" title="/images/make-dashboards-from-elasticstack-1/pipeline.png" data-thumbnail="/images/make-dashboards-from-elasticstack-1/pipeline.png" data-sub-html="&lt;h2>전체 흐름&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/pipeline.png"
+ data-srcset="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/pipeline.png, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/pipeline.png 1.5x, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/pipeline.png 2x"
+ data-sizes="auto"
+ alt="/images/make-dashboards-from-elasticstack-1/pipeline.png" width="100%" />
+ &lt;/a>&lt;figcaption class="image-caption">전체 흐름&lt;/figcaption>
+ &lt;/figure>&lt;/p>
+&lt;blockquote>
+&lt;p>﻿글을 모두 작성하고 보니 양이 생각보다 길어져서 데이터를 조회하고 필터링하여 Elasticsearch에 인덱싱 하는 대시보드를 만들기 위한 일종의 &amp;ldquo;데이터 파이프라인&amp;quot;을 구성하는 부분과 만들어진 데이터 기반으로 Kibana의 다양한 기능을 활용하여 대시보드를 만드는 2개의 포스팅으로 나누어 정리해보겠다.&lt;/p>&lt;/blockquote>
+&lt;p>﻿　최종적으로 만들게 될 대시보드의 모습은 다음과 같다.
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/kibana-dashboard.png" title="/images/make-dashboards-from-elasticstack-1/kibana-dashboard.png" data-thumbnail="/images/make-dashboards-from-elasticstack-1/kibana-dashboard.png" data-sub-html="&lt;h2>최종 목표!&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/kibana-dashboard.png"
+ data-srcset="https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/kibana-dashboard.png, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/kibana-dashboard.png 1.5x, https://taetaetae.github.io/images/make-dashboards-from-elasticstack-1/kibana-dashboard.png 2x"
+ data-sizes="auto"
+ alt="/images/make-dashboards-from-elasticstack-1/kibana-dashboard.png" width="100%" />
+ &lt;/a>&lt;figcaption class="image-caption">최종 목표!&lt;/figcaption>
+ &lt;/figure>&lt;/p>
+&lt;h2 id="대시보드-구성-준비">대시보드 구성 준비&lt;/h2>
+&lt;p>　﻿예전에는 Elasticsearch, Logstash, Kibana 3가지를 가지고 ELK라 불리다 Beat라는 경량 수집기 제품이 등장하며 이 모든 걸 ElasticStack라 부르기 시작했다. (&lt;a href="https://www.elastic.co/kr/elastic-stack" target="_blank" rel="noopener noreffer ">공식 홈페이지 참고&lt;/a>) 먼저 어떤 목표와 어떤 순서로 대시보드를 구성할 것인지에 대해 정리해봐야겠다.﻿&lt;/p>
+&lt;h3 id="데이터">데이터&lt;/h3>
+&lt;p>　﻿데이터는 &lt;a href="https://data.go.kr" target="_blank" rel="noopener noreffer ">공공데이터 포털&lt;/a>에서 가져오려다 조회를 해보니 누락되는 날짜도 있었고 원하는 데이터의 품질이 생각보다 좋지 않아서 다른 곳을 찾아봐야 했다. 그러다 간결하게 정리한 데이터가 &lt;a href="https://github.com/jooeungen/coronaboard_kr" target="_blank" rel="noopener noreffer ">깃헙&lt;/a>에 공개가 되어 있어서 그것을 사용하려 한다. 해당 데이터는 &lt;a href="https://coronaboard.kr/" target="_blank" rel="noopener noreffer ">https://coronaboard.kr/&lt;/a> 에서도 사용되는 데이터라고 한다. ﻿&lt;/p>
+&lt;h3 id="데이터-전처리preprocessing">데이터 전처리(preprocessing)&lt;/h3>
+&lt;p>　﻿원하는 데이터는 위 깃헙에서 제공하는 데이터 중에 지역별 발생 현황. 해당 &lt;a href="https://raw.githubusercontent.com/jooeungen/coronaboard_kr/master/kr_regional_daily.csv" target="_blank" rel="noopener noreffer ">데이터&lt;/a>를 살펴보면 요일별로 데이터가 &amp;lsquo;누적&amp;rsquo;되어 저장되어 있다. 즉, 서울지역 기준으로 2020년 2월 17일에 14명이 발생했고 2020년 2월 18일에 한 명도 발생하지 않았는데 14명으로 &amp;lsquo;누적&amp;rsquo;되어 저장되어 있다. 사실 이대로 해도 큰 문제는 없지만 어디까지나 별도의 가공 없이 최대한 원본 데이터(raw) 가 있어야 데이터 분석 시 다양하게 활용이 가능하기에 데이터를 분석하기 전에 전처리 과정이 필요했다. 정리하면, 집계 수가 누적되지 않고 날짜 기준으로 집계된 수만 있는 데이터를 원했다.﻿&lt;/p>
+&lt;p>　﻿필자는 주로 java를 가지고 개발을 하지만 가끔 간단한 스크립트성 개발은 python을 활용하는 편이기에 다소 이쁜 코드는 아니지만 데이터를 조작하려 아래와 같은 코드를 작성하였다.&lt;/p></description></item><item><title>그런 개발자로 괜찮은가 - '이력서' 편</title><link>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-resume/</link><pubDate>Sun, 31 Jan 2021 18:14:37 +0900</pubDate><guid>https://taetaetae.github.io/posts/a-good-developer-in-terms-of-resume/</guid><description>&lt;p>﻿
+　이력서는 언제 쓰게 되는 걸까? 아주 일반적으로. 신입(학생)의 경우 대학을 졸업할 즈음 취업하고 싶은 회사로 지원하기 위해 작성하고, 경력(회사원)의 경우 이직을 마음먹고 가고자 하는 회사가 뚜렷하게 결정이 되면 그때 작성하게 되는 것 같다. 회사마다 정해진 형식이 있는 곳이라면 그 형식에 맞추어 작성하고 그렇지 않다면 나만의 기준에 맞추어 작성하게 되는 &amp;lsquo;이력서&amp;rsquo;.&lt;/p>
+&lt;p>　회사에 입사하고 정신없이 지내다 보면 이직을 생각하기 전까지는 &amp;lsquo;이력서&amp;rsquo;라는 존재를 자칫 잊어버리기 쉽다. 또한 구태여 시간을 할애하면서까지 써야 한다는 마음조차 잘 들지 않는다. 실제로 텅 빈 책상 앞에 앉아 하얀 A4지와 펜 한 자루만 가지고 써봐야지 하고 시작하면 내가 이제까지 뭘 해왔나 하며 잘 써지지 않기도 하고.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/mung.png" title="/images/a-good-developer-in-terms-of-resume/mung.png" data-thumbnail="/images/a-good-developer-in-terms-of-resume/mung.png" data-sub-html="&lt;h2>이력서에 뭘 써야 할까.출처 : https://epsem.tistory.com/243&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/mung.png"
+ data-srcset="https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/mung.png, https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/mung.png 1.5x, https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/mung.png 2x"
+ data-sizes="auto"
+ alt="/images/a-good-developer-in-terms-of-resume/mung.png" width="60%" />
+ &lt;/a>&lt;figcaption class="image-caption">이력서에 뭘 써야 할까.&lt;br>출처 : &lt;a href="https://epsem.tistory.com/243" target="_blank" rel="noopener noreffer ">https://epsem.tistory.com/243&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>　&lt;a href="https://taetaetae.github.io/tags/a-good-developer/" rel="">&lt;code>그런 개발자로 괜찮은가&lt;/code> 시리즈&lt;/a>인 ﻿이번 포스팅에서는 개발자에게 있어 &amp;lsquo;이력서&amp;rsquo;란 무엇이고 언제, 왜 그리고 어떻게 써야 하는지에 대해 이야기해보고자 한다. 정보의 바다, 홍수처럼 쏟아지는 기술의 변화를 IT 최전방에서 온몸으로 맞서 싸우는 우리 개발자들에게 &amp;lsquo;회사&amp;rsquo;보다는 &amp;lsquo;나 자신&amp;rsquo;을 위해 하루를 살아갈 수 있는 &amp;lsquo;힘&amp;rsquo;이 되었으면 하는 마음으로.&lt;/p>
+&lt;blockquote>
+&lt;p>﻿들어가기 앞서, 본 포스팅은 이직을 권유하는 내용은 절대 아님을 밝힌다. 오히려 이력서 작성을 통해 현재의 직장에서 본인에게 더욱 집중하고 회사와 함께 성장했으면 하는 바람이다.&lt;/p>&lt;/blockquote>
+&lt;h2 id="개발자에게-이력서란">개발자에게 이력서란?&lt;/h2>
+&lt;p>　우선 이력서란 무엇일까? 사전적 의미를 먼저 살펴보자. &lt;a href="https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%A0%A5%EC%84%9C" target="_blank" rel="noopener noreffer ">위키백과&lt;/a>에 따르면 &amp;ldquo;취직을 위한 면접의 기회를 얻기 위해 회사 등 조직에 제출하는 개인의 신상정보, 학력, 경력 등을 시간 순으로 요약 혹은 나열한 문서&amp;quot;라 나와있다. 여기에 추가로 우리 개발자들은 본인이 사용할 수 있는 &amp;lsquo;기술&amp;rsquo;이나 특정한 &amp;lsquo;경험&amp;rsquo;을 적으며 자신이 가지고 있는 기술적 가치에 대해 어필하는 경우가 대부분이다.&lt;/p>
+&lt;p>　사전적 의미로 보면 &amp;lsquo;내 정보&amp;rsquo;를 잘 요약해서 취업하고자 하는 &amp;lsquo;회사&amp;rsquo;에 전달하는 수단으로도 이해할 수도 있을 것 같다. 즉, 누군가에게 본인을 정보(혹은 실력)를 정리해서 알리는 수단 중에 하나로 볼 수 있는데, 과연 이 이력서에는 &amp;lsquo;알린다&amp;rsquo;라는 의미만 담겨있을까?&lt;/p>
+&lt;p>　필자가 생각하는 이력서의 정의는 &amp;lsquo;나를 알리는 수단&amp;rsquo; 보다 &amp;lsquo;나를 가장 잘 아는 거울&amp;rsquo;이라 생각한다. 특히 개발자에게는 더욱더. 무엇을 개발해왔고 어떤 기술을 써 왔으며 어떤 경험이 있는지 어느 곳에 작성을 하지 않으면 더듬더듬 기억으로 나 자신을 알기엔 요즘은 봐야 할 정보가 많은 세상이 되어버렸기 때문이다.&lt;/p>
+&lt;h2 id="왜-써야-할까">왜 써야 할까?&lt;/h2>
+&lt;p>　앞서 이력서를 &amp;lsquo;나를 가장 잘 아는 거울&amp;rsquo;이라고 말했다. 거울을 보고 얼굴에 뭐가 묻었으면 닦거나 옷차림이 별로라면 고쳐보는 등 &amp;lsquo;거울&amp;rsquo;은 나를 가장 잘 볼 수 있는 도구 중에 가장 좋은 물건이라 생각한다. 그런 의미에서 이력서는 단순하게 &amp;lsquo;Java 개발 N 연차&amp;rsquo; 가 아닌 그동안 무엇을 해왔고 어떤 경험과 기술을 사용해 왔는지 정리를 하며 나 자신을 돌아볼 수 있는 훌륭한 도구라 생각한다.&lt;/p>
+&lt;p>　개발자 생활(정확히 말하면 회사 생활)을 하다 보면 개인 사업을 제외하고 회사가 추구하는 비즈니스의 목표를 위해 자의적이 아닌 타의적으로 임무를 할당받아 진행하는 경우가 대부분이다. 그러다 보면 소위 말하는 &amp;lsquo;찍어내기식 개발&amp;rsquo;을 하는 경우도 많고, 문제를 만날 경우 다양한 삽질로 해결은 하지만 제대로 이해하지 못한 채 일정에 치여 넘어가는 경우들도 있다. 그렇게 시간이 지나고 연말이 되어 한 해를 돌아보면 업무를 일정에 맞추어 진행하는 데는 성공하였지만 정작 본인에게 남은 건 장시간 컴퓨터 앞에 앉아 생긴 거북목과 점점 짙어져가는 다크서클뿐이다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/why.jpg" title="/images/a-good-developer-in-terms-of-resume/why.jpg" data-thumbnail="/images/a-good-developer-in-terms-of-resume/why.jpg" data-sub-html="&lt;h2>왜 되지?출처 : https://www.clien.net/service/board/park/4533074&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/why.jpg"
+ data-srcset="https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/why.jpg, https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/why.jpg 1.5x, https://taetaetae.github.io/images/a-good-developer-in-terms-of-resume/why.jpg 2x"
+ data-sizes="auto"
+ alt="/images/a-good-developer-in-terms-of-resume/why.jpg" width="50%" />
+ &lt;/a>&lt;figcaption class="image-caption">왜 되지?&lt;br>출처 : &lt;a href="https://www.clien.net/service/board/park/4533074" target="_blank" rel="noopener noreffer ">https://www.clien.net/service/board/park/4533074&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>﻿　이력서를 써야 하는 이유를 크게 두 가지로 꼽자면, 첫 번째로는 나를 알리는 수단(Personal branding)으로 활용할 수 있다는 점에서다. 잘 정리한 자신의 이력서를 공개해놓으면 취업의 기회가 생길 수도 있고 인적 네트워킹이 되어 생각하지 못한 &amp;lsquo;기회&amp;rsquo;를 얻을 수도 있기 때문이다. 두 번째로는 앞서 이야기 한 &amp;lsquo;나 자신을 돌아보기 위함&amp;rsquo;이다. 멀리 가려면 앞만 보지 말고 뒤도 돌아볼 줄 알아야 한다는 말도 있지 않은가. 이력서를 쓰다 보면 무엇을 해냈고, 어떤 걸 할 수 있고, 그런데 무엇이 부족한지 (자괴감이 들기도 하지만) &amp;lsquo;팩트&amp;rsquo;로 볼 수 있기에 보다 나 자신에게 집중할 수 있다는 점에서 꼭 이력서를 써봐야 한다고 이야기하고 싶다.&lt;/p></description></item></channel></rss>

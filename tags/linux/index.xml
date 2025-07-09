@@ -1,28 +1,174 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>linux - Tag - 👨‍💻꿈꾸는 태태태의 공간</title><link>https://taetaetae.github.io/tags/linux/</link><description>linux - Tag - 👨‍💻꿈꾸는 태태태의 공간</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 13 Oct 2019 15:46:12 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/linux/" rel="self" type="application/rss+xml"/><item><title>더이상 기다리지 않아도 되는 배치 무중단 배포</title><link>https://taetaetae.github.io/2019/10/13/batch-nondisruptive-deploy/</link><pubDate>Sun, 13 Oct 2019 15:46:12 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2019/10/13/batch-nondisruptive-deploy/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/batch-nondisruptive-deploy/wait_illustration.jpg" referrerpolicy="no-referrer">
-            </div>지난 포스팅, 그러니까 우아한 형제들에서 초대를 받아 Spring batch 에 대한 테크세미나에 다녀 왔다. 그 중 가장 인상깊었던 부분이 바로 무중단 배포. 차일피일 미루다 필자가 속한 팀에서도 배포때마다 가장 불편을 느끼고 있었던 부분이었기도 했고, 그런가보다 하며 개념만 알고 넘어가기엔 무언가 양심에 찔려 직접 무중단 배포를 할 수 있도록 구성을 해보고 테스트까지 해보고자 한다.
-상황 및 문제점 리눅스 서버에 Jenkins가 설치되어 있고, Spring batch 모듈을 실행시키고 있다. 수동으로 실행을 하거나, Jenkins RestApi를 이용해서 실행을 할 수 있지만 주로 정해진 시간 즉, 스케쥴링에 의해 실행되곤 한다. 스케쥴링의 가장 작은 단위는 1분단위 배치도 있기 때문에 24시간 멈추지 않고 실행되고 있다고 무방하다. 하지만 배치 모듈이 수정되고, 배포를 하기 위해서는 다음과 같은 시나리오로 진행이 된다.
- Jenkins 설정의 끄기전 준비 를 실행하여 더이상 Jenkins에 의해 Spring batch 모듈(이하 Job)이 실행되지 않도록 한다. 새로운 Job은 더이상 실행되지 않지만 이미 실행중이였던 Job 은 강제로 중단을 하거나 Job 이 끝날때까지 기다린다. 실행중인 Job이 없을 경우 이제 배포를 진행한다. 배포가 완료되면 Jenkins 설정의 끄기전 준비를 해제한다.  실행중인 Job이 안끝나면 마냥 기다릴텐가? 출처 : https://m.post.naver.com/viewer/postView.nhn?volumeNo=14100660&amp;memberNo=2032633" 실행중인 Job이 안끝나면 마냥 기다릴텐가? 출처 : https://m.post.naver.com/viewer/postView.nhn?volumeNo=14100660&amp;memberNo=2032633  실행되는 Job을 중단하지 못하는 상황 즉, 실행중에 중단하면 트랜잭션이 깨져 무조건 기다려야만 하는 상황이라면 배포 또한 계속 지연될 수 밖에 없는 상황인 것이다. Spring boot에 java config 를 활용하고 딱 jar 파일 하나를 실행하는 방식이라면 jar파일을 바꿔치기 하는 식으로 고민을 해볼수도 있을것 같다. 하지만 Legacy 코드가 아직 존재하여 일반 Spring 에 xml 로 config 하는 방식으로 운영중이라 jar파일 하나만 바꿔치기 하기엔 무리가 있는 상황.
-은총알처럼 어디에서나 사용이 가능한 만병통치약 같은 방법은 없다. 언제나 그랬듯 현재 시스템(xml config 방식)에 가장 최적화된 방법, 그리고 java config 방식에서도 사용이 가능할것 같은 방법을 생각해 보았다.
-무중단 배포를 가능케 하는 3가지 핵심 1. 배포를 매번 새로운 경로에 배포한다. 각 회사마다, 그리고 서비스마다 정말 다양한 배포 시스템이 있다. 그들의 공통점은 원격서버의 특정 경로에 빌드된 파일들을 밀어 넣어준다는 것. 시나리오는 다음과 같다.
- 배포할때마다 별도의 디렉토리를 생성한뒤 심볼릭 링크를 연결해준다. 배포는 1에서 연결한 심볼릭 링크에 배포되도록 설정, 결국 매번 만들어지는 디렉토리에 배포가 되게 된다.  여기서 중요한점은 &ldquo;배포할 때마다 새로운 디렉토리에 배포가 된다&rdquo; 와 배포시에는 항상 심볼릭 링크에만 배포를 하면 되기 때문에 &ldquo;배포시스템이 새로 만들어지는 디렉토리의 경로를 몰라도 무방하다&quot;는 점이다.
-#!/bin/sh cd /~~~/deploy/ # 임시 디렉토리 DIRECTORY_NAME=batch_$(/bin/date +%Y%m%d%H%M%S) mkdir $DIRECTORY_NAME 위 쉘 스크립트를 실행하면 batch_20191012205218 와 같은 디렉토리가 생성이 된다. 심볼릭 링크 관련해서는 바로 아래 이어서 설명하겠다.
-2. 심볼릭 링크의 원래 링크를 즉시 변경 보통 심볼릭 링크 (즉, 바로가기) 의 경로를 변경하기 위해서는 아래처럼 지웠다가 삭제하는 식으로 했었는데
-$ mkdir directory_a $ mkdir directory_b $ ln -s directory_a asdf $ ll asdf -&gt; directory_a directory_a directory_b # directory_a 에서 directory_b 로 바꾸는 경우 (심볼릭 링크 자체를 삭제하고 다시 심볼릭 링크 생성) $ rm asdf $ ln -s directory_b asdf $ ll asdf -&gt; directory_b directory_a directory_b 이렇게 되면 삭제하고 ~ 다시 만들어지는 타이밍에 배포가 되거나 실행이 되는 즉, 해당 경로에 엑세스 하는 경우 이전의 경로를 바라본다거나 의도했던 방식으로 실행이 되지 않는 상황이 발생한다. (찰나의 타이밍 이지만 필자는 이러한 문제로 이전의 경로를 바라보는 문제가 발생했었다.) 그래서 ln 의 옵션중인 -Tfs옵션으로 즉시 변경을 해주도록 하자. (ln man 참고)
-# 만든 임시 디렉토리로 배포될수 있도록 설정한다.]]></description></item><item><title>linux(centOS)에서 selenium 설정하기 (feat. python)</title><link>https://taetaetae.github.io/2018/02/01/linux-selenium/</link><pubDate>Thu, 01 Feb 2018 14:52:10 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2018/02/01/linux-selenium/</guid><description><![CDATA[테스트 코드로 안되는 실제 브라우저단 사용성 테스트를 하고싶은 경우가 있다. 이를테면 화면이 뜨고, 어떤 버튼을 누르면, 어떤 결과가 나와야 하는 일련의 Regression Test. 이때 활용할수 있는게 다양한 도구가 있지만 이번엔 selenium 에 대해서 알아보고자 한다.처음부터 사실 web application 테스트를 하려고 selenium 를 알아보게 된건 아니고, 내가 참여하고 있는 특정 밴드(네이버 BAND)에서 일주일에 한번씩 동일한 형태의 글을 올리고 있는데 (일종의 한주 출석체크 같은&hellip;) 이를 자동화 해볼순 없을까 하며 밴드 API를 찾아보다 selenium 라는것을 알게되었고, 매크로처럼 어떤버튼 누르고 그다음 어떤버튼 누르고 하는 일련의 과정을 코드로 구성할수 있다는 점에 감동을 받아(?) + 별도의 API를 발급받지 않아도 되어 사용하게 되었다. (물론 UI가 바뀌면 골치아프겠지만&hellip;)
- 여기서는 selenium 이 무엇인지에 대한 설명은 하지 않는다. (인터넷에 나보다 정리 잘된글이 많으니&hellip;) 단, linux 환경에서 셋팅하는 정보가 너무 없고 몇일동안 삽질을 한게 아쉬워서 그 과정을 포스팅 해본다. (나같은 분이 이 글을 보고 도움이 되실꺼라는 기대를 갖으며&hellip;)
-  ※ 주의 : 본 포스팅은 밴드 서비스에 글을 올릴수 있는 비 정상적인 방법의 공유가 아닌, selenium에 대한 사용 후기(?)에 대한 글입니다. (참고로 막혔어요 -ㅁ-)
- 설정하기 서버 환경은 CentOS 7.4 64Bit + Python 3.6.3 + jdk 8 이다. 우선 selenium 을 설치해준다.
-$ sudo python3.6 -m pip install selenium 그 다음 CentOS에서 크롬브라우저를 설치하기 위하여 yum 저장소를 추가한다. (꼭 크롬이 아니더라도 파이어폭스나 지금은 지원이 끊긴 팬텀JS 같은것으로 활용할수도 있으나 다른것들도 해봤는데 자꾸 설정에서 걸려서 크롬에 대한 내용을 포스팅 한다.)
-$ sudo vi /etc/yum.repos.d/google-chrome.repo [google-chrome] name=google-chrome baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64 enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub 그리고는 yum 으로 크롬 브라우저를 설치한다. (내가 설치했을때의 버전은 google-chrome-stable.x86_64 0:64.0.3282.119-1)
-$ yum install google-chrome-stable 크롬드라이버를 설치해야한다. 다음 url에서 받을수 있는데 https://sites.google.com/a/chromium.org/chromedriver/downloads 나는 2.35 linux64 버전을 받았다. 다운받고 unzip 하면 딱하나 파일이 있는데 나중에 selenium 을 사용할때 이용되니 path를 알아두자.
-그다음 파이썬 코드를 작성한다. 내가 짠 파이썬 코드는 다음과 같은 순서로 실행이 된다.
- 밴드 접속 ( https://band.us/home ) 로그인 특정 밴드 선택 글쓰기 버튼 누르고 양식에 맞춰 글 작성 글 등록  파이썬 코드는 아래처럼 작성하였다. (중요부분만.. 그 아래는 자유)
-from selenium import webdriver from selenium.webdriver.chrome.options import Options # 초기화 -------------------------------------------- chrome_options = Options() chrome_options.add_argument(&#34;--headless&#34;) driver = webdriver.Chrome(executable_path=&#39;home/~~~/chromedriver&#39;, chrome_options=chrome_options) driver.implicitly_wait(3) driver.get(&#39;https://band.us/home&#39;) # 로그인 -------------------------------------------- driver.find_element_by_class_name(&#39;_loginLink&#39;).click() ...생략 그리고 실행을 해보면 작동이 잘~ 된다. selenium &#43; python 으로 자동작성된 밴드 글" selenium + python 으로 자동작성된 밴드 글 
-마치며 selenium 에 대해 찾아보면 거의 윈도우 환경에서 돌아가는것들에 대한 포스팅이 많았다. 난 리눅스 환경에서 스케쥴러(젠킨스 같은)를 통해 자동으로 화면없이 작동시키고 싶었는데 아무리 찾아봐도 + 삽질해도 잘 안되었다. 결국 사내에도 나같은 삽질을 하신 분을 찾고 묻고 물어 크롬드라이버만 있어야 하는것이 아니라 크롬앱또한 있어야 동작을 한다는것을 알게 되었다. 역시, 내가 한 삽질은 누군가 이미 한 삽질이라는걸 다시한번 깨닳은 좋은(?) 시간이였다.
-이걸로 나중에 내가 맡고있는 서비스에 대한 웹 자동 테스트 툴도 만들어 볼 생각이다.]]></description></item><item><title>리눅스상에서 json 파싱</title><link>https://taetaetae.github.io/2017/02/28/shell-script-json/</link><pubDate>Tue, 28 Feb 2017 17:50:44 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2017/02/28/shell-script-json/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/shell-script-json/jq.png" referrerpolicy="no-referrer">
-            </div>리눅스 상에서 json형태의 String 을 파싱해야하는 상황이라면 아래 라이브러리를 사용해보는것을 추천해본다.
-jq 사용방법은 너무너무 간단하다.
- 자신의 시스템에 맞는 라이브러리를 다운받고  (32-bit system) $ wget http://stedolan.github.io/jq/download/linux32/jq (64-bit system) $ wget http://stedolan.github.io/jq/download/linux64/jq  실행 권한을 설정해 준 뒤  chmod +x ./jq  root 권한으로 해당 파일을 이동시킨다.  sudo cp jq /usr/bin  실행은 다음과 같이 한다. Json String 이 아래와 같이 있다고 가정했을때  { &#34;name&#34;: &#34;Google&#34;, &#34;location&#34;: { &#34;street&#34;: &#34;1600 Amphitheatre Parkway&#34;, &#34;city&#34;: &#34;Mountain View&#34;, &#34;state&#34;: &#34;California&#34;, &#34;country&#34;: &#34;US&#34; }, &#34;employees&#34;: [ { &#34;name&#34;: &#34;Michael&#34;, &#34;division&#34;: &#34;Engineering&#34; }, { &#34;name&#34;: &#34;Laura&#34;, &#34;division&#34;: &#34;HR&#34; }, { &#34;name&#34;: &#34;Elise&#34;, &#34;division&#34;: &#34;Marketing&#34; } ] } 실제 사용과 결과는 다음과 같이 이루어 진다.
-$ cat json.txt | jq '.name' &quot;Google&quot; $ cat json.txt | jq '.location.city' &quot;Mountain View&quot; $ cat json.txt | jq '.employees[0].name' &quot;Michael&quot; $ cat json.txt | jq '.location | {street, city}' { &quot;city&quot;: &quot;Mountain View&quot;, &quot;street&quot;: &quot;1600 Amphitheatre Parkway&quot; } 보다 자세한 사용방법은 공식홈페이지( https://stedolan.github.io/jq/ )를 참조하면 좋을듯 하다.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on</title><link>https://taetaetae.github.io/tags/linux/</link><description>Recent content in Linux on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 13 Oct 2019 15:46:12 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>더이상 기다리지 않아도 되는 배치 무중단 배포</title><link>https://taetaetae.github.io/2019/10/13/batch-nondisruptive-deploy/</link><pubDate>Sun, 13 Oct 2019 15:46:12 +0000</pubDate><guid>https://taetaetae.github.io/2019/10/13/batch-nondisruptive-deploy/</guid><description>&lt;p>&lt;a href="https://taetaetae.github.io/2019/09/29/woowabros-spring-batch/" target="_blank" rel="noopener noreffer ">지난 포스팅&lt;/a>, 그러니까 우아한 형제들에서 초대를 받아 Spring batch 에 대한 테크세미나에 다녀 왔다. 그 중 가장 인상깊었던 부분이 바로 &lt;code>무중단 배포&lt;/code>. 차일피일 미루다 필자가 속한 팀에서도 배포때마다 가장 불편을 느끼고 있었던 부분이었기도 했고&lt;!--more -->, &lt;code>그런가보다&lt;/code> 하며 개념만 알고 넘어가기엔 무언가 양심에 찔려 직접 무중단 배포를 할 수 있도록 구성을 해보고 테스트까지 해보고자 한다.&lt;/p>
+&lt;h2 id="상황-및-문제점">상황 및 문제점&lt;/h2>
+&lt;p>리눅스 서버에 Jenkins가 설치되어 있고, Spring batch 모듈을 실행시키고 있다. 수동으로 실행을 하거나, Jenkins RestApi를 이용해서 실행을 할 수 있지만 주로 정해진 시간 즉, 스케쥴링에 의해 실행되곤 한다. 스케쥴링의 가장 작은 단위는 1분단위 배치도 있기 때문에 24시간 멈추지 않고 실행되고 있다고 무방하다. 하지만 배치 모듈이 수정되고, 배포를 하기 위해서는 다음과 같은 시나리오로 진행이 된다.&lt;/p>
+&lt;ol>
+&lt;li>Jenkins 설정의 &lt;code>끄기전 준비&lt;/code> 를 실행하여 더이상 Jenkins에 의해 Spring batch 모듈(이하 Job)이 실행되지 않도록 한다.&lt;/li>
+&lt;li>새로운 Job은 더이상 실행되지 않지만 이미 실행중이였던 Job 은 강제로 중단을 하거나 Job 이 끝날때까지 기다린다.&lt;/li>
+&lt;li>실행중인 Job이 없을 경우 이제 배포를 진행한다.&lt;/li>
+&lt;li>배포가 완료되면 Jenkins 설정의 &lt;code>끄기전 준비&lt;/code>를 해제한다.&lt;/li>
+&lt;/ol>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/batch-nondisruptive-deploy/wait.jpg" title="/images/batch-nondisruptive-deploy/wait.jpg" data-thumbnail="/images/batch-nondisruptive-deploy/wait.jpg" data-sub-html="&lt;h2>실행중인 Job이 안끝나면 마냥 기다릴텐가? 출처 : https://m.post.naver.com/viewer/postView.nhn?volumeNo=14100660&amp;memberNo=2032633&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/batch-nondisruptive-deploy/wait.jpg"
+ data-srcset="https://taetaetae.github.io/images/batch-nondisruptive-deploy/wait.jpg, https://taetaetae.github.io/images/batch-nondisruptive-deploy/wait.jpg 1.5x, https://taetaetae.github.io/images/batch-nondisruptive-deploy/wait.jpg 2x"
+ data-sizes="auto"
+ alt="/images/batch-nondisruptive-deploy/wait.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">실행중인 Job이 안끝나면 마냥 기다릴텐가? &lt;br>출처 : &lt;a href="https://m.post.naver.com/viewer/postView.nhn?volumeNo=14100660&amp;amp;memberNo=2032633" target="_blank" rel="noopener noreffer ">https://m.post.naver.com/viewer/postView.nhn?volumeNo=14100660&amp;memberNo=2032633&lt;/a>&lt;/figcaption>
+ &lt;/figure>
+&lt;p>실행되는 Job을 중단하지 못하는 상황 즉, 실행중에 중단하면 트랜잭션이 깨져 무조건 기다려야만 하는 상황이라면 배포 또한 계속 지연될 수 밖에 없는 상황인 것이다. Spring boot에 java config 를 활용하고 딱 &lt;code>jar&lt;/code> 파일 하나를 실행하는 방식이라면 &lt;code>jar&lt;/code>파일을 바꿔치기 하는 식으로 고민을 해볼수도 있을것 같다. 하지만 Legacy 코드가 아직 존재하여 일반 Spring 에 xml 로 config 하는 방식으로 운영중이라 &lt;code>jar&lt;/code>파일 하나만 바꿔치기 하기엔 무리가 있는 상황.&lt;/p>
+&lt;p>은총알처럼 어디에서나 사용이 가능한 만병통치약 같은 방법은 없다. 언제나 그랬듯 현재 시스템(xml config 방식)에 가장 최적화된 방법, 그리고 java config 방식에서도 사용이 가능할것 같은 방법을 생각해 보았다.&lt;/p>
+&lt;h2 id="무중단-배포를-가능케-하는-3가지-핵심">무중단 배포를 가능케 하는 3가지 핵심&lt;/h2>
+&lt;p>&lt;strong>1. 배포를 매번 새로운 경로에 배포한다.&lt;/strong>
+각 회사마다, 그리고 서비스마다 정말 다양한 배포 시스템이 있다. 그들의 공통점은 원격서버의 &lt;code>특정 경로&lt;/code>에 빌드된 파일들을 밀어 넣어준다는 것. 시나리오는 다음과 같다.&lt;/p>
+&lt;ol>
+&lt;li>배포할때마다 별도의 디렉토리를 생성한뒤 심볼릭 링크를 연결해준다.&lt;/li>
+&lt;li>배포는 &lt;code>1&lt;/code>에서 연결한 심볼릭 링크에 배포되도록 설정, 결국 매번 만들어지는 디렉토리에 배포가 되게 된다.&lt;/li>
+&lt;/ol>
+&lt;p>여기서 중요한점은 &amp;ldquo;배포할 때마다 새로운 디렉토리에 배포가 된다&amp;rdquo; 와 배포시에는 항상 심볼릭 링크에만 배포를 하면 되기 때문에 &amp;ldquo;배포시스템이 새로 만들어지는 디렉토리의 경로를 몰라도 무방하다&amp;quot;는 점이다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="nb">cd&lt;/span> /~~~/deploy/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 임시 디렉토리&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">DIRECTORY_NAME&lt;/span>&lt;span class="o">=&lt;/span>batch_&lt;span class="k">$(&lt;/span>/bin/date +%Y%m%d%H%M%S&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir &lt;span class="nv">$DIRECTORY_NAME&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 쉘 스크립트를 실행하면 batch_20191012205218 와 같은 디렉토리가 생성이 된다. 심볼릭 링크 관련해서는 바로 아래 이어서 설명하겠다.&lt;/p>
+&lt;p>&lt;strong>2. 심볼릭 링크의 원래 링크를 즉시 변경&lt;/strong>
+보통 심볼릭 링크 (즉, 바로가기) 의 경로를 변경하기 위해서는 아래처럼 지웠다가 삭제하는 식으로 했었는데&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ mkdir directory_a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ mkdir directory_b
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ln -s directory_a asdf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ll
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">asdf -&amp;gt; directory_a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">directory_a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">directory_b
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># directory_a 에서 directory_b 로 바꾸는 경우 (심볼릭 링크 자체를 삭제하고 다시 심볼릭 링크 생성)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ rm asdf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ln -s directory_b asdf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ll
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">asdf -&amp;gt; directory_b
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">directory_a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">directory_b
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>이렇게 되면 삭제하고 ~ 다시 만들어지는 타이밍에 배포가 되거나 실행이 되는 즉, 해당 경로에 엑세스 하는 경우 이전의 경로를 바라본다거나 의도했던 방식으로 실행이 되지 않는 상황이 발생한다. (찰나의 타이밍 이지만 필자는 이러한 문제로 이전의 경로를 바라보는 문제가 발생했었다.) 그래서 ln 의 옵션중인 &lt;code>-Tfs&lt;/code>옵션으로 즉시 변경을 해주도록 하자. (&lt;a href="https://linux.die.net/man/1/ln" target="_blank" rel="noopener noreffer ">ln man 참고&lt;/a>)&lt;/p></description></item><item><title>linux(centOS)에서 selenium 설정하기 (feat. python)</title><link>https://taetaetae.github.io/2018/02/01/linux-selenium/</link><pubDate>Thu, 01 Feb 2018 14:52:10 +0000</pubDate><guid>https://taetaetae.github.io/2018/02/01/linux-selenium/</guid><description>&lt;p>테스트 코드로 안되는 실제 브라우저단 사용성 테스트를 하고싶은 경우가 있다. 이를테면 화면이 뜨고, 어떤 버튼을 누르면, 어떤 결과가 나와야 하는 일련의 &lt;code>Regression Test&lt;/code>. 이때 활용할수 있는게 다양한 도구가 있지만 이번엔 &lt;code>selenium&lt;/code> 에 대해서 알아보고자 한다.&lt;!-- more -->&lt;/p>
+&lt;p>처음부터 사실 web application 테스트를 하려고 selenium 를 알아보게 된건 아니고, 내가 참여하고 있는 특정 밴드(네이버 BAND)에서 일주일에 한번씩 동일한 형태의 글을 올리고 있는데 (일종의 한주 출석체크 같은&amp;hellip;) 이를 자동화 해볼순 없을까 하며 밴드 API를 찾아보다 selenium 라는것을 알게되었고, 매크로처럼 어떤버튼 누르고 그다음 어떤버튼 누르고 하는 일련의 과정을 코드로 구성할수 있다는 점에 감동을 받아(?) + 별도의 API를 발급받지 않아도 되어 사용하게 되었다. (물론 UI가 바뀌면 골치아프겠지만&amp;hellip;)&lt;/p>
+&lt;blockquote>
+&lt;p>여기서는 selenium 이 무엇인지에 대한 설명은 하지 않는다. (인터넷에 나보다 정리 잘된글이 많으니&amp;hellip;) 단, linux 환경에서 셋팅하는 정보가 너무 없고 몇일동안 삽질을 한게 아쉬워서 그 과정을 포스팅 해본다. (나같은 분이 이 글을 보고 도움이 되실꺼라는 기대를 갖으며&amp;hellip;)&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>※ 주의 : 본 포스팅은 밴드 서비스에 글을 올릴수 있는 비 정상적인 방법의 공유가 아닌, selenium에 대한 사용 후기(?)에 대한 글입니다. (참고로 막혔어요 -ㅁ-)&lt;/p>&lt;/blockquote>
+&lt;h2 id="설정하기">설정하기&lt;/h2>
+&lt;p>서버 환경은 CentOS 7.4 64Bit + Python 3.6.3 + jdk 8 이다. 우선 selenium 을 설치해준다.&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ sudo python3.6 -m pip install selenium
+&lt;/code>&lt;/pre>&lt;p>그 다음 CentOS에서 크롬브라우저를 설치하기 위하여 yum 저장소를 추가한다. (꼭 크롬이 아니더라도 파이어폭스나 지금은 지원이 끊긴 팬텀JS 같은것으로 활용할수도 있으나 다른것들도 해봤는데 자꾸 설정에서 걸려서 크롬에 대한 내용을 포스팅 한다.)&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ sudo vi /etc/yum.repos.d/google-chrome.repo
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+&lt;/code>&lt;/pre>&lt;p>그리고는 yum 으로 크롬 브라우저를 설치한다. (내가 설치했을때의 버전은 &lt;code>google-chrome-stable.x86_64 0:64.0.3282.119-1&lt;/code>)&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ yum install google-chrome-stable
+&lt;/code>&lt;/pre>&lt;p>크롬드라이버를 설치해야한다. 다음 url에서 받을수 있는데 &lt;a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener noreffer ">https://sites.google.com/a/chromium.org/chromedriver/downloads&lt;/a> 나는 2.35 linux64 버전을 받았다. 다운받고 unzip 하면 딱하나 파일이 있는데 나중에 selenium 을 사용할때 이용되니 path를 알아두자.&lt;/p>
+&lt;p>그다음 파이썬 코드를 작성한다. 내가 짠 파이썬 코드는 다음과 같은 순서로 실행이 된다.&lt;/p>
+&lt;ul>
+&lt;li>밴드 접속 ( &lt;a href="https://band.us/home" target="_blank" rel="noopener noreffer ">https://band.us/home&lt;/a> )&lt;/li>
+&lt;li>로그인&lt;/li>
+&lt;li>특정 밴드 선택&lt;/li>
+&lt;li>글쓰기 버튼 누르고 양식에 맞춰 글 작성&lt;/li>
+&lt;li>글 등록&lt;/li>
+&lt;/ul>
+&lt;p>파이썬 코드는 아래처럼 작성하였다. (중요부분만.. 그 아래는 자유)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">selenium&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">webdriver&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">selenium.webdriver.chrome.options&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Options&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 초기화 --------------------------------------------&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">chrome_options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Options&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">chrome_options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_argument&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;--headless&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">webdriver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Chrome&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">executable_path&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;home/~~~/chromedriver&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">chrome_options&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">chrome_options&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">implicitly_wait&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://band.us/home&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 로그인 --------------------------------------------&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element_by_class_name&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;_loginLink&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">click&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">...&lt;/span>&lt;span class="n">생략&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>그리고 실행을 해보면 작동이 잘~ 된다.
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/linux-selenium/result.png" title="/images/linux-selenium/result.png" data-thumbnail="/images/linux-selenium/result.png" data-sub-html="&lt;h2>selenium &amp;#43; python 으로 자동작성된 밴드 글&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/linux-selenium/result.png"
+ data-srcset="https://taetaetae.github.io/images/linux-selenium/result.png, https://taetaetae.github.io/images/linux-selenium/result.png 1.5x, https://taetaetae.github.io/images/linux-selenium/result.png 2x"
+ data-sizes="auto"
+ alt="/images/linux-selenium/result.png" />
+ &lt;/a>&lt;figcaption class="image-caption">selenium + python 으로 자동작성된 밴드 글&lt;/figcaption>
+ &lt;/figure>&lt;/p>
+&lt;h2 id="마치며">마치며&lt;/h2>
+&lt;p>&lt;code>selenium&lt;/code> 에 대해 찾아보면 거의 윈도우 환경에서 돌아가는것들에 대한 포스팅이 많았다. 난 리눅스 환경에서 스케쥴러(젠킨스 같은)를 통해 자동으로 화면없이 작동시키고 싶었는데 아무리 찾아봐도 + 삽질해도 잘 안되었다. 결국 사내에도 나같은 삽질을 하신 분을 찾고 묻고 물어 &lt;code>크롬드라이버&lt;/code>만 있어야 하는것이 아니라 &lt;code>크롬앱&lt;/code>또한 있어야 동작을 한다는것을 알게 되었다.
+&lt;strong>역시, 내가 한 삽질은 누군가 이미 한 삽질이라는걸 다시한번 깨닳은 좋은(?) 시간이였다.&lt;/strong>&lt;/p>
+&lt;p>이걸로 나중에 내가 맡고있는 서비스에 대한 웹 자동 테스트 툴도 만들어 볼 생각이다.&lt;/p></description></item><item><title>리눅스상에서 json 파싱</title><link>https://taetaetae.github.io/2017/02/28/shell-script-json/</link><pubDate>Tue, 28 Feb 2017 17:50:44 +0000</pubDate><guid>https://taetaetae.github.io/2017/02/28/shell-script-json/</guid><description>&lt;p>리눅스 상에서 json형태의 String 을 파싱해야하는 상황이라면 아래 라이브러리를 사용해보는것을 추천해본다.&lt;/p>
+&lt;!-- more -->
+&lt;h2 id="jq">jq&lt;/h2>
+&lt;p>사용방법은 너무너무 간단하다.&lt;/p>
+&lt;ul>
+&lt;li>자신의 시스템에 맞는 라이브러리를 다운받고&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>(32-bit system)
+$ wget http://stedolan.github.io/jq/download/linux32/jq
+(64-bit system)
+$ wget http://stedolan.github.io/jq/download/linux64/jq
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>실행 권한을 설정해 준 뒤&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>chmod +x ./jq
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>root 권한으로 해당 파일을 이동시킨다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>sudo cp jq /usr/bin
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>실행은 다음과 같이 한다.
+Json String 이 아래와 같이 있다고 가정했을때&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Google&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;location&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;street&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;1600 Amphitheatre Parkway&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;city&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Mountain View&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;state&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;California&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;country&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;US&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;employees&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Michael&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Engineering&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Laura&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;HR&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Elise&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Marketing&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>실제 사용과 결과는 다음과 같이 이루어 진다.&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ cat json.txt | jq &amp;#39;.name&amp;#39;
+&amp;#34;Google&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.location.city&amp;#39;
+&amp;#34;Mountain View&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.employees[0].name&amp;#39;
+&amp;#34;Michael&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.location | {street, city}&amp;#39;
+{
+ &amp;#34;city&amp;#34;: &amp;#34;Mountain View&amp;#34;,
+ &amp;#34;street&amp;#34;: &amp;#34;1600 Amphitheatre Parkway&amp;#34;
+}
+&lt;/code>&lt;/pre>&lt;p>보다 자세한 사용방법은 공식홈페이지( &lt;a href="https://stedolan.github.io/jq/" target="_blank" rel="noopener noreffer ">https://stedolan.github.io/jq/&lt;/a> )를 참조하면 좋을듯 하다.&lt;/p></description></item></channel></rss>

@@ -1,11 +1,100 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>oss - Tag - 👨‍💻꿈꾸는 태태태의 공간</title><link>https://taetaetae.github.io/tags/oss/</link><description>oss - Tag - 👨‍💻꿈꾸는 태태태의 공간</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 01 Jul 2018 10:00:00 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/oss/" rel="self" type="application/rss+xml"/><item><title>2018 오픈소스개발자이야기 후기</title><link>https://taetaetae.github.io/2018/07/01/open-source-software-develpoer-story-review/</link><pubDate>Sun, 01 Jul 2018 10:00:00 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2018/07/01/open-source-software-develpoer-story-review/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/open-source-software-develpoer-story-review/oss.png" referrerpolicy="no-referrer">
-            </div>Facebook그룹들을 눈팅하다(?) OSS개발자 포럼에서 오픈소스 개발자이야기라는 주제로 세미나를 주최한다는 공지를 보게되었다. 언제부턴가 트랜드에 뒤쳐지지 않으려는 몸부림중 세미나같은 외부 개발 행사에 참여해보자는 마음으로 공지를 보자마자 홀린듯이 신청을 하게 되었고세미나를 듣고 감흥이 가시기 전에 후기를 적고자 한다.(시간이 지나면 잊어버릴것만같은, 보고 들은 생생한 그 무언가를 얻었기에&hellip;)
- 비가오는 주말이였지만 많이 배우고 오자는 설레임을 갖고 서울 광화문 근처에 있는 한국마이크로소프트로 가게되었다. 말로만 듣던 MS사 로고를 보고 사람들이 하나둘씩 모이는걸 보니 뭔가 배울수 있겠구나 하는 기대감이 생겼다. 사실 오픈소스를 사용만 해본 입장이라 실제 오픈소스에 기여하시는 분들은 어떤 생각들을 갖고 계시는지가 가장 궁금했고 개발자인 나도 언젠간 오픈소스에 기여할수있지 않을까 하는 생각을 하며 발표를 들었다.
-# 회색지대 : 이상과 현실 - 오픈소스 저작권 / 신정규 님  오픈소스는 아무리 말그대로 Open이지만 오픈소스마다 다양한 저작권을 갖고있고 서로 쟁취하려는 싸움이 많이 발생한다고 한다. 그러다보니 어떠한 프로그램을 만들고 오픈소스화 시킬때도 라이센스의 종류를 잘 결정해야 추후 불이익을 당하는 상황을 모면할수 있다고 한다. 특허와 라이센스는 같은 말이면서도 다른데 아래 표처럼 각 상황에 따라 다른 부분을 확인할수 있었다.
-    특허 라이센스     권리발생 출원, 심사, 등록 창작과 동시 발생   권리내용 독점배타적 실시권 인격권/재산권   효력범위 아이디어의 동일성 표현의 실질적 유사성    첫 시간이기도 하였고 아무래도 주제가 끝장토론을 해도 안끝날 주제였던지라 정해진 시간을 넘길정도로 이야기를 많이 해주셨다. 특히 오픈소스 관련된 이야기는 사례를 이야기 해야 재밌다고 하셨는데 시간관계상 몇가지만 말씀해주셨다.
- 링크가 맞는지는 모르겠으나 첨부해본다.  엘림넷 vs 하이온넷 사건 EFM Networks 오라클 VS 구글    오픈소스 개발에 대해 단순하게 누구나 수정할수 있는 환경 이라고만 생각을 하고있다가 이런 복잡한 라이센스 문제가 나오니 약간 어려웠지만, 오픈소스의 생태계를 알고 발을 들이기 위해서는 어느정도의 히스토리는 알아야 겠다고 느끼게 되었다.
-Elastic 에서 Remote 로 일하기 / 김종민 님  그전부터 Elastic 제품들을 실무에서도 사용해 왔었기에 개인적으로 오늘 발표중에 가장 궁금했었고, 관심이 있던 시간이였다. 발표에 앞서 어떻게 Elastic에 들어가게 되셨고 회사 소개를 간단히 해주셨는데 생각보다 어마어마한 회사다고 느낄수 있었다.(800여명중 한국엔 9명 / 네덜란드 출신 스타트업 인데 본사는 캘리포니아 마운틴뷰에 있고 등등) 원격근무는 편하고 비용이 절약되는 장점이 있으나 동료들간의 유대감형성이 힘들거나 회의시 집중이 힘든 단점도 있다는 점을 말씀해 주셨다. 시간관계상 몇가지 링크들을 소개해주셨는데 나중에 봐볼 생각이다.
- 침대에서 회사까지 1분 [마소 392호] 리모트 워크의 중심에 서보다  원격 툴로는 다음과 같이 사용한다고 한다.
- github : 슬랙연동, 개발뿐 아니라 운영/기획/이벤트 공유시 활용 Google Apps Slack : 봇 활용 (다양한 종류의 봇, 상황마다 특정 알림을 준다.) salesforce : CRM 툴 zoom : 화상회의 200명 동시콜 가능, 회의가 끝나면 녹음/녹화/스크립팅까지 가능하다고 한다 (wow) pinboard : 근태/인사 관리용 앱 jira는 사용 잘 안함  나중에 팀 내 Slack 봇으로 여러가지 다양한 자동화를 구성할수 있을것 같다는 생각이 들었다.
-오픈소스 생태계 일원으로서의 개발자 / 변정훈 님  사회자분이 &ldquo;아웃사이더님&quot;이라고 하시길래 설마 했다. 뭐가 잘 안되면 구글링을 하게되는데 내가 자주 보던 블로그를 운영하셨던 분이 내눈앞에 ㄷㄷ&hellip; 언제부터 해야지~가 아니고 개발하다보니 어느새 오픈소스에 참여하고 있었다고 한다. 또한 참여하는게 아니고 이미 오픈소스 생태계속에서 살고있는 우리들이라 말씀하시고, 오픈소스 Contribution 방법으로는 사용/홍보/번역/리포팅/문서화/코드제출 등 다양하게 있으니 어렵게 생각하지 말자 라고 하셨다. 오픈소스에서 배울수 있는점은 커뮤니케이션의 방법, 협업의 방법과 중요성, 테스트코드의 중요성, 지속적 통합/지속적 배포, 코드의 품질관리 라고 한다. 점점 발표를 들으면서 오픈소스에 대한 생각이 바뀌고 있는 내 자신을 느낄수 있었다.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Oss on</title><link>https://taetaetae.github.io/tags/oss/</link><description>Recent content in Oss on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 01 Jul 2018 10:00:00 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/oss/index.xml" rel="self" type="application/rss+xml"/><item><title>2018 오픈소스개발자이야기 후기</title><link>https://taetaetae.github.io/2018/07/01/open-source-software-develpoer-story-review/</link><pubDate>Sun, 01 Jul 2018 10:00:00 +0000</pubDate><guid>https://taetaetae.github.io/2018/07/01/open-source-software-develpoer-story-review/</guid><description>&lt;p>Facebook그룹들을 눈팅하다(?) OSS개발자 포럼에서 &lt;code>오픈소스 개발자이야기&lt;/code>라는 주제로 세미나를 주최한다는 공지를 보게되었다. 언제부턴가 트랜드에 뒤쳐지지 않으려는 몸부림중 세미나같은 외부 개발 행사에 참여해보자는 마음으로 공지를 보자마자 홀린듯이 신청을 하게 되었고&lt;!-- more --> 세미나를 듣고 감흥이 가시기 전에 후기를 적고자 한다.(시간이 지나면 잊어버릴것만같은, 보고 들은 생생한 그 무언가를 얻었기에&amp;hellip;)&lt;/p>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/first.png" title="/images/open-source-software-develpoer-story-review/first.png" data-thumbnail="/images/open-source-software-develpoer-story-review/first.png">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/first.png"
+ data-srcset="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/first.png, https://taetaetae.github.io/images/open-source-software-develpoer-story-review/first.png 1.5x, https://taetaetae.github.io/images/open-source-software-develpoer-story-review/first.png 2x"
+ data-sizes="auto"
+ alt="/images/open-source-software-develpoer-story-review/first.png" />
+ &lt;/a>
+&lt;p>비가오는 주말이였지만 많이 배우고 오자는 설레임을 갖고 서울 광화문 근처에 있는 한국마이크로소프트로 가게되었다. 말로만 듣던 MS사 로고를 보고 사람들이 하나둘씩 모이는걸 보니 뭔가 배울수 있겠구나 하는 기대감이 생겼다. 사실 오픈소스를 사용만 해본 입장이라 실제 오픈소스에 기여하시는 분들은 어떤 생각들을 갖고 계시는지가 가장 궁금했고 개발자인 나도 언젠간 오픈소스에 기여할수있지 않을까 하는 생각을 하며 발표를 들었다.&lt;/p>
+&lt;h4 id="-회색지대--이상과-현실---오픈소스-저작권--신정규-님"># 회색지대 : 이상과 현실 - 오픈소스 저작권 / 신정규 님&lt;/h4>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/01.png" title="/images/open-source-software-develpoer-story-review/01.png" data-thumbnail="/images/open-source-software-develpoer-story-review/01.png">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/01.png"
+ data-srcset="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/01.png, https://taetaetae.github.io/images/open-source-software-develpoer-story-review/01.png 1.5x, https://taetaetae.github.io/images/open-source-software-develpoer-story-review/01.png 2x"
+ data-sizes="auto"
+ alt="/images/open-source-software-develpoer-story-review/01.png" />
+ &lt;/a>
+&lt;p>오픈소스는 아무리 말그대로 &lt;code>Open&lt;/code>이지만 오픈소스마다 다양한 저작권을 갖고있고 서로 쟁취하려는 싸움이 많이 발생한다고 한다. 그러다보니 어떠한 프로그램을 만들고 오픈소스화 시킬때도 라이센스의 종류를 잘 결정해야 추후 불이익을 당하는 상황을 모면할수 있다고 한다. 특허와 라이센스는 같은 말이면서도 다른데 아래 표처럼 각 상황에 따라 다른 부분을 확인할수 있었다.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;/th>
+ &lt;th>특허&lt;/th>
+ &lt;th>라이센스&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>권리발생&lt;/td>
+ &lt;td>출원, 심사, 등록&lt;/td>
+ &lt;td>창작과 동시 발생&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>권리내용&lt;/td>
+ &lt;td>독점배타적 실시권&lt;/td>
+ &lt;td>인격권/재산권&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>효력범위&lt;/td>
+ &lt;td>아이디어의 동일성&lt;/td>
+ &lt;td>표현의 실질적 유사성&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>첫 시간이기도 하였고 아무래도 주제가 끝장토론을 해도 안끝날 주제였던지라 정해진 시간을 넘길정도로 이야기를 많이 해주셨다. 특히 오픈소스 관련된 이야기는 &lt;code>사례&lt;/code>를 이야기 해야 재밌다고 하셨는데 시간관계상 몇가지만 말씀해주셨다.&lt;/p>
+&lt;ul>
+&lt;li>링크가 맞는지는 모르겠으나 첨부해본다.
+&lt;ul>
+&lt;li>&lt;a href="https://ko.wikipedia.org/wiki/%EC%97%98%EB%A6%BC%EB%84%B7%EA%B3%BC_%ED%95%98%EC%9D%B4%EC%98%A8%EB%84%B7_%EC%82%AC%EA%B1%B4" target="_blank" rel="noopener noreffer ">엘림넷 vs 하이온넷 사건&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://namu.wiki/w/EFM%20%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%8A%A4#s-3.3" target="_blank" rel="noopener noreffer ">EFM Networks&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.oss.kr/oss_guide/show/5a251739-761d-4199-a2ce-a6103f6b7ca0" target="_blank" rel="noopener noreffer ">오라클 VS 구글&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>오픈소스 개발에 대해 단순하게 누구나 수정할수 있는 환경 이라고만 생각을 하고있다가 이런 복잡한 라이센스 문제가 나오니 약간 어려웠지만, 오픈소스의 생태계를 알고 발을 들이기 위해서는 어느정도의 히스토리는 알아야 겠다고 느끼게 되었다.&lt;/p>
+&lt;h2 id="elastic-에서-remote-로-일하기--김종민-님">Elastic 에서 Remote 로 일하기 / 김종민 님&lt;/h2>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/02.png" title="/images/open-source-software-develpoer-story-review/02.png" data-thumbnail="/images/open-source-software-develpoer-story-review/02.png">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/02.png"
+ data-srcset="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/02.png, https://taetaetae.github.io/images/open-source-software-develpoer-story-review/02.png 1.5x, https://taetaetae.github.io/images/open-source-software-develpoer-story-review/02.png 2x"
+ data-sizes="auto"
+ alt="/images/open-source-software-develpoer-story-review/02.png" />
+ &lt;/a>
+&lt;p>그전부터 Elastic 제품들을 실무에서도 사용해 왔었기에 개인적으로 오늘 발표중에 가장 궁금했었고, 관심이 있던 시간이였다. 발표에 앞서 어떻게 Elastic에 들어가게 되셨고 회사 소개를 간단히 해주셨는데 생각보다 어마어마한 회사다고 느낄수 있었다.(800여명중 한국엔 9명 / 네덜란드 출신 스타트업 인데 본사는 캘리포니아 마운틴뷰에 있고 등등)
+원격근무는 편하고 비용이 절약되는 장점이 있으나 동료들간의 유대감형성이 힘들거나 회의시 집중이 힘든 단점도 있다는 점을 말씀해 주셨다.
+시간관계상 몇가지 링크들을 소개해주셨는데 나중에 봐볼 생각이다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=dx65VsvWsuM" target="_blank" rel="noopener noreffer ">침대에서 회사까지 1분&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://it.chosun.com/site/data/html_dir/2018/05/03/2018050385084.html" target="_blank" rel="noopener noreffer ">[마소 392호] 리모트 워크의 중심에 서보다&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>원격 툴로는 다음과 같이 사용한다고 한다.&lt;/p>
+&lt;ul>
+&lt;li>github : 슬랙연동, 개발뿐 아니라 운영/기획/이벤트 공유시 활용&lt;/li>
+&lt;li>Google Apps&lt;/li>
+&lt;li>Slack : 봇 활용 (다양한 종류의 봇, 상황마다 특정 알림을 준다.)&lt;/li>
+&lt;li>salesforce : CRM 툴&lt;/li>
+&lt;li>zoom : 화상회의 200명 동시콜 가능, 회의가 끝나면 녹음/녹화/스크립팅까지 가능하다고 한다 (wow)&lt;/li>
+&lt;li>pinboard : 근태/인사 관리용 앱&lt;/li>
+&lt;li>jira는 사용 잘 안함&lt;/li>
+&lt;/ul>
+&lt;p>나중에 팀 내 Slack 봇으로 여러가지 다양한 자동화를 구성할수 있을것 같다는 생각이 들었다.&lt;/p>
+&lt;h2 id="오픈소스-생태계-일원으로서의-개발자--변정훈-님">오픈소스 생태계 일원으로서의 개발자 / 변정훈 님&lt;/h2>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/03.png" title="/images/open-source-software-develpoer-story-review/03.png" data-thumbnail="/images/open-source-software-develpoer-story-review/03.png">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/03.png"
+ data-srcset="https://taetaetae.github.io/images/open-source-software-develpoer-story-review/03.png, https://taetaetae.github.io/images/open-source-software-develpoer-story-review/03.png 1.5x, https://taetaetae.github.io/images/open-source-software-develpoer-story-review/03.png 2x"
+ data-sizes="auto"
+ alt="/images/open-source-software-develpoer-story-review/03.png" />
+ &lt;/a>
+&lt;p>사회자분이 &amp;ldquo;아웃사이더님&amp;quot;이라고 하시길래 설마 했다. 뭐가 잘 안되면 구글링을 하게되는데 내가 자주 보던 블로그를 운영하셨던 분이 내눈앞에 ㄷㄷ&amp;hellip;
+언제부터 해야지~가 아니고 개발하다보니 어느새 오픈소스에 참여하고 있었다고 한다. 또한 참여하는게 아니고 이미 오픈소스 생태계속에서 살고있는 우리들이라 말씀하시고, 오픈소스 Contribution 방법으로는 사용/홍보/번역/리포팅/문서화/코드제출 등 다양하게 있으니 어렵게 생각하지 말자 라고 하셨다. 오픈소스에서 배울수 있는점은 커뮤니케이션의 방법, 협업의 방법과 중요성, 테스트코드의 중요성, 지속적 통합/지속적 배포, 코드의 품질관리 라고 한다.
+점점 발표를 들으면서 오픈소스에 대한 생각이 바뀌고 있는 내 자신을 느낄수 있었다. 너무 어렵게만 생각해 온것 같다는.&lt;/p></description></item></channel></rss>

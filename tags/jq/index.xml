@@ -1,6 +1,64 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>jq - Tag - 👨‍💻꿈꾸는 태태태의 공간</title><link>https://taetaetae.github.io/tags/jq/</link><description>jq - Tag - 👨‍💻꿈꾸는 태태태의 공간</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2017 17:50:44 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/jq/" rel="self" type="application/rss+xml"/><item><title>리눅스상에서 json 파싱</title><link>https://taetaetae.github.io/2017/02/28/shell-script-json/</link><pubDate>Tue, 28 Feb 2017 17:50:44 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2017/02/28/shell-script-json/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/shell-script-json/jq.png" referrerpolicy="no-referrer">
-            </div>리눅스 상에서 json형태의 String 을 파싱해야하는 상황이라면 아래 라이브러리를 사용해보는것을 추천해본다.
-jq 사용방법은 너무너무 간단하다.
- 자신의 시스템에 맞는 라이브러리를 다운받고  (32-bit system) $ wget http://stedolan.github.io/jq/download/linux32/jq (64-bit system) $ wget http://stedolan.github.io/jq/download/linux64/jq  실행 권한을 설정해 준 뒤  chmod +x ./jq  root 권한으로 해당 파일을 이동시킨다.  sudo cp jq /usr/bin  실행은 다음과 같이 한다. Json String 이 아래와 같이 있다고 가정했을때  { &#34;name&#34;: &#34;Google&#34;, &#34;location&#34;: { &#34;street&#34;: &#34;1600 Amphitheatre Parkway&#34;, &#34;city&#34;: &#34;Mountain View&#34;, &#34;state&#34;: &#34;California&#34;, &#34;country&#34;: &#34;US&#34; }, &#34;employees&#34;: [ { &#34;name&#34;: &#34;Michael&#34;, &#34;division&#34;: &#34;Engineering&#34; }, { &#34;name&#34;: &#34;Laura&#34;, &#34;division&#34;: &#34;HR&#34; }, { &#34;name&#34;: &#34;Elise&#34;, &#34;division&#34;: &#34;Marketing&#34; } ] } 실제 사용과 결과는 다음과 같이 이루어 진다.
-$ cat json.txt | jq '.name' &quot;Google&quot; $ cat json.txt | jq '.location.city' &quot;Mountain View&quot; $ cat json.txt | jq '.employees[0].name' &quot;Michael&quot; $ cat json.txt | jq '.location | {street, city}' { &quot;city&quot;: &quot;Mountain View&quot;, &quot;street&quot;: &quot;1600 Amphitheatre Parkway&quot; } 보다 자세한 사용방법은 공식홈페이지( https://stedolan.github.io/jq/ )를 참조하면 좋을듯 하다.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jq on</title><link>https://taetaetae.github.io/tags/jq/</link><description>Recent content in Jq on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2017 17:50:44 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/jq/index.xml" rel="self" type="application/rss+xml"/><item><title>리눅스상에서 json 파싱</title><link>https://taetaetae.github.io/2017/02/28/shell-script-json/</link><pubDate>Tue, 28 Feb 2017 17:50:44 +0000</pubDate><guid>https://taetaetae.github.io/2017/02/28/shell-script-json/</guid><description>&lt;p>리눅스 상에서 json형태의 String 을 파싱해야하는 상황이라면 아래 라이브러리를 사용해보는것을 추천해본다.&lt;/p>
+&lt;!-- more -->
+&lt;h2 id="jq">jq&lt;/h2>
+&lt;p>사용방법은 너무너무 간단하다.&lt;/p>
+&lt;ul>
+&lt;li>자신의 시스템에 맞는 라이브러리를 다운받고&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>(32-bit system)
+$ wget http://stedolan.github.io/jq/download/linux32/jq
+(64-bit system)
+$ wget http://stedolan.github.io/jq/download/linux64/jq
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>실행 권한을 설정해 준 뒤&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>chmod +x ./jq
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>root 권한으로 해당 파일을 이동시킨다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>sudo cp jq /usr/bin
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>실행은 다음과 같이 한다.
+Json String 이 아래와 같이 있다고 가정했을때&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Google&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;location&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;street&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;1600 Amphitheatre Parkway&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;city&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Mountain View&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;state&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;California&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;country&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;US&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;employees&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Michael&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Engineering&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Laura&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;HR&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Elise&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Marketing&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>실제 사용과 결과는 다음과 같이 이루어 진다.&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ cat json.txt | jq &amp;#39;.name&amp;#39;
+&amp;#34;Google&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.location.city&amp;#39;
+&amp;#34;Mountain View&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.employees[0].name&amp;#39;
+&amp;#34;Michael&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.location | {street, city}&amp;#39;
+{
+ &amp;#34;city&amp;#34;: &amp;#34;Mountain View&amp;#34;,
+ &amp;#34;street&amp;#34;: &amp;#34;1600 Amphitheatre Parkway&amp;#34;
+}
+&lt;/code>&lt;/pre>&lt;p>보다 자세한 사용방법은 공식홈페이지( &lt;a href="https://stedolan.github.io/jq/" target="_blank" rel="noopener noreffer ">https://stedolan.github.io/jq/&lt;/a> )를 참조하면 좋을듯 하다.&lt;/p></description></item></channel></rss>

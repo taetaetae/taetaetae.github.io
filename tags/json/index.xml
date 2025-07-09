@@ -1,15 +1,99 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>json - Tag - 👨‍💻꿈꾸는 태태태의 공간</title><link>https://taetaetae.github.io/tags/json/</link><description>json - Tag - 👨‍💻꿈꾸는 태태태의 공간</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2017 17:50:44 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/json/" rel="self" type="application/rss+xml"/><item><title>리눅스상에서 json 파싱</title><link>https://taetaetae.github.io/2017/02/28/shell-script-json/</link><pubDate>Tue, 28 Feb 2017 17:50:44 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2017/02/28/shell-script-json/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/shell-script-json/jq.png" referrerpolicy="no-referrer">
-            </div>리눅스 상에서 json형태의 String 을 파싱해야하는 상황이라면 아래 라이브러리를 사용해보는것을 추천해본다.
-jq 사용방법은 너무너무 간단하다.
- 자신의 시스템에 맞는 라이브러리를 다운받고  (32-bit system) $ wget http://stedolan.github.io/jq/download/linux32/jq (64-bit system) $ wget http://stedolan.github.io/jq/download/linux64/jq  실행 권한을 설정해 준 뒤  chmod +x ./jq  root 권한으로 해당 파일을 이동시킨다.  sudo cp jq /usr/bin  실행은 다음과 같이 한다. Json String 이 아래와 같이 있다고 가정했을때  { &#34;name&#34;: &#34;Google&#34;, &#34;location&#34;: { &#34;street&#34;: &#34;1600 Amphitheatre Parkway&#34;, &#34;city&#34;: &#34;Mountain View&#34;, &#34;state&#34;: &#34;California&#34;, &#34;country&#34;: &#34;US&#34; }, &#34;employees&#34;: [ { &#34;name&#34;: &#34;Michael&#34;, &#34;division&#34;: &#34;Engineering&#34; }, { &#34;name&#34;: &#34;Laura&#34;, &#34;division&#34;: &#34;HR&#34; }, { &#34;name&#34;: &#34;Elise&#34;, &#34;division&#34;: &#34;Marketing&#34; } ] } 실제 사용과 결과는 다음과 같이 이루어 진다.
-$ cat json.txt | jq '.name' &quot;Google&quot; $ cat json.txt | jq '.location.city' &quot;Mountain View&quot; $ cat json.txt | jq '.employees[0].name' &quot;Michael&quot; $ cat json.txt | jq '.location | {street, city}' { &quot;city&quot;: &quot;Mountain View&quot;, &quot;street&quot;: &quot;1600 Amphitheatre Parkway&quot; } 보다 자세한 사용방법은 공식홈페이지( https://stedolan.github.io/jq/ )를 참조하면 좋을듯 하다.]]></description></item><item><title>spring4에서 json view 활용하기(with @ResponseBody)</title><link>https://taetaetae.github.io/2017/01/07/spring4-json/</link><pubDate>Sat, 07 Jan 2017 15:47:59 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2017/01/07/spring4-json/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/spring4-json/json.png" referrerpolicy="no-referrer">
-            </div>수많은 블로거분들의 도움을 받고자 구글링을 해서 적용을 해봤지만 너무많은 삽질을 했다.(해봤던 방식은 jsonViewResolver 를 따로 설정해보거나, @RequestMapping 옵션을 바꿔보는 수준..) 특히나 Spring설정방식이 예전 방식이였던 xml이 아닌 javaconfig였기 때문에 더욱더 자료가 없었고.. 한참을 삽질하다 해결을 하여 포스팅하게 된다. 우선 환경은 spring 4.3.4.RELEASE, Maven, jdk8임을 밝힌다.
-pom.xml jackson-mapper-asl을 이용해서 하라는 블로거들도 있었지만, 아무리해도(뭔가 Spring버전과 맞지 않는듯 했다.) 잘 안되어 아래와 같은 dependency를 주었다.
-&lt;dependency&gt; &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt; &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt; &lt;version&gt;2.5.1&lt;/version&gt; &lt;/dependency&gt; Controller 아래와같이 @ResponseBody 어노테이션을 설정해주고 리턴은 해당 모델을 넘기면 된다.
-@RequestMapping(value=&#34;/test&#34;) @ResponseBody public Map&lt;String, Object&gt; test(){ Map&lt;String, Object&gt; map = new HashMap&lt;String, Object&gt;(); map.put(&#34;1&#34;, &#34;111&#34;); map.put(&#34;2&#34;, 222); return map; } 그리고 호출을 해보면 기대했던것처럼 이쁘게 json형태로 나온다.
-{ &#34;1&#34;: &#34;111&#34;, &#34;2&#34;: 222 } 물론, list 나 array, 일반 객체도 가능하다.
-정리 삽질을 끝에 알게된 사실(?)을 정리해보자. 다른측면에서 분석을 해보면. @ResponseBody을 이용하여 view 에 json 형태로 나타내고자 할 경우 가능한 상황은 toString으로 했을때 json형태로 나올수 있으면 가능하다. 예로들어 아래처럼 클래스에 Lombok 어노테이션인 @Data가 붙으면 자동으로 toString을 오버라이딩 해주기 때문에 해당 클래스를 리턴하게되면 자동으로 json 처리가 된다.
-@Data public Student{ private String id; private String name; ... } @ResponseBody을 붙이고 List&lt;Student&gt;를 리턴하게 되면 에러가 나는데, 이럴경우 별도 라이브러리를 추가해줘야 자동으로 변환되어 json 형태로 나올수 있게 된다. (list.toString을 하면 json형태가 아닌 이상한 문자형태로 나오기 때문&hellip; Map같은것도 마찬가지 이유로 별도 라이브러리를 추가해줘야 정상적으로 나온다.)
-마치며 단순히 @ResponseBody를 사용해서 json으로 리턴하려면 어떤 라이브러리를 추가해야한다 로 생각했던것에서, 이것저것 테스트 한 결과 toString을 할수 있어야 하고 그 값이 json형태이면 가능하다 로 결론이 지어졌다. 확실히 장님 코끼리 만지듯이 &lsquo;그런가보다&rsquo;하고 넘어가면 삽질이 진짜 불필요한 삽질이 되는것 같다. 구글링을 해보고, 테스트를 해봐서, 결론적으로 내것으로 만드는 습관을 가져야 겠다.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Json on</title><link>https://taetaetae.github.io/tags/json/</link><description>Recent content in Json on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 28 Feb 2017 17:50:44 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/json/index.xml" rel="self" type="application/rss+xml"/><item><title>리눅스상에서 json 파싱</title><link>https://taetaetae.github.io/2017/02/28/shell-script-json/</link><pubDate>Tue, 28 Feb 2017 17:50:44 +0000</pubDate><guid>https://taetaetae.github.io/2017/02/28/shell-script-json/</guid><description>&lt;p>리눅스 상에서 json형태의 String 을 파싱해야하는 상황이라면 아래 라이브러리를 사용해보는것을 추천해본다.&lt;/p>
+&lt;!-- more -->
+&lt;h2 id="jq">jq&lt;/h2>
+&lt;p>사용방법은 너무너무 간단하다.&lt;/p>
+&lt;ul>
+&lt;li>자신의 시스템에 맞는 라이브러리를 다운받고&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>(32-bit system)
+$ wget http://stedolan.github.io/jq/download/linux32/jq
+(64-bit system)
+$ wget http://stedolan.github.io/jq/download/linux64/jq
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>실행 권한을 설정해 준 뒤&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>chmod +x ./jq
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>root 권한으로 해당 파일을 이동시킨다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>sudo cp jq /usr/bin
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>실행은 다음과 같이 한다.
+Json String 이 아래와 같이 있다고 가정했을때&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Google&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;location&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;street&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;1600 Amphitheatre Parkway&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;city&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Mountain View&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;state&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;California&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;country&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;US&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;employees&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Michael&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Engineering&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Laura&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;HR&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Elise&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;division&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Marketing&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>실제 사용과 결과는 다음과 같이 이루어 진다.&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ cat json.txt | jq &amp;#39;.name&amp;#39;
+&amp;#34;Google&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.location.city&amp;#39;
+&amp;#34;Mountain View&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.employees[0].name&amp;#39;
+&amp;#34;Michael&amp;#34;
+
+$ cat json.txt | jq &amp;#39;.location | {street, city}&amp;#39;
+{
+ &amp;#34;city&amp;#34;: &amp;#34;Mountain View&amp;#34;,
+ &amp;#34;street&amp;#34;: &amp;#34;1600 Amphitheatre Parkway&amp;#34;
+}
+&lt;/code>&lt;/pre>&lt;p>보다 자세한 사용방법은 공식홈페이지( &lt;a href="https://stedolan.github.io/jq/" target="_blank" rel="noopener noreffer ">https://stedolan.github.io/jq/&lt;/a> )를 참조하면 좋을듯 하다.&lt;/p></description></item><item><title>spring4에서 json view 활용하기(with @ResponseBody)</title><link>https://taetaetae.github.io/2017/01/07/spring4-json/</link><pubDate>Sat, 07 Jan 2017 15:47:59 +0000</pubDate><guid>https://taetaetae.github.io/2017/01/07/spring4-json/</guid><description>&lt;p>수많은 블로거분들의 도움을 받고자 구글링을 해서 적용을 해봤지만 너무많은 삽질을 했다.(해봤던 방식은 &lt;code>jsonViewResolver&lt;/code> 를 따로 설정해보거나, &lt;code>@RequestMapping&lt;/code> 옵션을 바꿔보는 수준..) 특히나 Spring설정방식이 예전 방식이였던 &lt;code>xml&lt;/code>이 아닌 &lt;code>javaconfig&lt;/code>였기 때문에 더욱더 자료가 없었고.. &lt;!-- more --> 한참을 삽질하다 해결을 하여 포스팅하게 된다. 우선 환경은 &lt;code>spring 4.3.4.RELEASE&lt;/code>, &lt;code>Maven&lt;/code>, &lt;code>jdk8&lt;/code>임을 밝힌다.&lt;/p>
+&lt;h2 id="pomxml">pom.xml&lt;/h2>
+&lt;p>&lt;code>jackson-mapper-asl&lt;/code>을 이용해서 하라는 블로거들도 있었지만, 아무리해도(뭔가 Spring버전과 맞지 않는듯 했다.) 잘 안되어 아래와 같은 dependency를 주었다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;dependency&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nt">&amp;lt;groupId&amp;gt;&lt;/span>com.fasterxml.jackson.core&lt;span class="nt">&amp;lt;/groupId&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nt">&amp;lt;artifactId&amp;gt;&lt;/span>jackson-databind&lt;span class="nt">&amp;lt;/artifactId&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nt">&amp;lt;version&amp;gt;&lt;/span>2.5.1&lt;span class="nt">&amp;lt;/version&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/dependency&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="controller">Controller&lt;/h2>
+&lt;p>아래와같이 &lt;code>@ResponseBody&lt;/code> 어노테이션을 설정해주고 리턴은 해당 모델을 넘기면 된다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@RequestMapping&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/test&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nd">@ResponseBody&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Map&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Object&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">test&lt;/span>&lt;span class="p">(){&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> 	&lt;/span>&lt;span class="n">Map&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Object&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">HashMap&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Object&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> 	&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;111&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> 	&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">put&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;2&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">222&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> 	&lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>그리고 호출을 해보면 기대했던것처럼 이쁘게 json형태로 나온다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;111&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;2&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">222&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>물론, list 나 array, 일반 객체도 가능하다.&lt;/p>
+&lt;h2 id="정리">정리&lt;/h2>
+&lt;p>삽질을 끝에 알게된 사실(?)을 정리해보자.
+다른측면에서 분석을 해보면. &lt;code>@ResponseBody&lt;/code>을 이용하여 view 에 json 형태로 나타내고자 할 경우 가능한 상황은 &lt;code>toString&lt;/code>으로 했을때 json형태로 나올수 있으면 가능하다. 예로들어 아래처럼 클래스에 Lombok 어노테이션인 &lt;code>@Data&lt;/code>가 붙으면 자동으로 &lt;code>toString&lt;/code>을 오버라이딩 해주기 때문에 해당 클래스를 리턴하게되면 자동으로 json 처리가 된다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Data&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Student&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">id&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">...&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>@ResponseBody&lt;/code>을 붙이고 &lt;code>List&amp;lt;Student&amp;gt;&lt;/code>를 리턴하게 되면 에러가 나는데, 이럴경우 별도 라이브러리를 추가해줘야 자동으로 변환되어 json 형태로 나올수 있게 된다. (list.toString을 하면 json형태가 아닌 이상한 문자형태로 나오기 때문&amp;hellip; Map같은것도 마찬가지 이유로 별도 라이브러리를 추가해줘야 정상적으로 나온다.)&lt;/p>
+&lt;h2 id="마치며">마치며&lt;/h2>
+&lt;p>단순히 &lt;strong>@ResponseBody를 사용해서 json으로 리턴하려면 어떤 라이브러리를 추가해야한다&lt;/strong> 로 생각했던것에서, 이것저것 테스트 한 결과 &lt;strong>toString을 할수 있어야 하고 그 값이 json형태이면 가능하다&lt;/strong> 로 결론이 지어졌다. 확실히 장님 코끼리 만지듯이 &amp;lsquo;그런가보다&amp;rsquo;하고 넘어가면 삽질이 진짜 불필요한 삽질이 되는것 같다. 구글링을 해보고, 테스트를 해봐서, 결론적으로 &lt;code>내것&lt;/code>으로 만드는 습관을 가져야 겠다.&lt;/p></description></item></channel></rss>

@@ -1,47 +1,147 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>blog - Category - 👨‍💻꿈꾸는 태태태의 공간</title><link>https://taetaetae.github.io/categories/blog/</link><description>blog - Category - 👨‍💻꿈꾸는 태태태의 공간</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 27 Oct 2019 13:51:16 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/categories/blog/" rel="self" type="application/rss+xml"/><item><title>개발하기 바쁜데 글까지 쓰라고? (글쓰는 개발자가 되자.)</title><link>https://taetaetae.github.io/2019/10/27/a-reason-for-writing/</link><pubDate>Sun, 27 Oct 2019 13:51:16 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2019/10/27/a-reason-for-writing/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/a-reason-for-writing/idea.jpg" referrerpolicy="no-referrer">
-            </div>신입시절. 배워야 할 것도 회사 업무도 많아 허우적대던 때가 있었다. 그렇게 하루에 3~4시간 자며 정신없이 하루를 보내던 날 문득 동기 형이 &ldquo;개발자는 기술 블로그를 해야 돼!&ldquo;라는 전혀 이해가 안 되는 말을 해온다. 이렇게 바빠 죽겠는데 블로그에 글까지 쓰라고? 말이 되는 소릴 하라며 반박하다 못내 이기는 척 하나 둘 글을 쓰기 시작했고, 다른 유명 블로거처럼 엄청나진 않지만 하루에 1,000~2,000명 정도 들어오며 점점 성장해 가는 나만의 기술 블로그가 되었다.
-미약하지만 처음보다는 성장하고 있는 블로그 PV(Page View)" 미약하지만 처음보다는 성장하고 있는 블로그 PV(Page View)  또한 필자의 개발자 경력(?)을 돌이켜 보자면 기술 블로그를 하기 전과 하고 난 후로 나뉠 만큼 기술 블로그는 개인적으로 엄청난 영향력이 되었다.
- 이 기회를 빌어 동기 형에게 감사의 인사를 전하고 싶다. 형. 보고 있죠? ;]
- 이번 포스팅은 꼭 &ldquo;블로그를 하자&rdquo; 라기 보다 &ldquo;글을 왜 써야 하고 어떻게 써야 하는지&quot;에 대해 이야기해보고자 한다. 처음 이 글을 쓰려고 마음먹었을 땐 개발자라는 직군에 국한되지 않고 누구에게나 적용될 정도의 범용적인 글을 쓰려 했으나 &ldquo;S&quot;의 조언으로 독자(타깃)을 최대한 개발자에 맞춰 써보고자 한다. thanks to &ldquo;S&rdquo;
-사실 조금만 검색을 해보면 특히 개발자에게 글쓰기가 얼마나 중요한지 찾아볼 수 있을 정도로 다양한 글들에서 &ldquo;개발자가 왜 글을 써야 하는가&quot;에 대한 내용이 언급이 되곤 했었다. 글을 쓰지 않던 개발자. 하지만 지금은 글쓰기가 정말 중요하다고 느끼며 적어도 2주에 하나 이상의 글을 쓰려는 현업 개발자의 시선에서 정리를 해보고자 한다. 그리고 마침 멘토링 해주고 있는 분께도 글 쓰는것에 대한 중요성을 알려주고 싶었고, 팀 내에도 공유를 하고 싶어 겸사겸사.
-왜 글을 써야 할까? 비로소 내 것이 되기 위한 과정 프로그래밍 언어를 처음 배울때 꼭 만나는 문구 Hello World를 출력하시오. 이게 의미하는 의미가 무엇일까? 정말 새로운 세계를 알려주려 하는 것 일까?(그럴수도 있다&hellip;) 우리가 살아가며 &ldquo;배움&quot;이라는 과정은 대부분 비슷하겠지만 특히 IT 기술은 책을 다 읽었다든지, 동영상 강의를 다 들었다고 해서 내 것이 되었다고 말하기는 어려울 것 같다. 직접 키보드를 두드려 가며 거기서 얻을 수 있는 또 다른 &ldquo;인사이트&rdquo; 가 생길 수도 있기 때문이다.
-다른 예로, 운영하던 시스템이나 서비스에서 장애를 맞았다고 가정해보자. 하지만 우리는 늘 그래왔듯 어떻게든 장애를 해결할 것이다. 이러한 상황에서 분명 &ldquo;문제의 원인&quot;이 있었을 테고 &ldquo;해결 과정&quot;이 있기 마련인데 이곳에서도 &ldquo;인사이트&quot;가 분명 있을 것이다.
-이러한 &ldquo;인사이트&quot;를 글로 적다 보면 그냥 &ldquo;아~ 그렇구나, 그랬었지&rdquo; 하는 머릿속에서의 기억보다는 훨씬 더 오래 남을 것이고 혹여 글에서 정리를 잘못해 다른 사람들의 피드백이 있다면 더할 나위 없이 좋은 효과라고 생각이 된다. (이것이 바로 공유의 힘!)
-더불어 글을 쓸 때 올바른 정보에 기반하여 쓰는 습관이 중요한데 그러다 보면 원래 쓰려고 했던 내용보다 더 깊게 알아가는 과정 속에서 또 다른 배움을 얻을 수 있는 반강제적 기회가 생길 수 있다. 누가 시키지 않았어도 배운 것에 대한 활용을 하고 싶은 생각이 들고 이를 또 글로 쓰고. 긍정적인 순환 속에 생겨나는 작은 발자국일지라도 성장해가는 자신을 느낄 수 있을 것이다.
-몸이 기억하는 정리하는 습관 개발을 하다 보면 정말 간단한 &ldquo;CRUD&rdquo;(Create, Read, Update, Delete) 부터 시작해서 엄청나게 복잡한 도메인 지식에 기반하여 개발을 해야 하는 상황이 생긴다. 그럴 때면 머릿속으로 정리하는 것보다 그림이나 글을 써가면서 정리하는 게 좋다는 건 굳이 말하지 않아도 아는 사실. 글을 쓰다 보면 기승전결의 정리 방법과 목적이 무엇이고 근거가 무엇인지에 대해 구분하는 스킬이 늘어나는 것 같다.(적어도 필자는 기술 블로그를 운영하면서 정리하는 스킬이 그전보다 엄청나게 늘어났다고 자부한다.)
-중국 속담중에 하나, 머릿속에 박혀 나오질 않는다.]]></description></item><item><title>Deview-2017 Day1 리뷰</title><link>https://taetaetae.github.io/2017/10/16/deview-2017-review/</link><pubDate>Mon, 16 Oct 2017 17:29:55 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2017/10/16/deview-2017-review/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/deview-2017-review/deview_main.jpg" referrerpolicy="no-referrer">
-            </div>벌써 10번째 Naver에서 주최하는 Deview. 올해도 어김없이 참석을 하게 되었고, 이번엔 보고 듣고 느꼈던 부분들을 조금이라도 간직하고 싶은 마음에 바로 블로깅을 하려고 한다. (오랜만에 블로깅이긴 하지만&hellip;)항상 Deview에 올때마다 느끼는 부분인데 이번참석이 3번째 되는듯 하다 세상은 좁고 능력자는 많으며 내가 한번쯤 본것들은 이미 지나간 기술들이라는것, 더불어 단상위에 올라가 발표하는 사람들도 예전엔 나와 똑같이 발표를 듣는 일반 사람이였다는것. 이번에도 많은 생각을 하게 되었다. 구구절절 개인적으로 느낀점을 적는것에 앞서 강한 기억이 남았던 몇몇 세션들에 대해서 간략하게 리뷰를 먼저 하는게 맞는 순서같다.
- 책 읽어주는 딥러닝 ( 김태훈 / 데브시스터즈 ) 슬라이드 자료
- 네이버에서 유인나의 목소리로 책을 읽어주는것을 보고 흥미를 얻어 개발하기 시작했다고 한다. 음성합성은 데이터가 많아야 머신러닝이나 딥러닝 기술을 접목시키는데 도움이 되는데 박근혜 전 대통령, 문재인 대통령, 손석희 아나운서의 영상에서 데이터를 추출하여 문장별로 텍스트-음성을 맞추고(pair) 머신러닝 + 딥러닝 기술을 이용해서 만들수 있었다고 한다. 추후 누구나 사용할 수 있도록 파이썬 모듈로 제공한다고 하니, 감사할 따름이다. 사실 머신러닝에 관심만있었지 이렇다할 공부나 직접 구현은 단한번도 안해보고 해당 세션을 들어보니 그냥 우와 신기하다정도였는데. 이번기회에 작은것부터 하나씩 시작하면서 요즈음 핫한(?) 트랜드를 따라가는 것도 괜찮은 방법같아 보인다. (앗, 우선 파이썬부터&hellip;)
-그런 REST API로 괜찮은가 ( 이응준 / 비바리퍼블리카 ) 슬라이드 자료
- 발표자분을 어디서 많이 봤다 했더니만 예전에 우리 회사 사람이였다. 수업도 들어봤고, 같이 알고리즘 스터디도 했고(한번 나갔지만&hellip;). 발표 첫 부분에 자신이 10년전에 데뷰 staff 를 시작했는데 10년을 다 못채우고 퇴사를 했다고 ㅎㅎ.. 아무튼 개인적으로 나름 반가운 분이라 더 관심갖고 듣게 되었다. REST 가 무엇인가?에 대한 발표다. 결론부터 말하자면 아래 3가지중 하나를 사용하면 될것이라고 한다.
- REST API 를 구현하고 REST API라고 부른다. REST API 구현을 포기하고 HTTP API 라고 부른다. REST API 가 아니지만 REST API 라고 부른다. (현재 대부분의 API들의 상태)  REST API를 구성하는 스타일중 눈여겨 볼만한 부분은 크게 두가지가 있다고 한다. (uniform interface)
- self-descriptive messages : 메시지는 스스로 설명이 되어야 한다. hypermedia as the engine of application state (HATEOAS) : 전이(상태의 이동)가 될수있는 정보가 있어야 한다.  정리를 해보면 REST API로 만들려면 제대로 알고 만들어라 라는 메시지가 강한 발표내용같다. 나도 이제까지는 그냥 json 으로 내려준다는 것, GETㆍPOST 등 HTTP Method 사용하는 것으로만 알고있었는데 개인적으로는 발표자분이 말씀하신 두가지 내용은 지키는게 맞다고 생각한다. 즉, 정말 REST 하게 만들꺼면 정확한 사용법을 알고 만드는게 좋아보인다.
-동네 커피샵도 사이렌오더를 쓸 수 있을까? ( 허형, 나동진 / 삼성전자[Lunch class] ) 슬라이드 자료
- 오늘 발표중에 가장 들어보고 싶었던 세션. 예전부터 사이렌오더가 어떤식으로 동작하는지 + 우리회사 커피숍도 사내 앱을 활용해서 만들어 볼순 없을지(아이디어) 이런저런 생각이 많았었는데 딱! 원하던 발표가 있어 듣게 되었다. 삼성전자 소속이신 분들이 따로 그룹을 만들어 진행하면서 만난 부분들을 발표해주셨는데 신기한 기술들이 많아 듣는 내내 흥미진진 했다.
-  PWA(Progressive Web App) : PWA 로 모바일 청첩장을 만들었다고 한다. (결혼식 전날입니다. 오늘 결혼합니다. 이벤트[추첨]를 진행합니다. 등등..) Physical Web(Beacon), NFC &hellip; Browser Fingerprint (Device 구분) Push Nofification Web Payment  결국 정리를 해보면 동네 커피샵에서 사이렌 오더를 사용하기위해 이러저러한 기술들을 시도해봤다~인데. 각 기술들에 있어 현실적인 상황에 한계점이 있고, 그래서 결국 처음에 이야기 된 동네 커피샵에서 사이렌 오더를 사용에 대한 결과물이 없어서 아쉬웠다. 엄청 기대했는데 말이다. 하지만 PWA를 이용해서 모바일 청접장을 만든 부분은 정말 찬사를 보내주고 싶은 아이디어 같다.나도 나중에 해야지~ 예전 &ldquo;날씨&quot;라는 웹서비스를 만들면서 웹이라는 환경에서 기상속보나 갑작스러운 눈/비 알림을 단순히 화면에 뿌려주는것이 아니라 사용자 기기에 노티(푸시)해줄수는 없을까하며 잠깐 본 기술이 PWA 였는데 난 프로토타이핑만 해본 수준이지만 이분들은 실제로 본업과는 별개로 구현을 해보는 노력을 했다는것에 내 자신이 부끄러워 진다.]]></description></item><item><title>다시 시작하자</title><link>https://taetaetae.github.io/2017/07/09/refresh/</link><pubDate>Sun, 09 Jul 2017 17:16:23 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2017/07/09/refresh/</guid><description>마지막 포스팅을 한지 벌써 3개월이 지났다. 그렇게 바빴던것도 아니고 블로그포스팅을 할 시간이 안난것도 아닌데 어느덧 다시 정신차리고 블로그를 포스팅 하려고보니 3개월이라는 시간이 흘러버렸네챗바퀴같은 일상, 느즈막히 일어나서 회사출근하고 정신없이 일하다가 퇴근, 그리고 늦게까지 잠못이루다 또 다음날이면 느즈막히 일어나고&amp;hellip; 뭔가 변화가 필요하다.
-매일 일기쓰기 : 일기라고 해봤자 거창한건 아니고 딱 3개월만 써보자. 오늘 뭐했는지. 자기전에 딱 10분이면 좋을듯 아침에 일찍 일어나기 : 월수금 수영에 화목 배드민턴. 주말에도 일찍일어나고. 일찍일어나면 먹이도 더 먹는다고 하지 않았던가 달력활용하기 : 운동하는것도 그렇지만, 달력을 자주 보면서 빼먹지 말아야 할 중요한 날들은 반드시 메모하고 기억하자 기타 : 책좀 많이 읽고 운동도 꾸준히 해야겠다. 물론 기술블로그 포스팅도 잊지말고. 첫술에 배부르랴. 하나둘씩 퍼즐 맞춰나가듯 해보다보면 내 자신이 바뀌어 있겠지.</description></item><item><title>벌써 3월, 다시 일어서야할 때</title><link>https://taetaetae.github.io/2017/03/08/a-quarter-of-this-year/</link><pubDate>Wed, 08 Mar 2017 13:44:21 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2017/03/08/a-quarter-of-this-year/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/a-quarter-of-this-year/time.png" referrerpolicy="no-referrer">
-            </div>벌써 3월이다. 뭐하나 제대로 한것도 없는데 시간은 야속하게도 멈추지 않고 지나가고 있다. 오랜만에 동기형을 만났다. 신입사원이 되기 전 연습생(?)시절 동거동락하며 개발에 대해 고군분투 하던 사이인지라. 오랜만에 만나도 서로 이야기 하고자 하는 주제는 언제나 동일하다. 개발자로서의 삶 이런저런 이야기를 하며 다시 나를 돌아보게 되었다. 내 노력에 의해, 아니면 운이 좋아 지금 다니고있는 회사에 들어온 이후로 예전만큼의 열정은 온데간데 없으며, 그만큼 간절하지도 않고 치열하지도 않는 내 자신이 너무 미안하고 쪽팔릴정도로 한심하기 그지 없었다. 무엇때문일까, 도대체 왜 이렇게 안일해졌고 적극적이지 못하게 되었을까. 그 질문에 대한 정답은 이것이다 라고 정의를 할수는 없겠지만 확실한건, 현재 내 상황에 안주하고 타협하려하는 마음가짐이 생겼다는건 회피할수 없을정도로 나도 정말 많이 변해버린것 같다. 물론 지금 상황이 잘못되었다는건 아니지만 내 직업 특성상 끊임없이 노력하고 도전하며 배워야 하는 상황인데 지금 난 퇴근하고 집에가면 쉬고싶고 자기 바쁘고 다음날 늦잠자고&hellip; 계속된 생활패턴에 젖어 사는것 같다. 일단 독서좀 많이 해야겟다. 회사에, 집에 쌓인 책만 벌써 몇권인지&hellip; 기본이 되는 전공서적 하나 정하고 끝까지 완독해보자. 그게 자바든 스프링이든, 최신 신기술보다 기본이 탄탄해져야 하는건 백번 천번 말해도 당연하기에.
-다시 정신차리자. 오늘 걷지 않으면 내일은 달려야 한다고 누군가 그랬듯..]]></description></item><item><title>2017 버킷리스트</title><link>https://taetaetae.github.io/2017/01/01/hello-2017/</link><pubDate>Sun, 01 Jan 2017 15:49:31 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2017/01/01/hello-2017/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/hello-2017/2017.jpg" referrerpolicy="no-referrer">
-&lt;/div>올해도 어김없이(?) 1월 1일이 되어 해맞이(해돋인지 해맞인지 햇갈리지만, 새해 첫날부터 복잡해지기 싫당 =ㅁ=)를 다녀오고 까페에서 새해 계획을 세워본다. 정말 지킬수 있는 계획들, 현실적인 부분들만 고려해서 써내려 가보자. 절반 이상만이라도 지킬수만 있다면 그나마 다행이라고 생각!
-기술블로그 운영하기 : 월 2회 posting
-내가 아는지식이 얼만큼인지, 보여주기식이 아닌 내 머릿속에 자리잡고 있는 부분들을 정리해서 기록화 하는 이름하야 기술블로그를 작성하는거다. 2주에 최소 하나씩, 이렇게 되면 한달에 최소 2post, 1년이면 약 20post. 작다고 해도 마냥 작게만 느껴지지 않을 분량이다. 사소한거 하나라도. 이를테면 서버 설치나 스프링의 기본 설정 관련된 것들도. 글쓰는 연습도 하고 좋은 기회가 될것 같다.
-4대강 종주 : 영산강, 1박2일코스
-2014년에 한강(북한강, 남한강), 2015년에 금강, 2016년에는 못갔다. 4대강 종주의 목표가 갑자기 시들어진 작년이라 생각이 든다. 우여곡절 산전수전 다겪은 내 자전거 붕붕이에게 미안하지 않기위해서라도 올해 여름에는 꼭 영산강이나 낙동강 하나를 계획잡아 1박2일 코스로 다녀와야겠다. 음, 대략 5월? 아마 영산강을 가게될것같다. 이번에는 무리하지 않고 1박2일코스로..
-독서 : 월 전공1권, 전공외1권
-작년에 내 입에서 나왔던 이야기들중에 한심스럽게(?)나온 멘트중 가장 많이나왔던 책좀읽자 올해에는 정말 많이는 아닐지라도 자주읽는 습관을 길러야겠다. 한달에 전공책 한권, 기타서적 한권. 얇은책+읽고싶은책 부터 읽기 시작해서 내년 1월1일때는 내 책상 한켠에 자리잡고있는 책장을 가득 메워보고싶다. 아, 물론 다 읽은 책들로만.
-여행+사진 : 한달에 한번이상 여행가기
-해외든 국내든, 올해는 정말 많이 다녀와야겠다. 가볍게 당일치기부터 시작해서 갈수만 있다면 해외여행도. 물론 올해도 야근과의 싸움은 계속될테지만 주말 잠깐이라도 시간을 내서 두달에?아니 한달에 한번이라도 휴가를 써서라도 가까운곳에 힐링하러 다녀오고 싶다. 가서 작년에 산 카메라로 사진도 이것저것 많이 찍고 좋은추억 많이 만들고오고 싶다.
-저축+a : 근검절약의 생활화, 경제공부
-나름 월급의 60%이상을 저축하는 중이다. 그치만 상황이 상황인지라 지금도 만족하지 못한다. 천장에 굴비 달아놓고 간장찍어 먹는다는게 아니라 아낄수 있는 부분들은 최대한 아끼면서 살자는거다. 아침에 택시 타지말고 조금 일찍 일어나서 버스를 탄다던지, 버스를 타지말고 조금일찍 일어나서 자전거를 탄다던지(사실 자전거를 타면 퇴근할때 더 빠르고 편하게 올수 있으니) 생활속에서 절약할수 있는 부분들을 찾고, 몸에 베도록 습관화 시켜야겠다. 그리고 주식이나 펀드 등 투자에 대해서도 이제 공부를 해봐야겠다. (독서하자는거랑 비슷한 이야기) 저금리시대 마냥 저축만 하다보면 힘든건 누구나 다 아는이야기. 일에 치여 생활에 치여 핑계대지말고 배워가면서 챙겨보자.
-운동 : 자유형마스터, 몸짱
-항상 하는 이야기지만 건강보다 중요한건 없다고 생각한다. 올해에도 병원가지 않는 나를 만들기 위해 헬스 + 배드민턴 + 라이딩 은 필수고 가능하면 수영도 배워서 자유형 정도는 할수있는 나를 만들고 싶다. 그래서 다들 말하는 몸짱도 되보고 싶고 자신있게 해변가에서 상의를 탈의할수있는(?!) 건강한 내가 되도록 노력해야겠다.
-봉사활동하기 : 연탄배달, 자원봉사
-작년에 하려다가 못한 봉사활동 올해는 꼭 해야겠다. 가깝게 할수있을법한게 연탄배달, 이건 1월달 내로 꼭! 해서 봉사라는것과 나눔이라는 행복을 느껴보고 싶다. 지금 생각나는건 자원봉사 같은것도 해보고 싶고 무보수 알바(?) 같은것도 해보고싶다. 나이들면 못할, 언제 해보겠나.
-가까운, 먼 사람들 만나기
-마지막으로, 잊고있었던 중요한 행동. 바로 사람들 만나기다. 바쁘다는 핑계 하나만으로 등한시한 내 소중한 사람들. 아무리 연봉을 많이 받고 일을 잘한다고 회사에서 잘나간다 할지라도, 내 곁엔 나를 생각해주는 소중한 사람들이 있기에 내가 있을수 있는것 같다. 가까운 사람들부터 시작해서 오랬동안 못봤던 사람들도 하나둘씩 연락하면서 지내는 여유를 가져야 겠다.
-할수 있을까? 라는 생각보다 하나둘씩 잊지말고, 놓치지 말고 하루를, 이번주를, 이번달을 점검하고 실천해 나가보자. 올 한해도 열심히 최선을 다해 살것!</description></item><item><title>첫번째 포스팅</title><link>https://taetaetae.github.io/2016/09/18/first/</link><pubDate>Sun, 18 Sep 2016 00:34:23 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2016/09/18/first/</guid><description>시작은 언제든지 새롭고 떨리고 가슴벅차는 순간이다. 과연 이 블로그를 잘 운영할수 있을런지.. 제대로 한번 관리 해보고, 나만의 공간으로 꾸며보자!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on</title><link>https://taetaetae.github.io/categories/blog/</link><description>Recent content in Blog on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 27 Oct 2019 13:51:16 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>개발하기 바쁜데 글까지 쓰라고? (글쓰는 개발자가 되자.)</title><link>https://taetaetae.github.io/2019/10/27/a-reason-for-writing/</link><pubDate>Sun, 27 Oct 2019 13:51:16 +0000</pubDate><guid>https://taetaetae.github.io/2019/10/27/a-reason-for-writing/</guid><description>&lt;p>신입시절. 배워야 할 것도 회사 업무도 많아 허우적대던 때가 있었다. 그렇게 하루에 3&lt;del>4시간 자며 정신없이 하루를 보내던 날 문득 동기 형이 &amp;ldquo;개발자는 기술 블로그를 해야 돼!&amp;ldquo;라는 전혀 이해가 안 되는 말을 해온다. 이렇게 바빠 죽겠는데 블로그에 글까지 쓰라고? &lt;!--more -->말이 되는 소릴 하라며 반박하다 못내 이기는 척 하나 둘 글을 쓰기 시작했고, 다른 유명 블로거처럼 엄청나진 않지만 하루에 1,000&lt;/del>2,000명 정도 들어오며 점점 성장해 가는 나만의 기술 블로그가 되었다.&lt;/p>
+&lt;figure>&lt;a class="lightgallery" href="https://taetaetae.github.io/images/a-reason-for-writing/blog_graph.jpg" title="/images/a-reason-for-writing/blog_graph.jpg" data-thumbnail="/images/a-reason-for-writing/blog_graph.jpg" data-sub-html="&lt;h2>미약하지만 처음보다는 성장하고 있는 블로그 PV(Page View)&lt;/h2>">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src="https://taetaetae.github.io/images/a-reason-for-writing/blog_graph.jpg"
+ data-srcset="https://taetaetae.github.io/images/a-reason-for-writing/blog_graph.jpg, https://taetaetae.github.io/images/a-reason-for-writing/blog_graph.jpg 1.5x, https://taetaetae.github.io/images/a-reason-for-writing/blog_graph.jpg 2x"
+ data-sizes="auto"
+ alt="/images/a-reason-for-writing/blog_graph.jpg" width="80%" />
+ &lt;/a>&lt;figcaption class="image-caption">미약하지만 처음보다는 성장하고 있는 블로그 PV(Page View)&lt;/figcaption>
+ &lt;/figure>
+&lt;p>또한 필자의 개발자 경력(?)을 돌이켜 보자면 기술 블로그를 하기 전과 하고 난 후로 나뉠 만큼 기술 블로그는 개인적으로 엄청난 영향력이 되었다.&lt;/p>
+&lt;blockquote>
+&lt;p>이 기회를 빌어 동기 형에게 감사의 인사를 전하고 싶다. 형. 보고 있죠? ;]&lt;/p>&lt;/blockquote>
+&lt;p>이번 포스팅은 꼭 &amp;ldquo;블로그를 하자&amp;rdquo; 라기 보다 &amp;ldquo;글을 왜 써야 하고 어떻게 써야 하는지&amp;quot;에 대해 이야기해보고자 한다. 처음 이 글을 쓰려고 마음먹었을 땐 개발자라는 직군에 국한되지 않고 누구에게나 적용될 정도의 범용적인 글을 쓰려 했으나 &amp;ldquo;S&amp;quot;의 조언으로 독자(타깃)을 최대한 개발자에 맞춰 써보고자 한다. thanks to &amp;ldquo;S&amp;rdquo;&lt;/p>
+&lt;p>사실 조금만 검색을 해보면 특히 개발자에게 글쓰기가 얼마나 중요한지 찾아볼 수 있을 정도로 다양한 글들에서 &amp;ldquo;개발자가 왜 글을 써야 하는가&amp;quot;에 대한 내용이 언급이 되곤 했었다. 글을 쓰지 않던 개발자. 하지만 지금은 글쓰기가 정말 중요하다고 느끼며 적어도 2주에 하나 이상의 글을 쓰려는 현업 개발자의 시선에서 정리를 해보고자 한다.
+그리고 마침 멘토링 해주고 있는 분께도 글 쓰는것에 대한 중요성을 알려주고 싶었고, 팀 내에도 공유를 하고 싶어 겸사겸사.&lt;/p>
+&lt;h2 id="왜-글을-써야-할까">왜 글을 써야 할까?&lt;/h2>
+&lt;h3 id="비로소-내-것이-되기-위한-과정">비로소 내 것이 되기 위한 과정&lt;/h3>
+&lt;p>프로그래밍 언어를 처음 배울때 꼭 만나는 문구 &lt;code>Hello World를 출력하시오&lt;/code>. 이게 의미하는 의미가 무엇일까? 정말 새로운 세계를 알려주려 하는 것 일까?(그럴수도 있다&amp;hellip;) 우리가 살아가며 &amp;ldquo;배움&amp;quot;이라는 과정은 대부분 비슷하겠지만 특히 IT 기술은 책을 다 읽었다든지, 동영상 강의를 다 들었다고 해서 내 것이 되었다고 말하기는 어려울 것 같다. 직접 키보드를 두드려 가며 거기서 얻을 수 있는 또 다른 &amp;ldquo;인사이트&amp;rdquo; 가 생길 수도 있기 때문이다.&lt;/p>
+&lt;p>다른 예로, 운영하던 시스템이나 서비스에서 장애를 맞았다고 가정해보자. 하지만 우리는 늘 그래왔듯 어떻게든 장애를 해결할 것이다. 이러한 상황에서 분명 &amp;ldquo;문제의 원인&amp;quot;이 있었을 테고 &amp;ldquo;해결 과정&amp;quot;이 있기 마련인데 이곳에서도 &amp;ldquo;인사이트&amp;quot;가 분명 있을 것이다.&lt;/p>
+&lt;p>이러한 &amp;ldquo;인사이트&amp;quot;를 글로 적다 보면 그냥 &amp;ldquo;아~ 그렇구나, 그랬었지&amp;rdquo; 하는 머릿속에서의 기억보다는 훨씬 더 오래 남을 것이고 혹여 글에서 정리를 잘못해 다른 사람들의 피드백이 있다면 더할 나위 없이 좋은 효과라고 생각이 된다. (이것이 바로 공유의 힘!)&lt;/p>
+&lt;p>더불어 글을 쓸 때 올바른 정보에 기반하여 쓰는 습관이 중요한데 그러다 보면 원래 쓰려고 했던 내용보다 더 깊게 알아가는 과정 속에서 또 다른 배움을 얻을 수 있는 반강제적 기회가 생길 수 있다. 누가 시키지 않았어도 배운 것에 대한 활용을 하고 싶은 생각이 들고 이를 또 글로 쓰고. 긍정적인 순환 속에 생겨나는 작은 발자국일지라도 성장해가는 자신을 느낄 수 있을 것이다.&lt;/p>
+&lt;h3 id="몸이-기억하는-정리하는-습관">몸이 기억하는 정리하는 습관&lt;/h3>
+&lt;p>개발을 하다 보면 정말 간단한 &amp;ldquo;CRUD&amp;rdquo;(Create, Read, Update, Delete) 부터 시작해서 엄청나게 복잡한 도메인 지식에 기반하여 개발을 해야 하는 상황이 생긴다. 그럴 때면 머릿속으로 정리하는 것보다 그림이나 글을 써가면서 정리하는 게 좋다는 건 굳이 말하지 않아도 아는 사실. 글을 쓰다 보면 기승전결의 정리 방법과 목적이 무엇이고 근거가 무엇인지에 대해 구분하는 스킬이 늘어나는 것 같다.(적어도 필자는 기술 블로그를 운영하면서 정리하는 스킬이 그전보다 엄청나게 늘어났다고 자부한다.)&lt;/p></description></item><item><title>Deview-2017 Day1 리뷰</title><link>https://taetaetae.github.io/2017/10/16/deview-2017-review/</link><pubDate>Mon, 16 Oct 2017 17:29:55 +0000</pubDate><guid>https://taetaetae.github.io/2017/10/16/deview-2017-review/</guid><description>&lt;p>벌써 10번째 Naver에서 주최하는 Deview. 올해도 어김없이 참석을 하게 되었고, 이번엔 보고 듣고 느꼈던 부분들을 조금이라도 간직하고 싶은 마음에 바로 블로깅을 하려고 한다. (오랜만에 블로깅이긴 하지만&amp;hellip;)&lt;!-- more -->
+항상 Deview에 올때마다 느끼는 부분인데 &lt;code>이번참석이 3번째 되는듯 하다&lt;/code> 세상은 좁고 능력자는 많으며 내가 한번쯤 본것들은 이미 지나간 기술들이라는것, 더불어 단상위에 올라가 발표하는 사람들도 예전엔 나와 똑같이 발표를 듣는 일반 사람이였다는것. 이번에도 많은 생각을 하게 되었다. 구구절절 개인적으로 느낀점을 적는것에 앞서 강한 기억이 남았던 몇몇 세션들에 대해서 간략하게 리뷰를 먼저 하는게 맞는 순서같다.&lt;/p>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/deview-2017-review/10th.jpg" title="" data-thumbnail="">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src=""
+ data-srcset=", 1.5x, /images/deview-2017-review/10th.jpg 2x"
+ data-sizes="auto"
+ alt="" />
+ &lt;/a>
+&lt;h2 id="책-읽어주는-딥러닝--김태훈--데브시스터즈-">책 읽어주는 딥러닝 ( 김태훈 / 데브시스터즈 )&lt;/h2>
+&lt;p>&lt;a href="https://www.slideshare.net/carpedm20/deview-2017-80824162" target="_blank" rel="noopener noreffer ">슬라이드 자료&lt;/a>&lt;/p>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/deview-2017-review/session_1.jpg" title="" data-thumbnail="">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src=""
+ data-srcset=", 1.5x, /images/deview-2017-review/session_1.jpg 2x"
+ data-sizes="auto"
+ alt="" />
+ &lt;/a>
+&lt;p>네이버에서 유인나의 목소리로 책을 읽어주는것을 보고 흥미를 얻어 개발하기 시작했다고 한다.
+음성합성은 데이터가 많아야 머신러닝이나 딥러닝 기술을 접목시키는데 도움이 되는데 &lt;code>박근혜 전 대통령&lt;/code>, &lt;code>문재인 대통령&lt;/code>, &lt;code>손석희 아나운서&lt;/code>의 영상에서 데이터를 추출하여 문장별로 텍스트-음성을 맞추고(pair) 머신러닝 + 딥러닝 기술을 이용해서 만들수 있었다고 한다. 추후 누구나 사용할 수 있도록 파이썬 모듈로 제공한다고 하니, 감사할 따름이다.
+사실 머신러닝에 관심&lt;code>만&lt;/code>있었지 이렇다할 공부나 직접 구현은 단한번도 안해보고 해당 세션을 들어보니 그냥 &lt;code>우와 신기하다&lt;/code>정도였는데. 이번기회에 작은것부터 하나씩 시작하면서 요즈음 핫한(?) 트랜드를 따라가는 것도 괜찮은 방법같아 보인다. (앗, 우선 파이썬부터&amp;hellip;)&lt;/p>
+&lt;h2 id="그런-rest-api로-괜찮은가--이응준--비바리퍼블리카-">그런 REST API로 괜찮은가 ( 이응준 / 비바리퍼블리카 )&lt;/h2>
+&lt;p>&lt;a href="http://slides.com/eungjun/rest" target="_blank" rel="noopener noreffer ">슬라이드 자료&lt;/a>&lt;/p>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/deview-2017-review/session_2.jpg" title="" data-thumbnail="">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src=""
+ data-srcset=", 1.5x, /images/deview-2017-review/session_2.jpg 2x"
+ data-sizes="auto"
+ alt="" />
+ &lt;/a>
+&lt;p>발표자분을 어디서 많이 봤다 했더니만 예전에 우리 회사 사람이였다. 수업도 들어봤고, 같이 알고리즘 스터디도 했고(한번 나갔지만&amp;hellip;). 발표 첫 부분에 자신이 10년전에 데뷰 staff 를 시작했는데 10년을 다 못채우고 퇴사를 했다고 ㅎㅎ.. 아무튼 개인적으로 나름 반가운 분이라 더 관심갖고 듣게 되었다.
+&lt;code>REST 가 무엇인가?&lt;/code>에 대한 발표다. 결론부터 말하자면 아래 3가지중 하나를 사용하면 될것이라고 한다.&lt;/p>
+&lt;ul>
+&lt;li>REST API 를 구현하고 REST API라고 부른다.&lt;/li>
+&lt;li>REST API 구현을 포기하고 HTTP API 라고 부른다.&lt;/li>
+&lt;li>REST API 가 아니지만 REST API 라고 부른다. (현재 대부분의 API들의 상태)&lt;/li>
+&lt;/ul>
+&lt;p>REST API를 구성하는 스타일중 눈여겨 볼만한 부분은 크게 두가지가 있다고 한다. &lt;code>(uniform interface)&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>self-descriptive messages : 메시지는 스스로 설명이 되어야 한다.&lt;/li>
+&lt;li>hypermedia as the engine of application state (HATEOAS) : 전이(상태의 이동)가 될수있는 정보가 있어야 한다.&lt;/li>
+&lt;/ul>
+&lt;p>정리를 해보면 &lt;code>REST API로 만들려면 제대로 알고 만들어라&lt;/code> 라는 메시지가 강한 발표내용같다. 나도 이제까지는 그냥 json 으로 내려준다는 것, GETㆍPOST 등 HTTP Method 사용하는 것으로만 알고있었는데 개인적으로는 발표자분이 말씀하신 두가지 내용은 지키는게 맞다고 생각한다. 즉, 정말 REST 하게 만들꺼면 정확한 사용법을 알고 만드는게 좋아보인다.&lt;/p>
+&lt;h2 id="동네-커피샵도-사이렌오더를-쓸-수-있을까--허형-나동진--삼성전자lunch-class-">동네 커피샵도 사이렌오더를 쓸 수 있을까? ( 허형, 나동진 / 삼성전자[Lunch class] )&lt;/h2>
+&lt;p>&lt;a href="https://www.slideshare.net/deview/123-80843907" target="_blank" rel="noopener noreffer ">슬라이드 자료&lt;/a>&lt;/p>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/deview-2017-review/session_3.jpg" title="" data-thumbnail="">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src=""
+ data-srcset=", 1.5x, /images/deview-2017-review/session_3.jpg 2x"
+ data-sizes="auto"
+ alt="" />
+ &lt;/a>
+&lt;p>오늘 발표중에 가장 들어보고 싶었던 세션. 예전부터 사이렌오더가 어떤식으로 동작하는지 + 우리회사 커피숍도 사내 앱을 활용해서 만들어 볼순 없을지(아이디어) 이런저런 생각이 많았었는데 딱! 원하던 발표가 있어 듣게 되었다.
+삼성전자 소속이신 분들이 따로 그룹을 만들어 진행하면서 만난 부분들을 발표해주셨는데 신기한 기술들이 많아 듣는 내내 흥미진진 했다.&lt;/p>
+&lt;a class="lightgallery" href="https://taetaetae.github.io/images/deview-2017-review/session_3_1.jpg" title="" data-thumbnail="">
+ &lt;img
+ class="lazyload"
+ src="https://taetaetae.github.io/svg/loading.min.svg"
+ data-src=""
+ data-srcset=", 1.5x, /images/deview-2017-review/session_3_1.jpg 2x"
+ data-sizes="auto"
+ alt="" />
+ &lt;/a>
+&lt;ul>
+&lt;li>PWA(Progressive Web App) : PWA 로 모바일 청첩장을 만들었다고 한다. (결혼식 전날입니다. 오늘 결혼합니다. 이벤트[추첨]를 진행합니다. 등등..)&lt;/li>
+&lt;li>Physical Web(Beacon), NFC &amp;hellip;&lt;/li>
+&lt;li>Browser Fingerprint (Device 구분)&lt;/li>
+&lt;li>Push Nofification&lt;/li>
+&lt;li>Web Payment&lt;/li>
+&lt;/ul>
+&lt;p>결국 정리를 해보면 동네 커피샵에서 사이렌 오더를 사용하기위해 이러저러한 기술들을 시도해봤다~인데. 각 기술들에 있어 현실적인 상황에 한계점이 있고, 그래서 결국 처음에 이야기 된 &lt;code>동네 커피샵에서 사이렌 오더를 사용&lt;/code>에 대한 결과물이 없어서 아쉬웠다. 엄청 기대했는데 말이다.
+하지만 PWA를 이용해서 모바일 청접장을 만든 부분은 정말 찬사를 보내주고 싶은 아이디어 같다.&lt;code>나도 나중에 해야지~&lt;/code>
+예전 &amp;ldquo;날씨&amp;quot;라는 웹서비스를 만들면서 &lt;code>웹&lt;/code>이라는 환경에서 기상속보나 갑작스러운 눈/비 알림을 단순히 화면에 뿌려주는것이 아니라 사용자 기기에 노티(푸시)해줄수는 없을까하며 잠깐 본 기술이 PWA 였는데 난 프로토타이핑만 해본 수준이지만 이분들은 실제로 본업과는 별개로 구현을 해보는 노력을 했다는것에 내 자신이 부끄러워 진다.&lt;/p></description></item><item><title>다시 시작하자</title><link>https://taetaetae.github.io/2017/07/09/refresh/</link><pubDate>Sun, 09 Jul 2017 17:16:23 +0000</pubDate><guid>https://taetaetae.github.io/2017/07/09/refresh/</guid><description>&lt;p>마지막 포스팅을 한지 벌써 3개월이 지났다. 그렇게 바빴던것도 아니고 블로그포스팅을 할 시간이 안난것도 아닌데 어느덧 다시 정신차리고 블로그를 포스팅 하려고보니 3개월이라는 시간이 흘러버렸네&lt;!-- more -->
+챗바퀴같은 일상, 느즈막히 일어나서 회사출근하고 정신없이 일하다가 퇴근, 그리고 늦게까지 잠못이루다 또 다음날이면 느즈막히 일어나고&amp;hellip; 뭔가 변화가 필요하다.&lt;/p>
+&lt;ul>
+&lt;li>매일 일기쓰기 : 일기라고 해봤자 거창한건 아니고 딱 3개월만 써보자. 오늘 뭐했는지. 자기전에 딱 10분이면 좋을듯&lt;/li>
+&lt;li>아침에 일찍 일어나기 : 월수금 수영에 화목 배드민턴. 주말에도 일찍일어나고. 일찍일어나면 먹이도 더 먹는다고 하지 않았던가&lt;/li>
+&lt;li>달력활용하기 : 운동하는것도 그렇지만, 달력을 자주 보면서 빼먹지 말아야 할 중요한 날들은 반드시 메모하고 기억하자&lt;/li>
+&lt;li>기타 : 책좀 많이 읽고 운동도 꾸준히 해야겠다. 물론 기술블로그 포스팅도 잊지말고.&lt;/li>
+&lt;/ul>
+&lt;p>첫술에 배부르랴. 하나둘씩 퍼즐 맞춰나가듯 해보다보면 내 자신이 바뀌어 있겠지.&lt;/p></description></item><item><title>벌써 3월, 다시 일어서야할 때</title><link>https://taetaetae.github.io/2017/03/08/a-quarter-of-this-year/</link><pubDate>Wed, 08 Mar 2017 13:44:21 +0000</pubDate><guid>https://taetaetae.github.io/2017/03/08/a-quarter-of-this-year/</guid><description>&lt;p>벌써 3월이다. 뭐하나 제대로 한것도 없는데 시간은 야속하게도 멈추지 않고 지나가고 있다.
+오랜만에 동기형을 만났다. &lt;!-- more -->신입사원이 되기 전 연습생(?)시절 동거동락하며 개발에 대해 고군분투 하던 사이인지라. 오랜만에 만나도 서로 이야기 하고자 하는 주제는 언제나 동일하다. &lt;code>개발자로서의 삶&lt;/code>
+이런저런 이야기를 하며 다시 나를 돌아보게 되었다. 내 노력에 의해, 아니면 운이 좋아 지금 다니고있는 회사에 들어온 이후로 예전만큼의 열정은 온데간데 없으며, 그만큼 간절하지도 않고 치열하지도 않는 내 자신이 너무 미안하고 쪽팔릴정도로 한심하기 그지 없었다. 무엇때문일까, 도대체 왜 이렇게 안일해졌고 적극적이지 못하게 되었을까.
+그 질문에 대한 정답은 이것이다 라고 정의를 할수는 없겠지만 확실한건, 현재 내 상황에 안주하고 타협하려하는 마음가짐이 생겼다는건 회피할수 없을정도로 나도 정말 많이 변해버린것 같다. 물론 지금 상황이 잘못되었다는건 아니지만 내 직업 특성상 끊임없이 노력하고 도전하며 배워야 하는 상황인데 지금 난 퇴근하고 집에가면 쉬고싶고 자기 바쁘고 다음날 늦잠자고&amp;hellip; 계속된 생활패턴에 젖어 사는것 같다.
+일단 독서좀 많이 해야겟다. 회사에, 집에 쌓인 책만 벌써 몇권인지&amp;hellip; 기본이 되는 전공서적 하나 정하고 끝까지 완독해보자. 그게 자바든 스프링이든, 최신 신기술보다 기본이 탄탄해져야 하는건 백번 천번 말해도 당연하기에.&lt;/p>
+&lt;p>다시 정신차리자. 오늘 걷지 않으면 내일은 달려야 한다고 누군가 그랬듯..&lt;/p></description></item><item><title>2017 버킷리스트</title><link>https://taetaetae.github.io/2017/01/01/hello-2017/</link><pubDate>Sun, 01 Jan 2017 15:49:31 +0000</pubDate><guid>https://taetaetae.github.io/2017/01/01/hello-2017/</guid><description>&lt;p>올해도 어김없이(?) 1월 1일이 되어 해맞이(&lt;del>해돋인지 해맞인지 햇갈리지만, 새해 첫날부터 복잡해지기 싫당 =ㅁ=&lt;/del>)를 다녀오고 까페에서 새해 계획을 세워본다. 정말 지킬수 있는 계획들, 현실적인 부분들만 고려해서 써내려 가보자. 절반 이상만이라도 지킬수만 있다면 그나마 다행이라고 생각!&lt;/p>
+&lt;!-- more -->
+&lt;blockquote>
+&lt;p>기술블로그 운영하기 : 월 2회 posting&lt;/p>&lt;/blockquote>
+&lt;p>내가 아는지식이 얼만큼인지, 보여주기식이 아닌 내 머릿속에 자리잡고 있는 부분들을 정리해서 기록화 하는 이름하야 &lt;code>기술블로그&lt;/code>를 작성하는거다. 2주에 최소 하나씩, 이렇게 되면 한달에 최소 2post, 1년이면 약 20post. 작다고 해도 마냥 작게만 느껴지지 않을 분량이다. 사소한거 하나라도. 이를테면 서버 설치나 스프링의 기본 설정 관련된 것들도. 글쓰는 연습도 하고 좋은 기회가 될것 같다.&lt;/p>
+&lt;blockquote>
+&lt;p>4대강 종주 : 영산강, 1박2일코스&lt;/p>&lt;/blockquote>
+&lt;p>2014년에 한강(북한강, 남한강), 2015년에 금강, 2016년에는 못갔다. 4대강 종주의 목표가 갑자기 시들어진 작년이라 생각이 든다. 우여곡절 산전수전 다겪은 내 자전거 붕붕이에게 미안하지 않기위해서라도 올해 여름에는 꼭 영산강이나 낙동강 하나를 계획잡아 1박2일 코스로 다녀와야겠다. 음, 대략 5월? 아마 영산강을 가게될것같다. 이번에는 무리하지 않고 1박2일코스로..&lt;/p>
+&lt;blockquote>
+&lt;p>독서 : 월 전공1권, 전공외1권&lt;/p>&lt;/blockquote>
+&lt;p>작년에 내 입에서 나왔던 이야기들중에 한심스럽게(?)나온 멘트중 가장 많이나왔던 &lt;code>책좀읽자&lt;/code> 올해에는 정말 &lt;code>많이&lt;/code>는 아닐지라도 &lt;code>자주&lt;/code>읽는 습관을 길러야겠다. 한달에 전공책 한권, 기타서적 한권. 얇은책+읽고싶은책 부터 읽기 시작해서 내년 1월1일때는 내 책상 한켠에 자리잡고있는 책장을 가득 메워보고싶다. 아, 물론 다 읽은 책들로만.&lt;/p>
+&lt;blockquote>
+&lt;p>여행+사진 : 한달에 한번이상 여행가기&lt;/p>&lt;/blockquote>
+&lt;p>해외든 국내든, 올해는 정말 많이 다녀와야겠다. 가볍게 당일치기부터 시작해서 갈수만 있다면 해외여행도. 물론 올해도 야근과의 싸움은 계속될테지만 주말 잠깐이라도 시간을 내서 두달에?아니 한달에 한번이라도 휴가를 써서라도 가까운곳에 힐링하러 다녀오고 싶다. 가서 작년에 산 카메라로 사진도 이것저것 많이 찍고 좋은추억 많이 만들고오고 싶다.&lt;/p>
+&lt;blockquote>
+&lt;p>저축+a : 근검절약의 생활화, 경제공부&lt;/p>&lt;/blockquote>
+&lt;p>나름 월급의 60%이상을 저축하는 중이다. 그치만 상황이 상황인지라 지금도 만족하지 못한다. 천장에 굴비 달아놓고 간장찍어 먹는다는게 아니라 아낄수 있는 부분들은 최대한 아끼면서 살자는거다. 아침에 택시 타지말고 조금 일찍 일어나서 버스를 탄다던지, 버스를 타지말고 조금일찍 일어나서 자전거를 탄다던지&lt;code>(사실 자전거를 타면 퇴근할때 더 빠르고 편하게 올수 있으니)&lt;/code> 생활속에서 절약할수 있는 부분들을 찾고, 몸에 베도록 습관화 시켜야겠다. 그리고 주식이나 펀드 등 투자에 대해서도 이제 공부를 해봐야겠다. &lt;code>(독서하자는거랑 비슷한 이야기)&lt;/code> 저금리시대 마냥 저축만 하다보면 힘든건 누구나 다 아는이야기. 일에 치여 생활에 치여 핑계대지말고 배워가면서 챙겨보자.&lt;/p>
+&lt;blockquote>
+&lt;p>운동 : 자유형마스터, 몸짱&lt;/p>&lt;/blockquote>
+&lt;p>항상 하는 이야기지만 건강보다 중요한건 없다고 생각한다. 올해에도 병원가지 않는 나를 만들기 위해 헬스 + 배드민턴 + 라이딩 은 필수고 가능하면 수영도 배워서 자유형 정도는 할수있는 나를 만들고 싶다. 그래서 다들 말하는 &lt;code>몸짱&lt;/code>도 되보고 싶고 자신있게 해변가에서 상의를 탈의할수있는(?!) 건강한 내가 되도록 노력해야겠다.&lt;/p>
+&lt;blockquote>
+&lt;p>봉사활동하기 : 연탄배달, 자원봉사&lt;/p>&lt;/blockquote>
+&lt;p>작년에 하려다가 못한 봉사활동 올해는 꼭 해야겠다. 가깝게 할수있을법한게 &lt;code>연탄배달&lt;/code>, 이건 1월달 내로 꼭! 해서 봉사라는것과 나눔이라는 행복을 느껴보고 싶다. 지금 생각나는건 자원봉사 같은것도 해보고 싶고 무보수 알바(?) 같은것도 해보고싶다. 나이들면 못할, 언제 해보겠나.&lt;/p>
+&lt;blockquote>
+&lt;p>가까운, 먼 사람들 만나기&lt;/p>&lt;/blockquote>
+&lt;p>마지막으로, 잊고있었던 중요한 행동. 바로 사람들 만나기다. 바쁘다는 핑계 하나만으로 등한시한 내 소중한 사람들. 아무리 연봉을 많이 받고 일을 잘한다고 회사에서 잘나간다 할지라도, 내 곁엔 나를 생각해주는 소중한 사람들이 있기에 내가 있을수 있는것 같다. 가까운 사람들부터 시작해서 오랬동안 못봤던 사람들도 하나둘씩 연락하면서 지내는 여유를 가져야 겠다.&lt;/p>
+&lt;p>할수 있을까? 라는 생각보다 하나둘씩 잊지말고, 놓치지 말고 하루를, 이번주를, 이번달을 점검하고 실천해 나가보자.
+올 한해도 열심히 최선을 다해 살것!&lt;/p></description></item><item><title>첫번째 포스팅</title><link>https://taetaetae.github.io/2016/09/18/first/</link><pubDate>Sun, 18 Sep 2016 00:34:23 +0000</pubDate><guid>https://taetaetae.github.io/2016/09/18/first/</guid><description>&lt;p>시작은 언제든지 새롭고 떨리고 가슴벅차는 순간이다.
+과연 이 블로그를 잘 운영할수 있을런지..
+제대로 한번 관리 해보고, 나만의 공간으로 꾸며보자!&lt;/p></description></item></channel></rss>

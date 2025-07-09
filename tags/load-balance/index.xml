@@ -1,12 +1,70 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Load Balance - Tag - 👨‍💻꿈꾸는 태태태의 공간</title><link>https://taetaetae.github.io/tags/load-balance/</link><description>Load Balance - Tag - 👨‍💻꿈꾸는 태태태의 공간</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 04 Aug 2019 19:50:43 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/load-balance/" rel="self" type="application/rss+xml"/><item><title>아파치 로드밸런싱으로 여러 WAS 운영하기</title><link>https://taetaetae.github.io/2019/08/04/apache-load-balancing/</link><pubDate>Sun, 04 Aug 2019 19:50:43 +0000</pubDate><author>Author</author><guid>https://taetaetae.github.io/2019/08/04/apache-load-balancing/</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/apache-load-balancing/lb_logo.jpg" referrerpolicy="no-referrer">
-            </div>웹서버 하나만 사용하거나 WAS 하나만을 사용하며 웹서비스를 운영하는 경우는 극히 드물다. 웹서버의 장점과 WAS의 장점 그 두마리의 토끼를 다 잡기 위해 보통 앞단에 웹서버를 두고 그 뒤에 WAS를 두며 서비스를 운영하곤 한다. 헌데 운영하는 서비스가 인기가 많아져(?) 사용량이 많아지다면 그만큼 응답이 느려 (TPS 등) 서버를 늘려야 하는 상황이 생긴다고 가정해보자.(물론 서버를 늘리는 것보다 캐시를 적용하거나 로직을 바꿔보는 노력이 선행되야 하겠지만&hellip;) 당연히 서버부터 구매하며 &ldquo;Scale Out&quot;을 하려고 할것이다. 만약 원래 운영하던 서버가 너무 좋아서 CPU나 메모리 사용률이 거의 바닥이여도 서버를 구매해야 할까? 서버를 구매하게되면 결국 두개 이상의 서버가 운영될텐데 그 서버들을 앞에서 묶어주며 트래픽을 분산시켜주는 무언가가 필요하다. 그러한 기술을 바로 로드밸런싱 이라고 한다. 통상 L4 스위치를 활용하여 요청을 여러 서버들로 분산시키며 산술적으로는 서버 대수만큼 성능이 좋아지는 효과를 볼 수 있다. 하지만 앞서 말했듯 서버의 자원 사용률이 바닥일 정도로 거의 사용을 안할경우 서버를 구매하는건 너무나 비효율적이다. 이번 포스팅에서는 서버를 늘리지 않으면서 웹서버 중 아파치를 활용하여 여러 WAS를 운영하는 방법에 대해 알아보고자 한다. 서버 늘려야 하는 상황에서 사용해 볼 수 있는 나만의 좋은 무기(?)가 생긴게 아닐까 생각이 든다.
-아파치는 EOL이 되었기 때문에 2.4버전으로 설치하고, WAS는 편의상 톰켓 최신버전으로 설치해서 동일한 서버에 아파치 한대와 톰켓 3대를 연동하는것을 목적으로 한다. 로드밸런싱이 어떤식으로 이루어 지고 하위에 연결된 톰켓을 컨트롤 하는 방법 또한 알아볼 예정이다.
- 서버 환경 및 설치하게 될 각 버전은 다음과 같다. 서버 : CentOS 7.4 64Bit apache : httpd-2.4.39 tomcat : apache-tomcat-8.5.43 tomcat-connectors(mod_jk) : 1.2.46
- Apache 와 Tomcat 설치 필자의 포스팅에서 종종 나오는 부분이기도 하고, 구글링 해보면 바로 설치 방법을 쉽게 찾을 수 있겠지만 그렇다고 언급을 안하고 넘어가기엔 너무 불친절하니&hellip; 치트키처럼(?) 빠르게 정리해보자.
- Apache  $ wget http://apache.tt.co.kr//httpd/httpd-2.4.39.tar.gz $ tar -zxvf httpd-2.4.39.tar.gz $ ./configure --prefix=/home/~~~/apache $ make &amp;&amp; make install $ cd /home/~~~/apache/bin $ sudo chown root:계정명 httpd $ sudo chmod +s httpd $ vi /home/~~~/apache/conf/httpd.conf User 계정명 Grop 계정명 $ /home/~~~/apache/bin/apachectl start ← 실행 이렇게 설치를 한뒤 실행을 시키고 서버의 ip를 접속해보면 아래와 같은 화면을 볼 수 있다.
- Tomcat  $ wget http://mirror.apache-kr.org/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz $ tar -zxvf apache-tomcat-8.5.43.tar.gz $ /home/apache-tomcat-8.5.43/bin/start.sh ← 실행 톰켓의 기본 http 포트인 8080으로 접속을 해보면 귀여운 고양이가 있는 톰켓 기본화면을 볼 수 있다.
-아파치와 톰켓 연동하기 아파치와 톰켓의 연동은 mod_jk 와 mod_proxy 등 다양한 모듈로 연동을 할 수 있는데 이번 포스팅에서는 mod_jk 를 활용하는 방법에 대해 알아보고자 한다. 우선 mod_jk 를 설치하자.
- 간단히 mod_jk 는 컴파일, 설정 등 복잡하지만 톰켓 전용 바이너리 프로토콜인 AJP를 사용하기 때문에 높은 성능을 기대할수가 있다. mod_proxy 는 반면 기본으로 아파치에 탑재되어있는 모듈이기 때문에 별도의 모듈 설치가 필요 없고 설정도 간단하다는 장점이 있다. 각 연동방식의 장단점이 있기 때문에 본인이 운영하는 서버 상황에 맞추어 적용 할 필요가 있다.
-  mod_jk 설치  $ wget http://apache.tt.co.kr/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.46-src.tar.gz $ tar -zxvf tomcat-connectors-1.2.46-src.tar.gz $ cd tomcat-connectors-1.2.46-src/native $ ./configure --with-apxs=/home/~~~/apache/bin/apxs $ make &amp;&amp; make install $ /home/~~~/apache/modules 하위에 mod_jk.so가 생김 mod_jk 를 활용하면 AJP라는 통신으로 아파치와 톰켓이 연동되는데 톰켓의 기본 AJP 포트는 8009번임을 알고 다음처럼 설정을 해주자.
- apache/conf/workers.properties  worker.list=tomcat1 worker.tomcat1.port=8009 worker.tomcat1.host=localhost worker.tomcat1.type=ajp13 worker.tomcat1.lbfactor=1  apache/conf/httpd.conf  LoadModule jk_module modules/mod_jk.so &lt;IfModule jk_module&gt; JkWorkersFile conf/workers.properties JkLogFile logs/mod_jk.log JkLogLevel info JkMount /* tomcat1 &lt;/IfModule&gt; 이렇게 하고서 아파치와 톰켓을 재시작 후에 서버의 ip로 접속해보면 (별도의 port 없이) 톰켓 설정페이지로 랜딩이 되는것을 확인할 수 있다.]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Load Balance on</title><link>https://taetaetae.github.io/tags/load-balance/</link><description>Recent content in Load Balance on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 04 Aug 2019 19:50:43 +0000</lastBuildDate><atom:link href="https://taetaetae.github.io/tags/load-balance/index.xml" rel="self" type="application/rss+xml"/><item><title>아파치 로드밸런싱으로 여러 WAS 운영하기</title><link>https://taetaetae.github.io/2019/08/04/apache-load-balancing/</link><pubDate>Sun, 04 Aug 2019 19:50:43 +0000</pubDate><guid>https://taetaetae.github.io/2019/08/04/apache-load-balancing/</guid><description>&lt;p>웹서버 하나만 사용하거나 WAS 하나만을 사용하며 웹서비스를 운영하는 경우는 극히 드물다. 웹서버의 장점과 WAS의 장점 그 두마리의 토끼를 다 잡기 위해 보통 앞단에 웹서버를 두고 그 뒤에 WAS를 두며 서비스를 운영하곤 한다. 헌데 운영하는 서비스가 인기가 많아져(?) 사용량이 많아지다면 그만큼 응답이 느려 (TPS 등) 서버를 늘려야 하는 상황이 생긴다고 가정해보자.&lt;!--more --> (물론 서버를 늘리는 것보다 캐시를 적용하거나 로직을 바꿔보는 노력이 선행되야 하겠지만&amp;hellip;) 당연히 서버부터 구매하며 &amp;ldquo;Scale Out&amp;quot;을 하려고 할것이다. 만약 원래 운영하던 서버가 너무 좋아서 CPU나 메모리 사용률이 거의 바닥이여도 서버를 구매해야 할까?
+서버를 구매하게되면 결국 두개 이상의 서버가 운영될텐데 그 서버들을 앞에서 묶어주며 트래픽을 분산시켜주는 무언가가 필요하다. 그러한 기술을 바로 &lt;code>로드밸런싱&lt;/code> 이라고 한다. 통상 L4 스위치를 활용하여 요청을 여러 서버들로 분산시키며 산술적으로는 서버 대수만큼 성능이 좋아지는 효과를 볼 수 있다.
+하지만 앞서 말했듯 서버의 자원 사용률이 바닥일 정도로 거의 사용을 안할경우 서버를 구매하는건 너무나 비효율적이다. 이번 포스팅에서는 서버를 늘리지 않으면서 웹서버 중 아파치를 활용하여 여러 WAS를 운영하는 방법에 대해 알아보고자 한다. 서버 늘려야 하는 상황에서 사용해 볼 수 있는 나만의 좋은 무기(?)가 생긴게 아닐까 생각이 든다.&lt;/p>
+&lt;p>아파치는 &lt;a href="https://httpd.apache.org/#apache-httpd-22-end-of-life-2018-01-01" target="_blank" rel="noopener noreffer ">EOL&lt;/a>이 되었기 때문에 2.4버전으로 설치하고, WAS는 편의상 톰켓 최신버전으로 설치해서 동일한 서버에 아파치 한대와 톰켓 3대를 연동하는것을 목적으로 한다. 로드밸런싱이 어떤식으로 이루어 지고 하위에 연결된 톰켓을 컨트롤 하는 방법 또한 알아볼 예정이다.&lt;/p>
+&lt;blockquote>
+&lt;p>서버 환경 및 설치하게 될 각 버전은 다음과 같다.
+서버 : CentOS 7.4 64Bit
+apache : httpd-2.4.39
+tomcat : apache-tomcat-8.5.43
+tomcat-connectors(mod_jk) : 1.2.46&lt;/p>&lt;/blockquote>
+&lt;h2 id="apache-와-tomcat-설치">Apache 와 Tomcat 설치&lt;/h2>
+&lt;p>필자의 포스팅에서 종종 나오는 부분이기도 하고, 구글링 해보면 바로 설치 방법을 쉽게 찾을 수 있겠지만 그렇다고 언급을 안하고 넘어가기엔 너무 불친절하니&amp;hellip; 치트키처럼(?) 빠르게 정리해보자.&lt;/p>
+&lt;ul>
+&lt;li>Apache&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$ wget http://apache.tt.co.kr//httpd/httpd-2.4.39.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ tar -zxvf httpd-2.4.39.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ./configure --prefix=/home/~~~/apache
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ make &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> make install
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd /home/~~~/apache/bin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo chown root:계정명 httpd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo chmod +s httpd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ vi /home/~~~/apache/conf/httpd.conf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">User 계정명
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Grop 계정명
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ /home/~~~/apache/bin/apachectl start ← 실행
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>이렇게 설치를 한뒤 실행을 시키고 서버의 ip를 접속해보면 아래와 같은 화면을 볼 수 있다.&lt;/p>
+&lt;ul>
+&lt;li>Tomcat&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$ wget http://mirror.apache-kr.org/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ tar -zxvf apache-tomcat-8.5.43.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ /home/apache-tomcat-8.5.43/bin/start.sh ← 실행
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>톰켓의 기본 http 포트인 8080으로 접속을 해보면 귀여운 고양이가 있는 톰켓 기본화면을 볼 수 있다.&lt;/p>
+&lt;h2 id="아파치와-톰켓-연동하기">아파치와 톰켓 연동하기&lt;/h2>
+&lt;p>아파치와 톰켓의 연동은 &lt;code>mod_jk&lt;/code> 와 &lt;code>mod_proxy&lt;/code> 등 다양한 모듈로 연동을 할 수 있는데 이번 포스팅에서는 &lt;code>mod_jk&lt;/code> 를 활용하는 방법에 대해 알아보고자 한다. 우선 mod_jk 를 설치하자.&lt;/p>
+&lt;blockquote>
+&lt;p>간단히 mod_jk 는 컴파일, 설정 등 복잡하지만 톰켓 전용 바이너리 프로토콜인 AJP를 사용하기 때문에 높은 성능을 기대할수가 있다. mod_proxy 는 반면 기본으로 아파치에 탑재되어있는 모듈이기 때문에 별도의 모듈 설치가 필요 없고 설정도 간단하다는 장점이 있다. 각 연동방식의 장단점이 있기 때문에 본인이 운영하는 서버 상황에 맞추어 적용 할 필요가 있다.&lt;/p>&lt;/blockquote>
+&lt;ul>
+&lt;li>mod_jk 설치&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$ wget http://apache.tt.co.kr/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.46-src.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ tar -zxvf tomcat-connectors-1.2.46-src.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd tomcat-connectors-1.2.46-src/native
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ./configure --with-apxs=/home/~~~/apache/bin/apxs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ make &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> make install
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ /home/~~~/apache/modules 하위에 mod_jk.so가 생김
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>mod_jk 를 활용하면 AJP라는 통신으로 아파치와 톰켓이 연동되는데 톰켓의 기본 AJP 포트는 8009번임을 알고 다음처럼 설정을 해주자.&lt;/p>
+&lt;ul>
+&lt;li>apache/conf/workers.properties&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">worker.list=tomcat1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">worker.tomcat1.port=8009
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">worker.tomcat1.host=localhost
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">worker.tomcat1.type=ajp13
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">worker.tomcat1.lbfactor=1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>apache/conf/httpd.conf&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">LoadModule jk_module modules/mod_jk.so
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">IfModule&lt;/span> &lt;span class="na">jk_module&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> JkWorkersFile conf/workers.properties
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> JkLogFile logs/mod_jk.log
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> JkLogLevel info
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> JkMount /* 	tomcat1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">IfModule&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>이렇게 하고서 아파치와 톰켓을 재시작 후에 서버의 ip로 접속해보면 (별도의 port 없이) 톰켓 설정페이지로 랜딩이 되는것을 확인할 수 있다.&lt;/p>
+&lt;h2 id="로드밸런싱을-위한-작업">로드밸런싱을 위한 작업&lt;/h2>
+&lt;p>여기까지는 본 포스팅을 작성하기 위한 밑거름이라고 말할 수 있다. 이제 실제로 로드밸런싱을 해볼 차례.
+앞서 톰켓 하나만 설치했는데 편의상 톰켓 3개를 설치해두자. (하나를 설치하고 cp -r 명령어를 활용하는게 빠르다.) 그 다음 각 톰켓의 모든 포트를 셋다 다르게 설정해야 하는데 겹치지 않도록 설정해 두고 (필자는 앞자리를 1,2,3 이런식으로 다르게 설정하였다.) 워커(workers.properties)를 아래처럼 설정해주자.&lt;/p></description></item></channel></rss>
