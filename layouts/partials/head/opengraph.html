@@ -1,0 +1,109 @@
+{{- $isPage := .IsPage -}}
+{{- $title := .Title -}}
+{{- if .IsHome -}}
+  {{ $title = .Site.Title }}
+{{- end -}}
+
+{{- $description := "" -}}
+{{- if .IsPage -}}
+  {{- $description = .Content | plainify | htmlUnescape | chomp | truncate 160 -}}
+{{- else -}}
+  {{- with .Site.Params.description -}}
+    {{ $description = . }}
+  {{- end -}}
+{{- end -}}
+
+{{- $images := slice -}}
+{{- $featured := "" -}}
+{{- with .Params.images -}}
+  {{- range . -}}
+    {{- if (gt (len .) 0) -}}
+      {{- $images = $images | append (. | absURL) -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- $featured = .Params.featured_image | default .Params.image -}}
+  {{- with $featured -}}
+    {{- $images = $images | append (. | absURL) -}}
+  {{- else -}}
+    {{- with $.Resources.ByType "image" -}}
+      {{- $featured = (index . 0).Permalink -}}
+      {{- $images = $images | append $featured -}}
+    {{- else -}}
+      {{- with .Site.Params.images -}}
+        {{- range . -}}
+          {{- $images = $images | append (. | absURL) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if (gt (len $images) 6) -}}
+  {{- $images = first 6 $images -}}
+{{- end -}}
+
+{{- with $title -}}
+  <meta property="og:title" content="{{ . }}" />
+{{- end -}}
+{{- with $description -}}
+  <meta property="og:description" content="{{ . }}" />
+{{- end -}}
+{{- with .Permalink -}}
+  <meta property="og:url" content="{{ . }}" />
+{{- end -}}
+
+{{- range $images -}}
+  <meta property="og:image" content="{{ . }}" />
+{{- end -}}
+
+{{- if $isPage -}}
+  <meta property="og:type" content="article" />
+  {{- with .PublishDate -}}
+    <meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05-07:00" }}" />
+  {{- end -}}
+  {{- with .Lastmod -}}
+    <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05-07:00" }}" />
+  {{- end -}}
+  {{- with .Site.Params.author -}}
+    <meta property="article:author" content="{{ . }}" />
+  {{- end -}}
+  {{- with .Params.author -}}
+    <meta property="article:author" content="{{ . }}" />
+  {{- end -}}
+  {{- with .Section -}}
+    <meta property="article:section" content="{{ . }}" />
+  {{- end -}}
+  {{- with .Params.tags -}}
+    {{- range . -}}
+      <meta property="article:tag" content="{{ . }}" />
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  <meta property="og:type" content="website" />
+{{- end -}}
+
+{{- with .Site.LanguageCode -}}
+  <meta property="og:locale" content="{{ . }}" />
+{{- end -}}
+
+{{- range .Site.Languages -}}
+  {{- if ne .LanguageCode $.Site.LanguageCode -}}
+    <meta property="og:locale:alternate" content="{{ .LanguageCode }}" />
+  {{- end -}}
+{{- end -}}
+
+{{- /* Twitter Card meta tags */ -}}
+<meta name="twitter:card" content="{{ if (gt (len $images) 0) }}summary_large_image{{ else }}summary{{ end }}" />
+{{- with $title -}}
+  <meta name="twitter:title" content="{{ . }}" />
+{{- end -}}
+{{- with $description -}}
+  <meta name="twitter:description" content="{{ . }}" />
+{{- end -}}
+{{- with (index $images 0) -}}
+  <meta name="twitter:image" content="{{ . }}" />
+{{- end -}}
+{{- with .Site.Params.twitter -}}
+  <meta name="twitter:site" content="@{{ . }}" />
+{{- end -}} 
