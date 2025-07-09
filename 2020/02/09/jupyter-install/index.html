@@ -72,7 +72,7 @@
 </span></span><span class=line><span class=cl>  keyring            pkgs/main/linux-64::keyring-18.0.0-py37_0
 </span></span><span class=line><span class=cl>  kiwisolver         pkgs/main/linux-64::kiwisolver-1.1.0-py37he6710b0_0
 </span></span><span class=line><span class=cl>  ...
-</span></span></code></pre></div><h2 id=주피터-원격-설정>주피터 원격 설정</h2><p>다음으로 주피터 환경설정을 만들어 주자. 기본 설정이 아닌 별도 설정을 만드는 이유는 원격으로 띄울때 입맛에 맞도록 띄우기 위함이다. 설정파일을 생성하고 수정을 해주자.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>$ sudo jupyter notebook --generate-config
+</span></span></code></pre></div><h2 id=주피터-원격-설정>주피터 원격 설정</h2><p>다음으로 주피터 환경설정을 만들어 주자. 기본 설정이 아닌 별도 설정을 만드는 이유는 원격으로 띄울때 입맛에 맞도록 띄우기 위함이다. 설정파일을 생성하고 수정을 해주자.</p><div class=post-adsense style="margin:2em 0"><script async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><ins class=adsbygoogle style=display:block;height:150px data-ad-client=ca-pub-5788330009690816 data-ad-slot=9180895229 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>$ sudo jupyter notebook --generate-config
 </span></span><span class=line><span class=cl>Writing default config to: /root/.jupyter/jupyter_notebook_config.py
 </span></span><span class=line><span class=cl>$ sudo vi /root/.jupyter/jupyter_notebook_config.py
 </span></span><span class=line><span class=cl>	c.NotebookApp.notebook_dir <span class=o>=</span> <span class=s1>&#39;/home/data&#39;</span> <span class=c1># 주피터에서 만든 결과물들이 저장되는 경로</span>

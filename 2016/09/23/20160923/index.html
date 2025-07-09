@@ -11,7 +11,7 @@ git remote add origin https://github.com/taetaetae/hexo.git
 git fetch
 </code></pre><p>필요없는<code>초기셋팅이 되는 파일</code>은 지우고</p><pre tabindex=0><code>rm source/_posts/hello-world.md
 rm -r themes/landscape/ #해당 테마를 사용하고 있다면 지울필요가 없다.
-</code></pre><p>hexo환경 repository 를 pull받는다</p><pre tabindex=0><code>git reset --hard origin/master
+</code></pre><p>hexo환경 repository 를 pull받는다</p><div class=post-adsense style="margin:2em 0"><script async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><ins class=adsbygoogle style=display:block;height:150px data-ad-client=ca-pub-5788330009690816 data-ad-slot=9180895229 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><pre tabindex=0><code>git reset --hard origin/master
 git pull origin master
 </code></pre><p>hueman테마의 검색 기능을 사용한다는 가정하에 필요한 플러그인과, 나중에 deploy 할때 필요한 플러그인을 설치해준다</p><pre tabindex=0><code>npm install hexo-deployer-git --save
 npm install -S hexo-generator-json-content

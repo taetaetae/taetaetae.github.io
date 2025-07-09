@@ -40,7 +40,7 @@ tomcat-connectors(mod_jk) : 1.2.46</p></blockquote><h2 id=apache-와-tomcat-설�
 </span></span><span class=line><span class=cl>    JkLogLevel       info
 </span></span><span class=line><span class=cl>    JkMount /* 	tomcat1
 </span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>IfModule</span><span class=p>&gt;</span>
-</span></span></code></pre></div><p>이렇게 하고서 아파치와 톰켓을 재시작 후에 서버의 ip로 접속해보면 (별도의 port 없이) 톰켓 설정페이지로 랜딩이 되는것을 확인할 수 있다.</p><h2 id=로드밸런싱을-위한-작업>로드밸런싱을 위한 작업</h2><p>여기까지는 본 포스팅을 작성하기 위한 밑거름이라고 말할 수 있다. 이제 실제로 로드밸런싱을 해볼 차례.
+</span></span></code></pre></div><p>이렇게 하고서 아파치와 톰켓을 재시작 후에 서버의 ip로 접속해보면 (별도의 port 없이) 톰켓 설정페이지로 랜딩이 되는것을 확인할 수 있다.</p><div class=post-adsense style="margin:2em 0"><script async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><ins class=adsbygoogle style=display:block;height:150px data-ad-client=ca-pub-5788330009690816 data-ad-slot=9180895229 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><h2 id=로드밸런싱을-위한-작업>로드밸런싱을 위한 작업</h2><p>여기까지는 본 포스팅을 작성하기 위한 밑거름이라고 말할 수 있다. 이제 실제로 로드밸런싱을 해볼 차례.
 앞서 톰켓 하나만 설치했는데 편의상 톰켓 3개를 설치해두자. (하나를 설치하고 cp -r 명령어를 활용하는게 빠르다.) 그 다음 각 톰켓의 모든 포트를 셋다 다르게 설정해야 하는데 겹치지 않도록 설정해 두고 (필자는 앞자리를 1,2,3 이런식으로 다르게 설정하였다.) 워커(workers.properties)를 아래처럼 설정해주자.</p><ul><li>apache/conf/workers.properties</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>worker.list=load_balancer
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>worker.load_balancer.type=lb
