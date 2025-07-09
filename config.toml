@@ -3,7 +3,6 @@ baseURL = "https://taetaetae.github.io/"
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
-title = "👨‍💻꿈꾸는 태태태의 공간"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
@@ -19,13 +18,15 @@ summaryLength=500
     desktopMode = "auto"
     # mobile header mode ("fixed", "normal", "auto")
     mobileMode = "auto"
+    [params.header.title]
+      name = "👨‍💻꿈꾸는 태태태의 공간"
   [params.footer]
     enable = true
     since = 2016
   [params.home.profile]
       enable = true
       avatarURL = "/images/profile.png"
-      subtitle = "Software Engineer Crazy for Growth"
+      subtitle = "Software development engineer"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
